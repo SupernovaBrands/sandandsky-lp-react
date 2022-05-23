@@ -1,0 +1,242 @@
+// Grid
+$grid-gutter-width: 15px;
+$grid-gutter-width-lg: 30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 992px,
+  xl: 1260px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+$spacer: calc-em(20, $context: 16, $unit: 1rem);
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,      // 5
+  2: $spacer * 0.5,       // 10
+  3: $spacer,             // 20
+  4: $spacer * 1.5,       // 30
+  5: $spacer * 2,         // 40
+  6: $spacer * 3,         // 60
+  7: $spacer * 4,         // 80
+  g: $grid-gutter-width,  // 15
+);
+
+$enable-negative-margins: true;
+
+// Typography
+$font-family-sans-serif: "sofia-pro", "Helvetica Neue", Arial, sans-serif;
+
+$line-height-base: calc-em(20, $context: 16, $unit: 1);
+$line-height-lg: $line-height-base;
+$line-height-sm: $line-height-base;
+
+$headings-font-weight: 700;
+$headings-line-height: $line-height-base;
+
+$font-size-base: calc-em(16);
+$font-size-sm: calc-em(14);
+$font-size-xs: calc-em(12);
+
+$h1-font-size: calc-em(24);
+$h2-font-size: calc-em(20);
+$h3-font-size: calc-em(20);
+$h4-font-size: calc-em(16);
+$h5-font-size: calc-em(14);
+
+$h1-font-size-lg: calc-em(36);
+$h2-font-size-lg: calc-em(24);
+$h3-font-size-lg: calc-em(24);
+$h4-font-size-lg: calc-em(16);
+$h5-font-size-lg: calc-em(14);
+
+$paragraph-margin-bottom: map-get($spacers, 1);
+
+// Colors
+$primary: #4ACD8A;
+$primary-light: #D2F3E2;
+$primary-dark: #4CB376;
+
+// Products
+$range-apc: #FF6F8D;
+$range-apc-light: #FFEFF2;
+$range-aea: #CC3195;
+$range-aea-light: #F5E7F3;
+$range-tsw: #42A1CA;
+$range-tsw-light: #DFF4F9;
+$range-oil: #50973B;
+$range-oil-light: #E3F3E6;
+
+$secondary: $range-apc;
+$secondary-light: $range-apc-light;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'secondary-light': $secondary-light,
+);
+
+$body-color: #484848;
+
+$gray-100: #F8F8F8;
+$gray-400: #CECECE;
+$gray-600: #969696;
+
+// Border
+$border-color: $gray-400;
+
+// Forms
+$form-group-margin-bottom: map-get($spacers, 1);
+$input-color: $body-color;
+$input-placeholder-color: $gray-400;
+$input-btn-focus-color: transparent;
+$input-focus-border-color: $gray-600;
+$input-disabled-bg: $gray-100;
+$input-disabled-color: $gray-400;
+$custom-control-gutter: .5em;
+$custom-control-indicator-size: 1em;
+$custom-control-indicator-checked-border-color: $body-color;
+$custom-control-indicator-border-color: $body-color;
+
+$input-font-size: $font-size-base;
+$input-padding-y: calc-em(14);
+$input-padding-x: 1em;
+$input-height-lg: calc-em(50);
+$custom-select-indicator-padding: 1em;
+
+$input-font-size-sm: $font-size-base;
+$input-padding-y-sm: calc-em(4);
+$input-padding-x-sm: calc-em(10);
+
+$search-icon-padding-y-sm: calc-em(6, 14);
+$input-border-radius-sm: 0.25rem;
+
+$input-group-addon-bg: #fff;
+$input-border-color: $gray-600;
+
+// Nav
+$nav-link-padding-y: calc-em(12/2);
+$nav-link-padding-x: calc-em(12/2);
+$nav-link-padding-y-lg: calc-em(24/2);
+$nav-link-padding-x-lg: calc-em(24/2);
+
+// Buttons
+
+$btn-hover-darken: 23.5%;
+$btn-font-weight: 700;
+$btn-font-size: $font-size-sm;
+$btn-padding-y: calc-em(10.5, 14);
+$btn-padding-x: calc-em(28, 14);
+$btn-padding-x-icon: calc-em(20);
+
+$btn-font-size-lg: $font-size-base;
+$btn-line-height-lg: $line-height-base;
+$btn-border-radius-lg: calc-em(4, $unit: 1rem);
+$btn-padding-y-lg: calc-em(28 / 2);
+$btn-padding-x-lg: calc-em(30);
+
+$btn-padding-y-sm: calc-em(15 / 2, 14);
+$btn-padding-x-sm: calc-em(28, 14);
+
+// HR
+$hr-border-color: $gray-400;
+
+// Carousels
+$carousel-indicator-width: calc-em(12);
+$carousel-indicator-height: calc-em(12);
+$carousel-control-color: $primary;
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+
+// Upsell
+$upsell-padding-y: calc-em(10);
+$upsell-padding-x: calc-em(15);
+$upsell-padding-y-lg: calc-em(10);
+$upsell-padding-x-lg: calc-em(10);
+
+// Video Carousel
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 1;
+
+// Breadcrumb
+$breadcrumb-bg: white;
+$breadcrumb-divider-color: $body-color;
+$breadcrumb-active-color: $body-color;
+$breadcrumb-divider: quote("/");
+$breadcrumb-item-padding: calc-em(5);
+$breadcrumb-font-size: calc-em(12);
+$breadcrumb-padding-x: 0;
+
+// Social Icon
+$icon-primary-font-size: calc-em(30);
+
+// Alert
+$alert-padding-x: 1.25em;
+
+// Interactions
+$hover-transition-timing: 0.15s ease-in-out;
+
+// navbar
+$navbar-nav-link-padding-x: calc-em(10, 16);
+$navbar-padding-y: 0;
+$navbar-padding-x: calc-em(15 / 2, 16);
+$navbar-toggler-padding-x: 0;
+
+//navbar brand
+$navbar-brand-padding-y: calc-em(9, 16);
+// Modal
+$close-text-shadow: none;
+
+// Select
+$custom-select-indicator: url("data:image/svg+xml,<svg width='28' height='12' viewBox='0 0 28 12' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#clip0)'><path d='M-4.76837e-07 -1.22392e-06L14 12L28 0L-4.76837e-07 -1.22392e-06Z' fill='black'/></g><defs><clipPath id='clip0'><rect width='12' height='28' fill='white' transform='translate(28) rotate(90)'/></clipPath></defs></svg>");
+$custom-select-bg-size: calc-em(10) calc-em(9);
+$custom-select-font-size: $font-size-base;
+
+// Badge
+$badge-font-weight: normal;
+$badge-padding-y: calc-em(8, 16);
+$badge-padding-x: calc-em(15, 16);
+$badge-circle-width: calc-em(75);
+$badge-circle-height: calc-em(75);
+$badge-circle-width-lg: calc-em(100);
+$badge-circle-height-lg: calc-em(100);
+
+// Custom switch
+$custom-switch-indicator-size-height: calc-em(42);
+$custom-switch-width: calc-em(82);
+$custom-switch-indicator-border-radius: 2em;
+$custom-control-indicator-checked-disabled-bg: $gray-400;
+$custom-control-indicator-border-color: white;
+
+// A
+$link-color: $body-color;
+$link-hover-decoration: none;
+$link-hover-color: $primary;
+
+// Custom switch
+$custom-switch-indicator-size-height: calc-em(42);
+$custom-switch-width: calc-em(82);
+$custom-switch-indicator-border-radius: 2em;
+$custom-control-indicator-checked-disabled-bg: $gray-400;
+$custom-control-indicator-border-color: white;
+
+// tooltip
+$tooltip-opacity: 1;
+
+//Popover
+$popover-max-width: 275px !default;
+$popover-border-radius: calc-em(8);
+$popover-body-padding-y: calc-em(8);
+$popover-body-padding-x: calc-em(8);
+$popover-box-shadow: 0 .25em .5em rgba(black, .2);
+$popover-border-width: 0;
+$popover-bg: $secondary;
+$popover-body-color: #fff;

@@ -1,0 +1,24 @@
+@import '_core';
+
+@import 'bootstrap/common';
+@import "~bootstrap/scss/progress";
+
+@import 'common';
+
+@import 'components/product-image-carousel.scss';
+@import 'components/product-card.scss';
+
+@import 'templates/product.scss';
+@import 'templates/survey.scss';
+@import 'components/multiple-choice';
+@import 'components/single-choice.scss';
+@import 'components/question-box.scss';
+
+
+.container {
+    &--survey {
+        @include media-breakpoint-down(lg) {
+            height: 100vh;
+        }
+    }
+}

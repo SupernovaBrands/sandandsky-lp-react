@@ -1,0 +1,9 @@
+@include media-breakpoint-up(lg) {
+	footer {
+
+		hr:not([size]) {
+			height: calc-em(0.5);
+		}
+
+	}
+}

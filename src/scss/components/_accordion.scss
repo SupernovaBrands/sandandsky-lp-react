@@ -1,0 +1,12 @@
+.accordion {
+	span {
+		cursor: pointer;
+		.plus { display: none; }
+		.minus { display: block; }
+
+		&.collapsed {
+			.plus { display: block; }
+			.minus { display: none; }
+		}
+	}
+}

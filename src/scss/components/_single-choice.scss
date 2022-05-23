@@ -1,0 +1,49 @@
+.single-choice {
+    &__slide {
+        top: calc-em(160);
+    }
+
+    &__image {
+        width: calc-em(120);
+        min-height: calc-em(120);
+        border: calc-em(5) solid;
+        border-color: $gray-100;
+        @include media-breakpoint-up(lg) {
+            width: calc-em(150);
+            min-height: calc-em(150);
+            border: none;
+        }
+    }
+
+    &__icon-box {
+        height: calc-em(24);
+    }
+
+    &--icon {
+        > div:first-child {
+            .single-choice__lines {
+                &:before {
+                    left: 0;
+                }
+            }
+
+            .single-choice__title {
+                margin-left: -45%;
+                padding-right: 45%;
+            }
+        }
+
+        > div:last-child {
+            .single-choice__lines {
+                &:before {
+                    left: auto;
+                    right: 0;
+                }
+            }    
+            .single-choice__title {
+                margin-right: -45%;
+                padding-left: 45%;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+
+@include media-breakpoint-up(lg) {
+	.navbar-brand {
+		padding-top: calc-em(9.10, 16);
+		padding-bottom: calc-em(9.10, 16);
+
+		svg {
+			height: calc-em(33, 16);
+		}
+	}
+}

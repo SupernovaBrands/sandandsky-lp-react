@@ -1,0 +1,9 @@
+.range__tab .nav-item {
+	flex: 1 0 0;
+}
+
+@include media-breakpoint-up(lg) {
+	.range__formula-title {
+		@include font-size($h1-font-size);
+	}
+}

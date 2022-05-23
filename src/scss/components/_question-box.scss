@@ -1,0 +1,31 @@
+.question-box {
+    &__title {
+        font-size: $h2-font-size;
+        font-weight: $headings-font-weight;
+        @include media-breakpoint-up(lg) {
+            font-size: $h1-font-size;
+        }
+    }
+    
+    .footer-action {
+        @include media-breakpoint-down(lg) {
+            .btn-next {
+                width: calc(100% - #{$grid-gutter-width-lg});
+            }
+        }
+    }
+
+    &.analyzing {
+        height: 100vh;
+    }
+
+    .loader {
+        width: calc-em(100);
+        height: calc-em(100);
+
+        @include media-breakpoint-up(lg) {
+            width: calc-em(150);
+            height: calc-em(150);    
+        }
+    }
+}

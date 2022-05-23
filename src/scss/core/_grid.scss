@@ -1,0 +1,25 @@
+@include media-breakpoint-up(lg) {
+	.container, .container-fluid {
+		padding-right: $grid-gutter-width;
+		padding-left: $grid-gutter-width;
+	}
+
+	.row {
+		margin-right: -$grid-gutter-width;
+		margin-left: -$grid-gutter-width;
+	}
+
+	.col,
+	[class*="col-"] {
+		padding-right: $grid-gutter-width-lg / 2;
+		padding-left: $grid-gutter-width-lg / 2;
+	}
+
+	.col-lg-1o5 {
+		@include make-col(1, 5);
+	}
+
+	.carousel-item.col-lg-3 {
+		@include make-col(1, 4);
+	}
+}
