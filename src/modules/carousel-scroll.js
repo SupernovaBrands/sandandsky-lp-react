@@ -110,7 +110,7 @@ const carouselScroll = (carouselId) => {
         const scrollItem = (direction) => (e) => {
             e.preventDefault();
             const item = carousel.querySelector('.carousel-item');
-            const itemToScroll = carousel.getAttribute('item-scroll') ? carousel.getAttribute('item-scroll') : 2;
+            const itemToScroll = carousel.getAttribute('item-scroll') ? carousel.getAttribute('item-scroll') : 1;
             itemIndex = Math.round(inner.scrollLeft / item.clientWidth) + (direction === 'left' ? -(itemToScroll) : itemToScroll);
             left = itemIndex * item.clientWidth;
             if (left < 0) left = 0;

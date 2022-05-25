@@ -1,6 +1,18 @@
 .accordion {
-	span {
+	.accordion-button {
+        &:after {
+            content: none;
+        }
+
+        &:not(.collapsed) {
+            box-shadow: none;
+			color: $body-color;
+        }
+
 		cursor: pointer;
+        svg {
+            width: calc-em(12);
+        }
 		.plus { display: none; }
 		.minus { display: block; }
 

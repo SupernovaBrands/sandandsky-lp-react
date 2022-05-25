@@ -568,8 +568,9 @@ module.exports = function (webpackEnv) {
         Object.assign(
           {},
           {
-            inject: true,
-            template: paths.appHtml,
+            inject: false,
+            template: 'public/pore-tight-kit.html',
+            filename: 'pore-tight-kit/index.html'
           },
           isEnvProduction
             ? {

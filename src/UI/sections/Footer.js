@@ -4,7 +4,7 @@ const Footer = () => {
 	return (
 		<footer className="pt-md-6 pt-2 pt-lg-4 pb-1 ">
             <div className="container px-g">
-                <a className='navbar-brand mx-auto text-secondary mb-1 d-block' href='https://www.sandandsky.com'>
+                <a className='navbar-brand mx-auto text-secondary mb-1 d-block text-center' href='https://www.sandandsky.com'>
                     <Logo />
                 </a>
                 <small className="text-center d-block mb-5">*Everyone’s skin is different and results may vary from person to person</small>

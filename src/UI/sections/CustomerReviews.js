@@ -7,75 +7,71 @@ const CustomerReviews = () => {
         {
             name: '@greivy.inc1',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f8e983f-d70a-4d10-7c5a-d107e3024d00',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
         },
         {
             name: '@greivy.inc2 ',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
         },
         {
             name: '@greivy.inc3',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8e611144-8d7d-4a71-2ac7-458456523000',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/175a591f-4b81-430a-b314-196bd0f77a00'
         },
         {
             name: '@greivy.inc4',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/10d49152-5507-467f-6734-5f060e3f5b00',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e90f614d-0569-40ce-d0d7-8ae10279b000'
         },
         {
-            name: '@greivy.inc5',
+            name: '@greivy.inc1',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f8e983f-d70a-4d10-7c5a-d107e3024d00',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
         },
         {
-            name: '@greivy.inc6',
+            name: '@greivy.inc2 ',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
         },
         {
-            name: '@greivy.inc7',
+            name: '@greivy.inc3',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8e611144-8d7d-4a71-2ac7-458456523000',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/175a591f-4b81-430a-b314-196bd0f77a00'
         },
         {
-            name: '@greivy.inc8',
+            name: '@greivy.inc4',
             text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/10d49152-5507-467f-6734-5f060e3f5b00',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e90f614d-0569-40ce-d0d7-8ae10279b000'
         },
-        {
-            name: '@greivy.inc9',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
-        },
-        {
-            name: '@greivy.inc10',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
-        },
-        {
-            name: '@greivy.inc11',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
-        },
-        {
-            name: '@greivy.inc12',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            img: 'https://via.placeholder.com/270x270'
-        }
     ]
     return (
         <section class="review-carousel py-4 py-lg-7 overflow-hidden position-relative">
-            <div class="d-flex justify-content-between align-items-center container pt-lg-3">
-                <h2 class="h1 col-10 mb-4 mb-lg-5 row">Don’t take our word for it…</h2>
+            <div className="container px-g">
+                <div class="d-flex justify-content-between align-items-center container pt-lg-3 justify-content-center justify-content-lg-start">
+                    <h2 class="h1 col-12 mb-4 mb-lg-5 row">Don’t take our word for it…</h2>
+                </div>
             </div>
             <div className="container px-g">
                 <div class="carousel--scroll position-relative" id="customerReviews">
                     <div class="carousel-inner d-flex flex-nowrap row w-auto" role="listbox">
                         {REVIEWS.map((item, index) => (
                             <figure class="col-9 col-lg-3 carousel-item mb-0" key={`review-${index}`} >
-                                <img src={item.img} alt="Placeholder" class="d-block w-100" />
+                                <picture>
+                                    <source type="image/webp" srcSet={`${item.webp}/828x`}/>
+                                    <source type="image/webp" srcSet={`${item.webp}/1140x`} media="(min-width: 992px)"/>
+                                    <source type="image/jpeg" srcSet={`${item.jpg}/828x`}/>
+                                    <source type="image/jpeg" srcSet={`${item.jpg}/1140x`} media="(min-width: 992px)"/>
+                                    <img src={`${item.jpg}/828x`} alt="" className="w-100" loading="lazy" />
+                                </picture>
                                 <figcaption class="m-0 bg-secondary-light font-size-sm px-g py-3">
                                     <p class="mb-3 text-body">{item.name}</p>
                                     <p class="d-block text-body">{item.text}</p>

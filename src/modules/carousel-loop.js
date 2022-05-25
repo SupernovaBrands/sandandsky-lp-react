@@ -1,3 +1,4 @@
+import { Carousel } from "../vendor/bootstrap.bundle";
 const carouselLoop = (carouselId) => {
     setTimeout(() => {
         const carouselLoop = document.getElementById(carouselId);
@@ -5,11 +6,20 @@ const carouselLoop = (carouselId) => {
         const initCarouselInner = carouselLoop.querySelector('.carousel-inner');
 
         if (768 > window.innerWidth && initCarouselItems.length <= 5) {
+            console.log(initCarouselItems.length);
             for (let i = 0; i < initCarouselItems.length; i += 1) {
-                const node = initCarouselInner.querySelectorAll('.carousel-item')[i+1]
+                const node = initCarouselInner.querySelectorAll('.carousel-item')[i]
                 const itemClone = node.cloneNode(true);
                 initCarouselInner.appendChild(itemClone);
+                node.classList.remove('active');
             }
+        }
+
+        if (768 > window.innerWidth && carouselId === 'product-image-carousel') {
+            carouselLoop.addEventListener('click', function (e) {
+                const carousel = Carousel.getInstance(carouselLoop);
+                carousel.next();
+            });
         }
 
         carouselLoop.addEventListener('slide.bs.carousel', function (e) {
@@ -59,17 +69,33 @@ const carouselLoop = (carouselId) => {
 
             }
 
+            const list = [...document.querySelectorAll(`#${carouselId} .carousel-item`)];
+            const active = document.querySelector(`#${carouselId} .carousel-item.active`);
+            const activeIndex = list.indexOf(active);
+            
             if (e.target.querySelector('.carousel--centered')) {
                 // special case for carousel centered we would need plus 1, as we have negative offset x on carousel-inner
                 if (e.direction === 'right') {
-                    const list = [...document.querySelectorAll(`#${carouselId} .carousel-item`)];
-                    const active = document.querySelector(`#${carouselId} .carousel-item.active`);
-                    const activeIndex = list.indexOf(active);
-
                     const selectorNthChild = `.carousel-item:nth-child(${activeIndex + 1 + parseInt(itemsPerSlide)})`;
                     if (e.target.querySelector(selectorNthChild)) {
                         // e.target.querySelector(selectorNthChild).classList.add('carousel-item--last');
                     }
+                }
+            }
+            const dataIndex = parseInt(active.getAttribute('data-index')) || null;
+            const dotsIndicator = carouselLoop.querySelector('.carousel-indicators--dots-unclickable');
+            
+            let dotActive = dataIndex < 4 ? dataIndex + 1 : 0;
+            if (e.direction === 'right') {
+                dotActive = dataIndex === 0 || dataIndex === null ? 4 : dataIndex - 1;
+            }
+            if (dotsIndicator) {
+                const selectedDot = dotsIndicator.querySelector(`li[data-bs-slide-to="${dotActive}"]`);
+                if (selectedDot) {
+                    dotsIndicator.querySelectorAll("li[data-bs-slide-to]").forEach(li => {
+                        li.classList.remove('active');
+                    });
+                    selectedDot.classList.add('active');
                 }
             }
         });
@@ -79,16 +105,16 @@ const carouselLoop = (carouselId) => {
             Array.from(items).forEach(function(element, index) {
                 if (index === 0) {
                     const firstBtn = element.querySelector('button');
-                    firstBtn.classList.add('border-primary');
+                    firstBtn.classList.add('border-secondary');
                     firstBtn.classList.remove('border-white');
                 }
                 element.addEventListener('click', function (e) {
                     Array.from(items).forEach(function(elToClassRemove) {
-                        elToClassRemove.querySelector('button').classList.remove('border-primary');
+                        elToClassRemove.querySelector('button').classList.remove('border-secondary');
                         elToClassRemove.querySelector('button').classList.add('border-white');
                     });
                     const targetBtn = e.target.closest('button');
-                    targetBtn.classList.add('border-primary');
+                    targetBtn.classList.add('border-secondary');
                     targetBtn.classList.remove('border-white');
                 });
             });

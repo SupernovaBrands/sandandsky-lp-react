@@ -25,7 +25,7 @@ const ProductImageCarouselItem = (props) => {
     
 
     return (
-        <div className={`carousel-item ${props.index === 0 ? 'active': ''}`}>
+        <div key={`productimgitem${props.index}`} className={`carousel-item ${props.index} ${props.index === 0 ? 'active': ''}`} data-index={props.index}>
             <picture className="bg-shimmer ratio ratio-1x1 w-100 d-block">
                 <source type="image/webp" srcSet={`${props.webp}/828x`}/>
                 <source type="image/webp" srcSet={`${props.webp}/1140x`} media="(min-width: 992px)"/>
