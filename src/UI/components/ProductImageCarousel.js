@@ -49,9 +49,9 @@ const ProductImageCarousel = () => {
                             />
                         ))} 
                     </div>
-                    <ol class="carousel-indicators--dots-unclickable d-lg-none px-1 mx-auto mb-0 justify-content-end align-items-center">
+                    <ol className="carousel-indicators--dots-unclickable d-lg-none px-1 mx-auto mb-0 justify-content-end align-items-center">
                         {PRODUCT_IMAGES.map((image, index) => (
-                            <li key={`product-image-carousel-ind${index}`} data-bs-target="" data-bs-slide-to={index} class={`rounded-circle ${index === 0 ? 'active' : ''}`}></li>
+                            <li key={`product-image-carousel-ind${index}`} data-bs-target="" data-bs-slide-to={index} className={`rounded-circle ${index === 0 ? 'active' : ''}`}></li>
                         ))}
                     </ol>
                 </figure>
@@ -65,7 +65,7 @@ const ProductImageCarousel = () => {
                             <picture className="ratio ratio-1x1 w-100 d-block bg-shimmer">
                                 <source type="image/webp" srcSet={`${image.webp}/200x`}/>
                                 <source type="image/jpeg" srcSet={`${image.jpg}/200x`}/>
-                                <img src={`${image.jpg}/200x`} loading="lazy" />
+                                <img src={`${image.jpg}/200x`} loading="lazy" className='fit--cover' />
                             </picture>
                         </button>
                     </div>
