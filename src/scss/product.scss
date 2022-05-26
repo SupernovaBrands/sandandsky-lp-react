@@ -1,11 +1,25 @@
 @import '_core';
 
-@import 'bootstrap/common';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/carousel";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
 
 @import 'common';
 
 @import 'components/product-image-carousel.scss';
-@import 'components/product-card.scss';
 
 @import 'sections/review-carousel';
 @import 'sections/a-beauty-review';
