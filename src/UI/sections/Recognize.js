@@ -4,16 +4,16 @@ import abeautyCarousel from "../../modules/a-beauty-review";
 const Recognize = () => {
     abeautyCarousel('a-beauty-review');
     return (
-        <div className="bg-light py-6" >
+        <div className="bg-gray-100 py-6" >
             <h2 className="container px-g h1 text-center mb-0">Recognized A-Beauty leader by…</h2>
             <div id="a-beauty-review" className="a-beauty-review container px-g carousel slide" data-bs-interval="7000" data-bs-wrap="false">
-                <ul className="list-unstyled carousel-inner mb-0 px-3 py-7 py-lg-5">
+                <ul className="list-unstyled carousel-inner mb-0 px-3 py-4 py-lg-5">
                     <li
-                        className="carousel-item text-center font-size-lg justify-content-center align-items-center active">
+                        className="carousel-item text-center font-size-lg justify-content-center align-items-center ">
                         “It's selling out around the world.”
                     </li>
                     <li
-                        className="carousel-item text-center font-size-lg justify-content-center align-items-center">
+                        className="carousel-item text-center font-size-lg justify-content-center align-items-center active">
                         “Pores appeared visibly smaller… <br />This mask is no lie!”
                     </li>
                     <li
@@ -40,20 +40,36 @@ const Recognize = () => {
 
                 <ol className="carousel-indicators mx-0 mb-0 justify-content-between">
                     <li data-bs-target="#a-beauty-review" data-bs-slide-to="0"
-                        className="d-flex justify-content-center align-items-center active">
-                        <img className="d-block mw-100 mh-100" src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/0f54040b-a037-4373-e00b-55daa4672600/828x" />
+                        className="d-flex justify-content-center align-items-center carousel-indicator--prev ">
+                        <picture>
+                            <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/054c9959-e8d3-431a-a420-b8a54f875b00/400x" />
+                            <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/3994b20e-9db5-471a-45da-80a327d6a100/400x" />
+                            <img className="d-block mw-100 mh-100" src={`${process.env.PUBLIC_URL}/images/mailonline.jpg`}  alt="Mail Online"   />
+                        </picture>
                     </li>
                     <li data-bs-target="#a-beauty-review" data-bs-slide-to="1"
-                        className="d-flex justify-content-center align-items-center carousel-indicator--next ">
-                        <img className="d-block mw-100 mh-100" src="https://cdn.shopify.com/s/files/1/0277/5262/8295/t/123/assets/logo-elle.png?v=131021256175075541141631261907" />
+                        className="d-flex justify-content-center align-items-center active ">
+                        <picture>
+                            <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/54312adc-b757-4199-389c-6aff215fff00/400x" />
+                            <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/5a598c17-cd78-4212-159d-1e1677162500/400x" />
+                            <img className="d-block mw-100 mh-100" src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/5a598c17-cd78-4212-159d-1e1677162500/400x" alt="Refinery 29" />
+                        </picture>
                     </li>
                     <li data-bs-target="#a-beauty-review" data-bs-slide-to="2"
-                        className="d-flex justify-content-center align-items-center carousel-indicator--next-out ">
-                        <img className="d-block mw-100 mh-100" src="https://cdn.shopify.com/s/files/1/0277/5262/8295/t/123/assets/logo-glamour.png?v=13346730905543477291631261908" />
+                        className="d-flex justify-content-center align-items-center carousel-indicator--next ">
+                        <picture>
+                            <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/2e3d1def-752b-4a39-17a3-d9abb1002f00/400x" />
+                            <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/be582085-ba2b-4dc2-4d18-44360489ee00/400x" />
+                            <img className="d-block mw-100 mh-100" src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/be582085-ba2b-4dc2-4d18-44360489ee00/400x"  alt="Elle"  />
+                        </picture>
                     </li>
                     <li data-bs-target="#a-beauty-review" data-bs-slide-to="3"
                         className="d-flex justify-content-center align-items-center carousel-indicator--next-out ">
-                        <img className="d-block mw-100 mh-100" src="https://cdn.shopify.com/s/files/1/0277/5262/8295/t/123/assets/logo-dailymail.png?v=136825921338695750301631261906" />
+                        <picture>
+                            <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ae7f46b9-6205-4d66-3f13-0a66efac7b00/400x" />
+                            <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/a4cb603b-5515-4635-da4c-a6edae090400/400x" />
+                            <img className="d-block mw-100 mh-100" src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/a4cb603b-5515-4635-da4c-a6edae090400/400x" alt="Glamour"  />
+                        </picture>
                     </li>
                 </ol>
             </div>

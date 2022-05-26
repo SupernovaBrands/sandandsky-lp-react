@@ -9,8 +9,7 @@ const ReviewCard = (props) => {
                 <ReviewStar score={5} useSharpStar={true} />
                 <a href="https://www.cocoandeve.com/products/sunny-honey-bali-bronzing-self-tan-set#write-a-review" className="d-block yotpo-widget__total mt-lg-0 ms-lg-1 ms-1">5.0</a>
             </div>
-            <p>{props.name}<GreenCheck className='ms-1' /></p>
-            <p className="fw-bold">{props.caption}</p>
+            <p className='fw-bold'>{props.name}<GreenCheck className='ms-1' /></p>
             {props.children}
         </div>
     )

@@ -9,7 +9,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                     name="Brooke M. Verified Buyer"
                 >
-                    <p>I have been using sand & Sky for about 2 months, and I love it! My skin feels great. I've tried so many other products. I have dark spots and occasional acne at 40 years old. And it is finally looking better! I use the deep pore cleanser, the exfoliating face scrub, the pink clay mask, and bounce mask.</p>
+                    <p className="font-size-sm">I have been using sand & Sky for about 2 months, and I love it! My skin feels great. I've tried so many other products. I have dark spots and occasional acne at 40 years old. And it is finally looking better! I use the deep pore cleanser, the exfoliating face scrub, the pink clay mask, and bounce mask.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -27,7 +27,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                     name="Megan P. Verified Buyer"
                 >
-                    <p>I love this cleanser! Not only does it smell amazingly fresh and clean, but it is gentle enough for every day use. It makes your skin feel so nice and soft and not really tight after use. I do tend to have more sensitive skin so this is perfect for me. I really love Sand & Sky and cannot wait until I have each and every product. Thank you! X</p>
+                    <p className="font-size-sm">I love this cleanser! Not only does it smell amazingly fresh and clean, but it is gentle enough for every day use. It makes your skin feel so nice and soft and not really tight after use. I do tend to have more sensitive skin so this is perfect for me. I really love Sand & Sky and cannot wait until I have each and every product. Thank you! X</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -63,7 +63,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                 name="Fernando C. Verified Buyer"
                 >
-                    <p>My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
+                    <p className="font-size-sm">My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -81,7 +81,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                     name="Brooke M. Verified Buyer"
                 >
-                    <p>I have been using sand & Sky for about 2 months, and I love it! My skin feels great. I've tried so many other products. I have dark spots and occasional acne at 40 years old. And it is finally looking better! I use the deep pore cleanser, the exfoliating face scrub, the pink clay mask, and bounce mask.</p>
+                    <p className="font-size-sm">I have been using sand & Sky for about 2 months, and I love it! My skin feels great. I've tried so many other products. I have dark spots and occasional acne at 40 years old. And it is finally looking better! I use the deep pore cleanser, the exfoliating face scrub, the pink clay mask, and bounce mask.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -99,7 +99,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                     name="Megan P. Verified Buyer"
                 >
-                    <p>I love this cleanser! Not only does it smell amazingly fresh and clean, but it is gentle enough for every day use. It makes your skin feel so nice and soft and not really tight after use. I do tend to have more sensitive skin so this is perfect for me. I really love Sand & Sky and cannot wait until I have each and every product. Thank you! X</p>
+                    <p className="font-size-sm">I love this cleanser! Not only does it smell amazingly fresh and clean, but it is gentle enough for every day use. It makes your skin feel so nice and soft and not really tight after use. I do tend to have more sensitive skin so this is perfect for me. I really love Sand & Sky and cannot wait until I have each and every product. Thank you! X</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -117,7 +117,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                 name="Rochelle P. Verified Buyer"
                 >
-                    <p>No make up, no worries I'm not a fan of make up so these products are my best friend. The first thing I tried was the detox pink clay mask and since then I’ve been hooked! I now have a little collection of sand and sky and I love them all. My latest but was the cleanser and I love what it’s doing for my skin! Soft, glowy, fresh, lovely skin!</p>
+                    <p className="font-size-sm">No make up, no worries I'm not a fan of make up so these products are my best friend. The first thing I tried was the detox pink clay mask and since then I’ve been hooked! I now have a little collection of sand and sky and I love them all. My latest but was the cleanser and I love what it’s doing for my skin! Soft, glowy, fresh, lovely skin!</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -135,7 +135,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                 name="Fernando C. Verified Buyer"
                 >
-                    <p>My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
+                    <p className="font-size-sm">a My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>

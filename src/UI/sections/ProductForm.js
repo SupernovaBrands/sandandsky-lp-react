@@ -34,7 +34,7 @@ const ProductForm = (props) => {
     }
     
     return (
-        <div className="container mb-4 mt-lg-3">
+        <div className="container mb-0 mt-lg-3">
             <div className="row align-items-start">
                 <ProductImagePreview />
                 <div className='col-12 col-lg-5 d-flex flex-column order-lg-3 px-g mt-2'>
@@ -47,7 +47,7 @@ const ProductForm = (props) => {
                     <p className="mb-2 order-lg-0 text-center text-lg-start">
 						<span className="text-linethrough text-muted h2 me-1">$89.80</span>
                         <span className="font-weight-bold h2 me-1">$62.80</span>
-                        <span className="h2 fw-normal text-primary">(SAVE 30%)</span>
+                        <span className="h2 fw-normal text-secondary">(SAVE 30%)</span>
                     </p>
                     <div className="d-flex product-swatch-mobile__trigger pdp-afterpay-selector mb-g order-lg-1" data-text="Add to cart" data-oos="Sold Out">
                         <div className="d-flex">
@@ -63,19 +63,19 @@ const ProductForm = (props) => {
                     <h2 className='mx-4 text-center d-lg-none'>Your go-to kit for peak purification</h2>
                     <p className="mb-2 mb-lg-3  order-lg-0">Step up your cleansing game with our three-piece kit containing everything you need for refined pores and clear skin. It includes a full-size cleanser, travel-size mask and reusable wipes.</p>
                     <ul className="product-form-icons list-unstyled row text-start order-lg-0 mb-0 mb-lg-3">
-                        <li className='col-12 d-flex align-items-center mb-2'>
+                        <li className='col-12 d-flex align-items-center mb-3'>
                             <FormIcon1 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             Drastically tighten pores and refines skin
                         </li>
-                        <li className='col-12 d-flex align-items-center mb-2'>
+                        <li className='col-12 d-flex align-items-center mb-3'>
                             <FormIcon2 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             Deep Pore Cleanser removes makeup and gently exfoliates with AHAs and luffa plant extract, suitable for daily use
                         </li>
-                        <li className='col-12 d-flex align-items-center mb-2'>
+                        <li className='col-12 d-flex align-items-center mb-3'>
                             <FormIcon3 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             5-time award winner Australian Pink Clay Mask clears congestion and impurities in 10 minutes
                         </li>
-                        <li className='col-12 d-flex align-items-center mb-2'>
+                        <li className='col-12 d-flex align-items-center mb-3'>
                             <FormIcon4 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             Wipe down with reusable wipes for next-level cleansing
                         </li>

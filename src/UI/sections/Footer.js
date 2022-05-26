@@ -2,7 +2,7 @@ import { ReactComponent as Logo } from '../../assets/ss-logo.svg';
 
 const Footer = () => {
 	return (
-		<footer className="pt-md-6 pt-2 pt-lg-4 pb-1 ">
+		<footer className="pt-4 pt-lg-4 ">
             <div className="container px-g">
                 <a className='navbar-brand mx-auto text-secondary mb-1 d-block text-center' href='https://www.sandandsky.com'>
                     <Logo />

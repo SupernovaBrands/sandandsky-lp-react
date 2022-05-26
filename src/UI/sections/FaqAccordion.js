@@ -25,7 +25,7 @@ const FaqAccordion = () => {
 		<section className='faq-accordion bg-secondary-light py-4'>
             <div className="container">
                 <h2 className="text-center h1">Your questions – answered</h2>
-                <div className="accordion list-unstyled border-0 mt-4 " id="faqSection">
+                <div className="accordion list-unstyled border-0 mt-2 mt-lg-4" id="faqSection">
                     {FAQCONTENT.map((faq, index) => (
                         <div key={`faqitem${index}`} className={`accordion-item border-0 border-bottom border-dark ${ index === 3 ? 'border-bottom-0':''}`}>
                             <div className="accordion-header bg-secondary-light" id={`FagItemHeading${index}`}>
