@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import ProductForm from '../sections/ProductForm';
 import '../../product.scss';
+import Carousel from '../components/Carousel';
 import ProductProvider from '../../store/ProductProvider';
 import FaqAccordion from '../sections/FaqAccordion';
 

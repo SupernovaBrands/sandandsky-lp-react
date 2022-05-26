@@ -567,8 +567,8 @@ module.exports = function (webpackEnv) {
           {},
           {
             inject: false,
-            template: 'public/sunny-honey-bali-bronzing-self-tan-set.html',
-            filename: 'sunny-honey-bali-bronzing-self-tan/index.html'
+            template: 'public/test-9.html',
+            filename: 'test-9/index.html'
           },
           isEnvProduction
             ? {

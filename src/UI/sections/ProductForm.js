@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProductImagePreview from "../components/ProductImagePreview";
 import ReviewStar from '../components/ReviewStar';
 import QuantityBox from '../components/QuantityBox';
@@ -7,8 +7,6 @@ import { ReactComponent as FormIcon1 } from '../../assets/ptk_icon_1.svg';
 import { ReactComponent as FormIcon2 } from '../../assets/ptk_icon_2.svg';
 import { ReactComponent as FormIcon3 } from '../../assets/ptk_icon_3.svg';
 import { ReactComponent as FormIcon4 } from '../../assets/ptk_icon_4.svg';
-
-import PropTypes from 'prop-types';
 
 const ProductForm = (props) => {
     const [selectedVariantId, setSelectedVariantId] = useState(1);
