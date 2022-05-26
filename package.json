@@ -2,6 +2,7 @@
   "name": "sandandsky-lp-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "../",
   "dependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@popperjs/core": "^2.11.4",
