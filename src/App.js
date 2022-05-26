@@ -9,7 +9,7 @@ const App = () => {
     <Layout>
       <Suspense fallback={<div></div>}>
         <Routes>
-          <Route path='/test1' element={<ProductDetail />} />
+          <Route path='/test2' element={<ProductDetail />} />
         </Routes>
       </Suspense>
     </Layout>
