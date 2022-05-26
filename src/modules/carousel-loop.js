@@ -4,7 +4,7 @@ const carouselLoop = (carouselId) => {
         const carouselLoop = document.getElementById(carouselId);
         const initCarouselItems = carouselLoop.querySelectorAll('.carousel-item');
         const initCarouselInner = carouselLoop.querySelector('.carousel-inner');
-
+        /*
         if (768 > window.innerWidth && initCarouselItems.length <= 5) {
             console.log(initCarouselItems.length);
             for (let i = 0; i < initCarouselItems.length; i += 1) {
@@ -14,6 +14,7 @@ const carouselLoop = (carouselId) => {
                 node.classList.remove('active');
             }
         }
+        */
 
         if (768 > window.innerWidth && carouselId === 'product-image-carousel') {
             carouselLoop.addEventListener('click', function (e) {

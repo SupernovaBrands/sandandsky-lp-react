@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import ProductImageCarousel from "../components/ProductImageCarousel";
+import ProductImagePreview from "../components/ProductImagePreview";
 import ReviewStar from '../components/ReviewStar';
 import QuantityBox from '../components/QuantityBox';
 
@@ -36,7 +36,7 @@ const ProductForm = (props) => {
     return (
         <div className="container mb-4 mt-lg-3">
             <div className="row align-items-start">
-                <ProductImageCarousel />
+                <ProductImagePreview />
                 <div className='col-12 col-lg-5 d-flex flex-column order-lg-3 px-g mt-2'>
                     <h4 className='text-center text-lg-start fw-normal order-lg-0'>Australian Pink Clay</h4>
                     <h1 className='text-center text-lg-start order-lg-0'>Pore Tight Kit</h1>
