@@ -1,5 +1,5 @@
 {
-  "name": "sandandsky-lp-react",
+  "name": "cocoandeve-react",
   "version": "0.1.0",
   "private": true,
   "homepage": "../",
@@ -75,7 +75,6 @@
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "browser-sync": "^2.27.7",
-    "del": "^6.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^5.2.1",
@@ -134,9 +133,7 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
-    ],
+    "setupFilesAfterEnv": [],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
