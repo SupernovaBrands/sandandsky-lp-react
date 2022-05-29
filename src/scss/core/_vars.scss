@@ -157,33 +157,12 @@ $carousel-control-color: $primary;
 $carousel-control-prev-icon-bg: none;
 $carousel-control-next-icon-bg: none;
 
-// Upsell
-$upsell-padding-y: calc-em(10);
-$upsell-padding-x: calc-em(15);
-$upsell-padding-y-lg: calc-em(10);
-$upsell-padding-x-lg: calc-em(10);
-
 // Video Carousel
 $carousel-control-opacity: 1;
 $carousel-control-hover-opacity: 1;
 
-// Breadcrumb
-$breadcrumb-bg: white;
-$breadcrumb-divider-color: $body-color;
-$breadcrumb-active-color: $body-color;
-$breadcrumb-divider: quote("/");
-$breadcrumb-item-padding: calc-em(5);
-$breadcrumb-font-size: calc-em(12);
-$breadcrumb-padding-x: 0;
-
 // Social Icon
 $icon-primary-font-size: calc-em(30);
-
-// Alert
-$alert-padding-x: 1.25em;
-
-// Interactions
-$hover-transition-timing: 0.15s ease-in-out;
 
 // navbar
 $navbar-nav-link-padding-x: calc-em(10, 16);
@@ -193,22 +172,11 @@ $navbar-toggler-padding-x: 0;
 
 //navbar brand
 $navbar-brand-padding-y: calc-em(9, 16);
-// Modal
-$close-text-shadow: none;
 
 // Select
 $custom-select-indicator: url("data:image/svg+xml,<svg width='28' height='12' viewBox='0 0 28 12' fill='none' xmlns='http://www.w3.org/2000/svg'><g clip-path='url(#clip0)'><path d='M-4.76837e-07 -1.22392e-06L14 12L28 0L-4.76837e-07 -1.22392e-06Z' fill='black'/></g><defs><clipPath id='clip0'><rect width='12' height='28' fill='white' transform='translate(28) rotate(90)'/></clipPath></defs></svg>");
 $custom-select-bg-size: calc-em(10) calc-em(9);
 $custom-select-font-size: $font-size-base;
-
-// Badge
-$badge-font-weight: normal;
-$badge-padding-y: calc-em(8, 16);
-$badge-padding-x: calc-em(15, 16);
-$badge-circle-width: calc-em(75);
-$badge-circle-height: calc-em(75);
-$badge-circle-width-lg: calc-em(100);
-$badge-circle-height-lg: calc-em(100);
 
 // Custom switch
 $custom-switch-indicator-size-height: calc-em(42);
@@ -221,23 +189,3 @@ $custom-control-indicator-border-color: white;
 $link-color: $body-color;
 $link-hover-decoration: none;
 $link-hover-color: $primary;
-
-// Custom switch
-$custom-switch-indicator-size-height: calc-em(42);
-$custom-switch-width: calc-em(82);
-$custom-switch-indicator-border-radius: 2em;
-$custom-control-indicator-checked-disabled-bg: $gray-400;
-$custom-control-indicator-border-color: white;
-
-// tooltip
-$tooltip-opacity: 1;
-
-//Popover
-$popover-max-width: 275px !default;
-$popover-border-radius: calc-em(8);
-$popover-body-padding-y: calc-em(8);
-$popover-body-padding-x: calc-em(8);
-$popover-box-shadow: 0 .25em .5em rgba(black, .2);
-$popover-border-width: 0;
-$popover-bg: $secondary;
-$popover-body-color: #fff;

@@ -161,11 +161,9 @@ const CustomerReview2 = () => {
                     centered={true}>
                     <button className="carousel-control carousel-control-prev  floating-out-start justify-content-start text-secondary d-none d-lg-flex" data-bs-target="#customerReviews2" role="button" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" className="svg"><path d="M16.2 1.885l-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg></span>
-                        <span className='visually-hidden-focusable'>Prev</span>
                     </button>
                     <button className="carousel-control carousel-control-next  floating-out-end justify-content-end text-secondary d-none d-lg-flex" data-bs-target="#customerReviews2" role="button" data-bs-slide="next">
                         <span className="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" className="svg"><path d="M5.428 20.742l9.428-9.428-9.428-9.428L7.314 0l11.314 11.314L7.314 22.627z"></path></svg></span>
-                        <span className='visually-hidden-focusable'>Next</span>
                     </button>
                 </Carousel>
             </div>
