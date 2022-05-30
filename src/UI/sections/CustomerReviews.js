@@ -5,50 +5,26 @@ const CustomerReviews = () => {
 
     const REVIEWS = [
         {
-            name: '@greivy.inc1',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
+            name: '@pryaathwal',
+            text: 'This mask is my saviour for helping me clear my congested pores. It make my skin feel so soft and radiant after one use!',
             jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f8e983f-d70a-4d10-7c5a-d107e3024d00',
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
         },
         {
-            name: '@greivy.inc2 ',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
+            name: '@Dalia',
+            text: 'The Australian Pink Clay is the only product I trust on my face! Your product has really helped my skin it`s almost as if it`s magic!',
             jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
         },
         {
-            name: '@greivy.inc3',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
+            name: '@ruchipage',
+            text: 'I`ve been using this over the past few weeks and it is such a reliable formula, from heavy to natural makeup this really does remove it all. But instead of stripping, it replenishes.',
             jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8e611144-8d7d-4a71-2ac7-458456523000',
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/175a591f-4b81-430a-b314-196bd0f77a00'
         },
         {
-            name: '@greivy.inc4',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/10d49152-5507-467f-6734-5f060e3f5b00',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e90f614d-0569-40ce-d0d7-8ae10279b000'
-        },
-        {
-            name: '@greivy.inc1',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f8e983f-d70a-4d10-7c5a-d107e3024d00',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
-        },
-        {
-            name: '@greivy.inc2 ',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
-        },
-        {
-            name: '@greivy.inc3',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8e611144-8d7d-4a71-2ac7-458456523000',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/175a591f-4b81-430a-b314-196bd0f77a00'
-        },
-        {
-            name: '@greivy.inc4',
-            text: 'I absolutely love to pamper my skin with the amazing pink clay mask from @sandandskyaus I wouldn’t have ended my Mother… More',
+            name: '@rebekahannemaguire',
+            text: 'I have been using this cleanser in my routine one to two times a week and loving it. My skin feels so soft, bright and refreshed after using it. I also found it helped my hormonal breakouts disappear a lot faster than usual which is a big plus for me.',
             jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/10d49152-5507-467f-6734-5f060e3f5b00',
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e90f614d-0569-40ce-d0d7-8ae10279b000'
         },

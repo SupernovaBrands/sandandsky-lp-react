@@ -135,7 +135,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                 name="Fernando C. Verified Buyer"
                 >
-                    <p className="font-size-sm">a My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
+                    <p className="font-size-sm">My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
