@@ -10,6 +10,7 @@ const App = () => {
       <Suspense fallback={<div></div>}>
         <Routes>
           <Route path='/pore-tight-kit' element={<ProductDetail />} />
+          <Route path='/australian-pink-clay-pore-tight-kit' element={<ProductDetail />} />
           <Route path='/test-18' element={<ProductDetail />} />
         </Routes>
       </Suspense>

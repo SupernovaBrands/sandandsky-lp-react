@@ -593,6 +593,32 @@ module.exports = function (webpackEnv) {
           {},
           {
             inject: false,
+            template: 'public/apc-pore-tight-kit.html',
+            filename: 'australian-pink-clay-pore-tight-kit/index.html'
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {
+            inject: false,
             template: 'public/test-17.html',
             filename: 'test-18/index.html'
           },
