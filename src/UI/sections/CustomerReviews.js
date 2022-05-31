@@ -11,7 +11,7 @@ const CustomerReviews = () => {
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
         },
         {
-            name: '@Dalia',
+            name: 'Dalia',
             text: 'The Australian Pink Clay is the only product I trust on my face! Your product has really helped my skin it`s almost as if it`s magic!',
             jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
