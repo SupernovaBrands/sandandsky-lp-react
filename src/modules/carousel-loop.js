@@ -4,23 +4,13 @@ const carouselLoop = (carouselId) => {
         const carouselLoop = document.getElementById(carouselId);
         const initCarouselItems = carouselLoop.querySelectorAll('.carousel-item');
         const initCarouselInner = carouselLoop.querySelector('.carousel-inner');
-        /*
+        
         if (768 > window.innerWidth && initCarouselItems.length <= 5) {
-            console.log(initCarouselItems.length);
             for (let i = 0; i < initCarouselItems.length; i += 1) {
-                const node = initCarouselInner.querySelectorAll('.carousel-item')[i]
+                const node = initCarouselInner.querySelectorAll('.carousel-item')[i+1]
                 const itemClone = node.cloneNode(true);
                 initCarouselInner.appendChild(itemClone);
-                node.classList.remove('active');
             }
-        }
-        */
-
-        if (768 > window.innerWidth && carouselId === 'product-image-carousel') {
-            carouselLoop.addEventListener('click', function (e) {
-                const carousel = Carousel.getInstance(carouselLoop);
-                carousel.next();
-            });
         }
 
         carouselLoop.addEventListener('slide.bs.carousel', function (e) {

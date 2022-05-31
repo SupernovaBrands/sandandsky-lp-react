@@ -7,15 +7,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                    name="Brooke M. Verified Buyer"
+                    name="Amanda Louise Patullo. Verified Buyer"
                 >
-                    <p className="font-size-sm">I have been using sand & Sky for about 2 months, and I love it! My skin feels great. I've tried so many other products. I have dark spots and occasional acne at 40 years old. And it is finally looking better! I use the deep pore cleanser, the exfoliating face scrub, the pink clay mask, and bounce mask.</p>
+                    <p className="font-size-sm">I love it<br/>My skin has gone from looking dull and lifeless to looking fresh, plump, hydrated & full of life! I absolutely love how this product makes me feel, my confidence levels are through the roof since using it.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c964bfc6-c9a7-4be1-be94-21d95955ed00/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x" className="img-fluid" alt="" loading="lazy" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000//400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
                         </div>
                     </div>
@@ -25,15 +25,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                    name="Megan P. Verified Buyer"
+                    name="Samara Jaye Smith. Verified Buyer"
                 >
-                    <p className="font-size-sm">I love this cleanser! Not only does it smell amazingly fresh and clean, but it is gentle enough for every day use. It makes your skin feel so nice and soft and not really tight after use. I do tend to have more sensitive skin so this is perfect for me. I really love Sand & Sky and cannot wait until I have each and every product. Thank you! X</p>
+                    <p className="font-size-sm">Love this product!<br/>My skin is smooth, soft and cleaner than ever! After I washed it off I was astounded that my pores shrunk by over half their original size! Love this product!</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4d0125e8-3ff5-4235-f1d4-120c4f89a800/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x"className="w-100" alt="" loading="lazy"  />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x"className="w-100" alt="" loading="lazy"  />
                             </picture>
                         </div>
                     </div>
@@ -43,15 +43,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                name="Rochelle P. Verified Buyer"
+                name="Michelle Contreras. Verified Buyer"
                 >
-                    <p>No make up, no worries I'm not a fan of make up so these products are my best friend. The first thing I tried was the detox pink clay mask and since then I’ve been hooked! I now have a little collection of sand and sky and I love them all. My latest but was the cleanser and I love what it’s doing for my skin! Soft, glowy, fresh, lovely skin!</p>
+                    <p>So fresh<br/>My skin was significantly brighter and felt so light and clean! It was fresh and the texture felt very great on my skin, and I felt like it was actually working on getting all the gunk off. </p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b74c1807-7b1a-4c2c-4839-15db63d14600/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/92f28102-38ad-4c16-ce68-953e8cd23100/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/92f28102-38ad-4c16-ce68-953e8cd23100/200x" className="img-fluid" alt="" loading="lazy" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
                         </div>
                     </div>
@@ -61,15 +61,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                name="Fernando C. Verified Buyer"
+                name="Stephanie Marie. Verified Buyer"
                 >
-                    <p className="font-size-sm">My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
+                    <p className="font-size-sm">I love how my skin feels!<br/>I love anything that has to do with Australian clay! So, I was super excited to try this cleanser. The rich smell combined with the exfoliate particles gives this cleanser a luxurious feel. It didn't dry up my skin it left it soft to the touch. I love the way my skin looks and feels. </p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ac2234b6-f53d-4660-3bb2-7874871e7700/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6a46b0a4-291a-4f26-cd53-072f247b7500/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6a46b0a4-291a-4f26-cd53-072f247b7500/200x" className="img-fluid" alt="" loading="lazy" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
                         </div>
                     </div>
@@ -79,15 +79,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                    name="Brooke M. Verified Buyer"
+                    name="Cass Wong. Verified Buyer"
                 >
-                    <p className="font-size-sm">I have been using sand & Sky for about 2 months, and I love it! My skin feels great. I've tried so many other products. I have dark spots and occasional acne at 40 years old. And it is finally looking better! I use the deep pore cleanser, the exfoliating face scrub, the pink clay mask, and bounce mask.</p>
+                    <p className="font-size-sm">Best morning cleanser<br/>My experience with this cleanser has definitely been a pleasant one! The texture is beautiful, it’s so soft and lightweight with small beads in it. The smells is nice, not too overpowering and smells natural. I love it as a morning cleanser as it makes my skin feel a lot brighter and nourished.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c964bfc6-c9a7-4be1-be94-21d95955ed00/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x" className="img-fluid" alt="" loading="lazy" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
                         </div>
                     </div>
@@ -97,15 +97,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                    name="Megan P. Verified Buyer"
+                    name="Amanda Louise Patullo. Verified Buyer"
                 >
-                    <p className="font-size-sm">I love this cleanser! Not only does it smell amazingly fresh and clean, but it is gentle enough for every day use. It makes your skin feel so nice and soft and not really tight after use. I do tend to have more sensitive skin so this is perfect for me. I really love Sand & Sky and cannot wait until I have each and every product. Thank you! X</p>
+                    <p className="font-size-sm">I love it<br/>My skin has gone from looking dull and lifeless to looking fresh, plump, hydrated & full of life! I absolutely love how this product makes me feel, my confidence levels are through the roof since using it.</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4d0125e8-3ff5-4235-f1d4-120c4f89a800/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f71bc4d4-3998-4fef-d25c-787feb678b00/200x"className="w-100" alt="" loading="lazy"  />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000//400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
                         </div>
                     </div>
@@ -115,15 +115,15 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                name="Rochelle P. Verified Buyer"
+                    name="Samara Jaye Smith. Verified Buyer"
                 >
-                    <p className="font-size-sm">No make up, no worries I'm not a fan of make up so these products are my best friend. The first thing I tried was the detox pink clay mask and since then I’ve been hooked! I now have a little collection of sand and sky and I love them all. My latest but was the cleanser and I love what it’s doing for my skin! Soft, glowy, fresh, lovely skin!</p>
+                    <p className="font-size-sm">Love this product!<br/>My skin is smooth, soft and cleaner than ever! After I washed it off I was astounded that my pores shrunk by over half their original size! Love this product!</p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b74c1807-7b1a-4c2c-4839-15db63d14600/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/92f28102-38ad-4c16-ce68-953e8cd23100/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/92f28102-38ad-4c16-ce68-953e8cd23100/200x" className="img-fluid" alt="" loading="lazy" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x"className="w-100" alt="" loading="lazy"  />
                             </picture>
                         </div>
                     </div>
@@ -133,15 +133,51 @@ const CustomerReview2 = () => {
             carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
             content:
                 <ReviewCard
-                name="Fernando C. Verified Buyer"
+                name="Michelle Contreras. Verified Buyer"
                 >
-                    <p className="font-size-sm">My new favorite and go to cleanser. This one doesn't burn or feels too strong on your skin. I recommend getting the whole kit. It'll be worth it.</p>
+                    <p>So fresh<br/>My skin was significantly brighter and felt so light and clean! It was fresh and the texture felt very great on my skin, and I felt like it was actually working on getting all the gunk off. </p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ac2234b6-f53d-4660-3bb2-7874871e7700/200x" />
-                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6a46b0a4-291a-4f26-cd53-072f247b7500/200x" />
-                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6a46b0a4-291a-4f26-cd53-072f247b7500/200x" className="img-fluid" alt="" loading="lazy" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" className="img-fluid w-100" alt="" loading="lazy" />
+                            </picture>
+                        </div>
+                    </div>
+                </ReviewCard>
+        },
+        {
+            carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
+            content:
+                <ReviewCard
+                name="Stephanie Marie. Verified Buyer"
+                >
+                    <p className="font-size-sm">I love how my skin feels!<br/>I love anything that has to do with Australian clay! So, I was super excited to try this cleanser. The rich smell combined with the exfoliate particles gives this cleanser a luxurious feel. It didn't dry up my skin it left it soft to the touch. I love the way my skin looks and feels. </p>
+                    <div className='row no-gutters'>
+                        <div className='col-6'>
+                            <picture>
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" className="img-fluid w-100" alt="" loading="lazy" />
+                            </picture>
+                        </div>
+                    </div>
+                </ReviewCard>
+        },
+        {
+            carouselItemClass: 'carousel-item col-9 col-md-4 rounded px-0',
+            content:
+                <ReviewCard
+                    name="Cass Wong. Verified Buyer"
+                >
+                    <p className="font-size-sm">Best morning cleanser<br/>My experience with this cleanser has definitely been a pleasant one! The texture is beautiful, it’s so soft and lightweight with small beads in it. The smells is nice, not too overpowering and smells natural. I love it as a morning cleanser as it makes my skin feel a lot brighter and nourished.</p>
+                    <div className='row no-gutters'>
+                        <div className='col-6'>
+                            <picture>
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" />
+                                <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" />
+                                <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
                         </div>
                     </div>
@@ -150,7 +186,7 @@ const CustomerReview2 = () => {
     ]
 
 	return (
-		<section className='customer-reviews pb-5 pt-2 pt-lg-4'>
+		<section className='customer-reviews pb-5 pt-4 pt-lg-4'>
             <h2 className="h1 mb-4 text-center">Customer Reviews</h2>
             <div className='container px-g pe-0 pe-lg-g'>
                 <Carousel
