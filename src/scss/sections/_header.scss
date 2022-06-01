@@ -1,5 +1,8 @@
 
 @include media-breakpoint-up(lg) {
+	header {
+		box-shadow: 0 0.1em 0.1em #0000000f;
+	}
 	.navbar-brand {
 		padding-top: calc-em(9.10, 16);
 		padding-bottom: calc-em(9.10, 16);

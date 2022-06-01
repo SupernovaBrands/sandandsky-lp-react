@@ -88,3 +88,7 @@ export const isABTest = (testID) => new Promise((resolve) => {
 		}
 	});
 });
+
+export const truncateWords = (str, no_words) => {
+    return str.split(" ").splice(0,no_words).join(" ");
+}

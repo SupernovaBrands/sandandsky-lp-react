@@ -1,4 +1,5 @@
 import carouselScroll from "../../modules/carousel-scroll";
+import { truncateWords } from '../../modules/Utils';
 
 const CustomerReviews = () => {
     carouselScroll('customerReviews');
@@ -11,7 +12,7 @@ const CustomerReviews = () => {
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
         },
         {
-            name: 'Dalia',
+            name: '@Dalia',
             text: "The Australian Pink Clay is the only product I trust on my face! Your product has really helped my skin it's almost as if it's magic!",
             jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
@@ -29,6 +30,19 @@ const CustomerReviews = () => {
             webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e90f614d-0569-40ce-d0d7-8ae10279b000'
         },
     ]
+
+    const onMore = (event) => {
+        event.target.closest('p').querySelector('.review-card__more-text').classList.remove('d-none');
+        event.target.closest('p').querySelector('.review-card__more-truncated').classList.add('d-none');
+        event.target.closest('p').querySelector('.review-card__more').classList.add('d-none');
+    }
+
+    const onLess = (event) => {
+        event.target.closest('p').querySelector('.review-card__more-text').classList.add('d-none');
+        event.target.closest('p').querySelector('.review-card__more-truncated').classList.remove('d-none');
+        event.target.closest('p').querySelector('.review-card__more').classList.remove('d-none');
+    }
+
     return (
         <section className="review-carousel py-4 py-lg-7 overflow-hidden position-relative">
             <div className="container px-g">
@@ -50,7 +64,14 @@ const CustomerReviews = () => {
                                 </picture>
                                 <figcaption className="m-0 bg-secondary-light font-size-sm px-g py-3">
                                     <p className="mb-3 text-body">{item.name}</p>
-                                    <p className="d-block text-body">{item.text}</p>
+                                    <p className="d-block text-body">
+                                        <span class="review-card__more-truncated text-break">{ truncateWords(item.text, 17) }... </span>
+                                        <span class="d-none review-card__more-text text-break">
+                                            {item.text}
+                                            <a href="javascript:void(0)" class="text-underline text-body review-card__less ms-1" onClick={onLess.bind(this)}>Less</a>
+                                        </span>
+			                            <a href="javascript:void(0)" class="text-underline text-body review-card__more" onClick={onMore.bind(this)}>More</a>
+                                    </p>
                                 </figcaption>
                             </figure>
                         ))}

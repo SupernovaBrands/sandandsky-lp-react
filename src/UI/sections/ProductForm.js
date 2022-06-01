@@ -58,7 +58,7 @@ const ProductForm = (props) => {
                         </div>
                         <button key="ProductFormButton2" className="btn btn-lg btn-primary ms-lg-g w-100 text-white" type="submit" onClick={onAddToCart}>Add to Cart</button>
 					</div>
-                    <h2 className='mx-4 text-center d-lg-none'>Your go-to kit for peak purification</h2>
+                    <h2 className='mx-4 text-center d-lg-none h1'>Your go-to kit for peak purification</h2>
                     <p className="mb-2 mb-lg-3  order-lg-0">Step up your cleansing game with our three-piece kit containing everything you need for refined pores and clear skin. It includes a full-size cleanser, travel-size mask and reusable wipes.</p>
                     <ul className="product-form-icons list-unstyled row text-start order-lg-0 mb-0 mb-lg-3">
                         <li className='col-12 d-flex align-items-center mb-3'>
