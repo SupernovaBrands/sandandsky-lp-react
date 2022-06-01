@@ -45,7 +45,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                 name="Michelle Contreras. Verified Buyer"
                 >
-                    <p>So fresh<br/>My skin was significantly brighter and felt so light and clean! It was fresh and the texture felt very great on my skin, and I felt like it was actually working on getting all the gunk off. </p>
+                    <p className="font-size-sm">So fresh<br/>My skin was significantly brighter and felt so light and clean! It was fresh and the texture felt very great on my skin, and I felt like it was actually working on getting all the gunk off. </p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
@@ -135,7 +135,7 @@ const CustomerReview2 = () => {
                 <ReviewCard
                 name="Michelle Contreras. Verified Buyer"
                 >
-                    <p>So fresh<br/>My skin was significantly brighter and felt so light and clean! It was fresh and the texture felt very great on my skin, and I felt like it was actually working on getting all the gunk off. </p>
+                    <p className="font-size-sm">So fresh<br/>My skin was significantly brighter and felt so light and clean! It was fresh and the texture felt very great on my skin, and I felt like it was actually working on getting all the gunk off. </p>
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
