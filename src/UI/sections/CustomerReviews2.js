@@ -85,7 +85,7 @@ const CustomerReview2 = () => {
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e510bd03-024d-4c99-e801-a3203ab4c000/400x" />
                                 <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" />
                                 <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ded8bbac-8f8e-4d19-4b3d-e0ef940d5900/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
@@ -103,7 +103,7 @@ const CustomerReview2 = () => {
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000/400x" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6337e990-d7ed-412c-1b20-37a6a9209f00/400x" />
                                 <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000/400x" />
                                 <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/47848a51-846c-447e-e8e0-4db4b321b000//400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
@@ -121,7 +121,7 @@ const CustomerReview2 = () => {
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8f672efb-4057-4e12-d30e-6ffc97457200/400x" />
                                 <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x" />
                                 <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f2e1b61-79ed-4c9b-eafe-147492adbc00/400x"className="w-100" alt="" loading="lazy"  />
                             </picture>
@@ -139,7 +139,7 @@ const CustomerReview2 = () => {
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f9285483-40a3-4050-0fdf-8a708184dd00/400x" />
                                 <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" />
                                 <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ea4d4048-e871-4800-3a3f-fc59a1da4300/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
@@ -157,7 +157,7 @@ const CustomerReview2 = () => {
                     <div className='row no-gutters'>
                         <div className='col-6'>
                             <picture>
-                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" />
+                                <source type="image/webp" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6febae62-6274-47bd-f6c8-f98aacdfb000/400x" />
                                 <source type="image/jpeg" srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" />
                                 <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c152a417-c00d-46e6-8b75-fddc541e1100/400x" className="img-fluid w-100" alt="" loading="lazy" />
                             </picture>
