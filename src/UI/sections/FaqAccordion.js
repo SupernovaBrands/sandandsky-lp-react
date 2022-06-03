@@ -1,6 +1,8 @@
 import { ReactComponent as Minus } from '../../assets/minus.svg';
 import { ReactComponent as Plus } from '../../assets/plus.svg';
 
+const bootstrap = require("bootstrap")
+
 const FaqAccordion = () => {
     const FAQCONTENT = [
         {
@@ -20,6 +22,26 @@ const FaqAccordion = () => {
             content: '<p>Use the cleanser morning and night. For sensitive skin, use it as a night cleanser. Use the mask 2-3 times a week for oily/combination skin and 1-2 times a week for sensitive/dry skin.</p>',
         }
     ]
+    
+    setTimeout(function () {
+        const collapseEl = document.getElementById('faqSection');
+        collapseEl.addEventListener('hidden.bs.collapse', function (e) {
+            
+            setTimeout(function () {
+                const contentId = e.target.id
+                const collapseEl = document.getElementById(contentId);
+                const isShow = collapseEl.classList.contains('show');
+                var bsCollapse = new bootstrap.Collapse(collapseEl, {
+                    toggle: false
+                });
+
+                if (isShow) {
+                    bsCollapse.hide();
+                }
+                
+            })
+        });
+    });
 
 	return (
 		<section className='faq-accordion bg-secondary-light py-4'>
