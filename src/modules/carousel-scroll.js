@@ -8,22 +8,28 @@ const adjustScrollThumb = (thumb, inner, scrollParent) => {
 	thumb.style.width = `${(inner.clientWidth / innerOuterWidth) * 100}%`;
 	// eslint-disable-next-line no-param-reassign
 	thumb.style.left = `${(inner.scrollLeft / inner.scrollWidth) * 100}%`;
+    const items = inner.querySelectorAll('.carousel-item');
 };
 
 const carouselScroll = (carouselId) => {
     setTimeout(() => {
         const carousel = document.getElementById(carouselId);
-
         const inner = carousel.querySelector('.carousel-inner');
+        const items = carousel.querySelectorAll('.carousel-item');
         const scrollbar = carousel.querySelector('.scrollbar');
         const scrollThumb = carousel.querySelector('.scrollbar--thumb');
         const prevButton = carousel.querySelector('.carousel-control-prev');
         const nextButton = carousel.querySelector('.carousel-control-next');
-
         if (scrollbar) {
             carousel.addEventListener('adjustThumb', () => { adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode); });
             if (scrollThumb) adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode);
+            console.log('add', items.length)
+            if (items.length < 5 && 768 <= window.innerWidth) {
+                
+                scrollbar.classList.add('d-none');
+            }
         }
+
         carousels.push(carousel);
 
         let x = 0;
