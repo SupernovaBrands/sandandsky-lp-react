@@ -43,8 +43,8 @@ const ProductForm = (props) => {
                         <span className='ms-1'> <a href="https:www//us.sandandsky.com/products/pore-tight-kit" className='text-underline text-dark'>407 Reviews</a></span>
                     </div>
                     <p className="mb-2 order-lg-0 text-center text-lg-start">
-						<span className="text-linethrough text-muted h2 me-1">$89.80</span>
-                        <span className="font-weight-bold h2 me-1">$62.80</span>
+						<span className="text-linethrough text-muted h2 me-1">$103.70</span>
+                        <span className="font-weight-bold h2 me-1">$72.60</span>
                         <span className="h2 fw-normal text-secondary">(SAVE 30%)</span>
                     </p>
                     <div className="d-flex product-swatch-mobile__trigger pdp-afterpay-selector mb-g order-lg-1" data-text="Add to cart" data-oos="Sold Out">
