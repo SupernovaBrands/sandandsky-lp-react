@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ProductImagePreview from "../components/ProductImagePreview";
 import ReviewStar from '../components/ReviewStar';
 import QuantityBox from '../components/QuantityBox';
+import ProductContext from '../../store/product-context';
 
 import { ReactComponent as FormIcon1 } from '../../assets/ptk_icon_1.svg';
 import { ReactComponent as FormIcon2 } from '../../assets/ptk_icon_2.svg';
@@ -9,6 +10,16 @@ import { ReactComponent as FormIcon3 } from '../../assets/ptk_icon_3.svg';
 import { ReactComponent as FormIcon4 } from '../../assets/ptk_icon_4.svg';
 
 const ProductForm = (props) => {
+    let params = (new URL(document.location)).searchParams;
+	let activeStore = params.get("utm_store") || 'us';
+
+    const productCtx = useContext(ProductContext);
+    productCtx.storeChange(activeStore);
+
+    const defaultPrice = productCtx.price;
+    const defaultCompareAtPrice = productCtx.compareAtPrice;
+    const defaultSaving = productCtx.saving;
+
     const [selectedVariantId, setSelectedVariantId] = useState(1);
     const [quantity, setQuantity] = useState(1);
     const [buttonUrl, setButtonUrl] = useState(`https://www.sandandsky.com?itemtoadd=var1&quantity=${quantity}`);
@@ -43,9 +54,9 @@ const ProductForm = (props) => {
                         <span className='ms-1'> <a href="https:www//us.sandandsky.com/products/pore-tight-kit" className='text-underline text-dark'>407 Reviews</a></span>
                     </div>
                     <p className="mb-2 order-lg-0 text-center text-lg-start">
-						<span className="text-linethrough text-muted h2 me-1">$103.70</span>
-                        <span className="font-weight-bold h2 me-1">$72.60</span>
-                        <span className="h2 fw-normal text-secondary">(SAVE 30%)</span>
+						<span className="text-linethrough text-muted h2 me-1">{defaultPrice}</span>
+                        <span className="font-weight-bold h2 me-1">{defaultCompareAtPrice}</span>
+                        <span className="h2 fw-normal text-secondary">({defaultSaving})</span>
                     </p>
                     <div className="d-flex product-swatch-mobile__trigger pdp-afterpay-selector mb-g order-lg-1" data-text="Add to cart" data-oos="Sold Out">
                         <div className="d-flex">

@@ -1,66 +1,51 @@
 import { useReducer } from "react";
 import ProductContext from "./product-context";
 
-const price = {
+const _content = {
     us: {
-        price: '$46.90',
-        compareAtPrice: '$73.90',
-        saving: 'Save 37%',
+        price: '$67.70',
+        compareAtPrice: '$47.40',
+        saving: 'Save 30%',
     },
     uk: {
-        price: '£39.90',
-        compareAtPrice: '£56.90',
+        price: '£62.70',
+        compareAtPrice: '£43.90',
         saving: 'Save 30%',
     },
     ca: {
-        price: '$59.90',
-        compareAtPrice: '$101.90',
-        saving: 'Save 41%',
+        price: '$89.70',
+        compareAtPrice: '$62.80',
+        saving: 'Save 30%',
     },
     au: {
-        price: '$69.20',
-        compareAtPrice: '$99.90',
-        saving: 'Save 31%',
+        price: '$103.70',
+        compareAtPrice: '$72.60',
+        saving: 'Save 30%',
     },
     eu: {
-        price: '€46,90',
-        compareAtPrice: '€65,90',
-        saving: 'Save 29%',
+        price: '€67,70',
+        compareAtPrice: '€47,40',
+        saving: 'Save 30%',
     },
     int: {
-        price: 'SG$64.90',
-        compareAtPrice: 'SG$101.90',
-        saving: 'Save 36%',
-    },
-    fr: {
-        price: '€46,90',
-        compareAtPrice: '€65,90',
-        saving: '29% de réduction',
-    },
-    de: {
-        price: '€46,90',
-        compareAtPrice: '€65,90',
-        saving: 'Spare 29%',
+        price: '$67.70',
+        compareAtPrice: '$47.40',
+        saving: 'Save 30%',
     }
 }
 
 const productReducer = (state, action) => {
-    return price[action.activeStore];
+    return _content[action.activeStore];
 };
 
 const ProductProvider = props => {
-    const [productState, dispatchProductAction] = useReducer(productReducer, price.uk);
+    const [productState, dispatchProductAction] = useReducer(productReducer, _content.us);
     const storeChangeHandler = (activeStore) => {
-        dispatchProductAction({type: 'CHANGESTORE', activeStore: activeStore})
+        const validStore = ['us', 'au', 'ca', 'uk', 'eu', 'int'].indexOf(activeStore) !== -1 ? activeStore : 'us';
+        dispatchProductAction({type: 'CHANGESTORE', activeStore: validStore})
     };
 
-    const productContext = {
-        price: productState.price,
-        compareAtPrice: productState.compareAtPrice,
-        saving: productState.saving,
-        storeChange: storeChangeHandler,
-    };
-    
+    const productContext = { ...productState, storeChange: storeChangeHandler };
 
     return (
         <ProductContext.Provider value={productContext}>
