@@ -51,7 +51,7 @@ const ProductForm = (props) => {
                     <h1 className='text-center text-lg-start order-lg-0'>Pore Tight Kit</h1>
                     <div className="d-flex mb-2 justify-content-center justify-content-lg-start order-lg-0">
                         <ReviewStar score={4.8} /> 
-                        <span className='ms-1'> <a href="https:www//us.sandandsky.com/products/pore-tight-kit" className='text-underline text-dark'>407 Reviews</a></span>
+                        <span className='ms-1'> <a href="https://www.sandandsky.com/products/pore-tight-kit#write-a-review" className='text-underline text-dark'>407 Reviews</a></span>
                     </div>
                     <p className="mb-2 order-lg-0 text-center text-lg-start">
 						<span className="text-linethrough text-muted h2 me-1">{defaultCompareAtPrice}</span>
