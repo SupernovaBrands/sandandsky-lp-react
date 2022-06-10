@@ -3,34 +3,39 @@ import ProductContext from "./product-context";
 
 const _content = {
     us: {
-        price: '$67.70',
-        compareAtPrice: '$47.40',
+        compareAtPrice: '$67.70',
+        price: '$47.40',
         saving: 'Save 30%',
     },
     uk: {
-        price: '£62.70',
-        compareAtPrice: '£43.90',
+        compareAtPrice: '£62.70',
+        price: '£43.90',
         saving: 'Save 30%',
     },
     ca: {
-        price: '$89.70',
-        compareAtPrice: '$62.80',
+        compareAtPrice: '$89.70',
+        price: '$62.80',
         saving: 'Save 30%',
     },
     au: {
-        price: '$103.70',
-        compareAtPrice: '$72.60',
+        compareAtPrice: '$103.70',
+        price: '$72.60',
         saving: 'Save 30%',
     },
     eu: {
-        price: '€67,70',
-        compareAtPrice: '€47,40',
+        compareAtPrice: '€67,70',
+        price: '€47,40',
         saving: 'Save 30%',
     },
     int: {
-        price: '$67.70',
-        compareAtPrice: '$47.40',
+        compareAtPrice: '$67.70',
+        price: '$47.40',
         saving: 'Save 30%',
+    },
+    my: {
+        compareAtPrice: 'RM303.00',
+        price: 'RM239.00',
+        saving: 'Save 21%',
     }
 }
 
@@ -41,7 +46,7 @@ const productReducer = (state, action) => {
 const ProductProvider = props => {
     const [productState, dispatchProductAction] = useReducer(productReducer, _content.us);
     const storeChangeHandler = (activeStore) => {
-        const validStore = ['us', 'au', 'ca', 'uk', 'eu', 'int'].indexOf(activeStore) !== -1 ? activeStore : 'us';
+        const validStore = ['us', 'au', 'ca', 'uk', 'eu', 'int', 'my'].indexOf(activeStore) !== -1 ? activeStore : 'us';
         dispatchProductAction({type: 'CHANGESTORE', activeStore: validStore})
     };
 
