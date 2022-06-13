@@ -33,9 +33,6 @@ const abeautyCarousel = (carouselId) => {
      }
 
     carouselEl.addEventListener('slide.bs.carousel', function (e) {
-        console.log('e', e)
-        console.log('e.to', e.to)
-        console.log('e.related', e)
         
         if ((e.from === 3 && e.to === 0) || (e.to === 3 && e.from === 0)) {
             carouselEl.classList.add('reverse-direction');

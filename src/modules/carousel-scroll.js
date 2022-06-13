@@ -23,7 +23,6 @@ const carouselScroll = (carouselId) => {
         if (scrollbar) {
             carousel.addEventListener('adjustThumb', () => { adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode); });
             if (scrollThumb) adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode);
-            console.log('add', items.length)
             if (items.length < 5 && 768 <= window.innerWidth) {
                 
                 scrollbar.classList.add('d-none');
