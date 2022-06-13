@@ -35,7 +35,7 @@ const ProductForm = (props) => {
             window.ga('send', 'event', {
                 eventCategory: 'Add to Cart',
                 eventAction: 'lp_pdp_cta',
-                eventLabel: 'sunny-honey-bali-bronzing-self-tan-set',
+                eventLabel: 'pore-tight-kit',
                 eventValue: 0,
             });
         }
