@@ -11,6 +11,7 @@ const Questions = [
         inputType: 'Button',
         showAllLabel: null,
         category: 'Identifying your skin type',
+        btnClass: 'btn__choice-bigger',
     },
     {
         question: 'How many hours of sun are you exposed to daily?',
@@ -26,6 +27,7 @@ const Questions = [
         inputType: 'RangeSlider',
         showAllLabel: false,
         category: 'Identifying environmental stressors',
+        btnClass: 'btn__choice-bigger',
     },
     {
         question: 'How much stress do you experience on a regular basis?',
@@ -51,6 +53,7 @@ const Questions = [
         inputType: 'Button',
         showAllLabel: null,
         category: 'Identifying environmental stressors',
+        btnClass: 'btn__choice-bigger',
     },
     {
         question: 'Which age range do you fall into?',
@@ -65,6 +68,7 @@ const Questions = [
         inputType: 'Button',
         showAllLabel: null,
         category: 'Identifying key ingredients',
+        btnClass: 'btn__choice-bigger',
     },
     {
         question: 'What type of skincare products are you currently using?',
@@ -77,15 +81,18 @@ const Questions = [
             {label: 'Moisturiser'},
         ],
         caption: '*Choose up to 6',
+        captionClass: 'w-100 font-size-sm mb-4',
         type: 'MultipleChoice',
         lastFull: false,
         maxChoose: 6,
         lastDisableForAll: false,
         category: 'Identifying key ingredients',
+        btnClass: 'btn__choice-bigger',
     },
     {
         question: 'What is your top skin concern?',
         caption: '*Choose 1',
+        captionClass: 'w-100 font-size-sm mb-0',
         answers: [
             'Clogged or enlarged pores',
             'Blemishes or acne',
@@ -101,6 +108,7 @@ const Questions = [
         inputType: 'Button',
         showAllLabel: null,
         category: 'Identifying key ingredients',
+        btnClass: 'btn__choice-medium',
     },
 ];
 

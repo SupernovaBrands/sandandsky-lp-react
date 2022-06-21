@@ -48,11 +48,21 @@
     }
 }
 
-.btn__choice-bigger {
-    min-height: calc-em(80);
+.btn__choice {
+    &-bigger {
+        min-height: calc-em(80);
 
-    @include media-breakpoint-up(lg) {
-        min-height: calc-em(70);
+        @include media-breakpoint-up(lg) {
+            min-height: calc-em(70);
+        }
+    }
+
+    &-medium {
+        min-height: calc-em(60);
+
+        @include media-breakpoint-up(lg) {
+            min-height: calc-em(70);
+        }
     }
 }
 

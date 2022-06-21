@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Questions from '../../modules/questions';
 import ProgressBarStep from './ProgressBarStep';
+import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
 
 export const SurveyContext = React.createContext();
 const QuestionBox = (props) => {
     const {
         question,
         caption,
+        captionClass,
         children,
         colSize,
         currentQuestion,
@@ -48,16 +50,23 @@ const QuestionBox = (props) => {
     return (
         <div className={`${colSize} col-12 d-flex flex-wrap justify-content-center question-box`}>
             <ProgressBarStep category={category} currentQuestion={currentQuestion} totalQuestions={totalSteps} />
-            <p className={`${caption ? 'w-100' : 'w-100 mb-2'} h1`}>{question}</p>
-            { caption && (<p className="w-100 mb-4 font-size-sm">{caption}</p>)}
-            <SurveyContext.Provider value={{answerAction: answer, currentQuestion: currentQuestion, width, height, setDisable: setDisable, currentAnswer }}>
-                { children }
-            </SurveyContext.Provider>
-            <div className="footer-action w-100 pt-5 mt-5 pb-2 bg-white">
-                <button className="btn btn-secondary text-white btn-next" onClick={nextAction()} disabled={isDisabled}>{ isLastQuestion ? 'See results!' : 'Next' }</button>
-                {
-                    currentQuestion > 1 && (<a href="/" className="d-block text-underline text-black w-100 mt-2 mb-lg-4" onClick={prevAction()}>Prev</a>)
-                }
+            <div className="d-flex justify-content-center align-items-center flex-column question-box__content mb-2">
+                <p className={`${caption ? 'w-100' : 'w-100 mb-4 mb-lg-2'} h1 mt-4`}>{question}</p>
+                { caption && (<p className={captionClass}>{caption}</p>)}
+                <SurveyContext.Provider value={{answerAction: answer, currentQuestion: currentQuestion, width, height, setDisable: setDisable, currentAnswer }}>
+                    { children }
+                </SurveyContext.Provider>
+            </div>
+            <div className="footer-action w-100 my-5 pt-lg-5 bg-white">
+                <div className={`row align-items-end ${currentQuestion > 1 ? '' : 'justify-content-center'}`}>
+                    {
+                        currentQuestion > 1 && (<a href="/" className="col-3 col-lg-2 text-start text-underline text-body font-size-sm mb-1" onClick={prevAction()}>Previous</a>)
+                    }
+                    <div className={`col-6 col-lg-4 ${currentQuestion > 1 ? 'offset-lg-2' : ''}`}>
+                        <button className="btn btn-secondary text-white btn-next w-100" onClick={nextAction()} disabled={isDisabled}>{ isLastQuestion ? 'View my results' : 'Next' }</button>
+                    </div>
+                </div>
+                <SplashBottom className="d-none d-lg-block question-box__decoration-bottom position-absolute start-0 bottom-0" />
             </div>
         </div>
     )

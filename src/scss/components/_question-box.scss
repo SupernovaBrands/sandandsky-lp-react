@@ -31,4 +31,16 @@
             border-color: $secondary;
         }
     }
+
+    &__content {
+        min-height: 60vh;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 50vh;
+        }
+    }
+
+    &__decoration-top {
+        top: calc-em(85);
+    }
 }

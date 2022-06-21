@@ -14,6 +14,7 @@ const MultipleChoice = (props) => {
     const {
         answers,
         lastFull,
+        btnClass,
     } = props;
 
     const defaultSelected = currentAnswer && currentAnswer[currentQuestion] ? currentAnswer[currentQuestion].split(",") : [];
@@ -89,7 +90,7 @@ const MultipleChoice = (props) => {
             {answers.map((answer, index) => {
                 console.log('index', index);
                 const full = lastFull && index + 1 === answers.length ? 'col-12' : 'col-6';
-                const classes = 'd-flex rounded align-items-center mb-g mb-lg-3 btn__choice-bigger position-relative border--default';
+                const classes = `d-flex rounded align-items-center mb-g mb-lg-3 ${btnClass} position-relative border--default`;
                 const disabledClass = disableRest && !selectedItems.includes(answer.label) ? 'disabled' : '';
                 const itemClasses = selectedItems.includes(answer.label) ? 'border--default-selected position-relative bg-secondary-light' : '';
                 return (

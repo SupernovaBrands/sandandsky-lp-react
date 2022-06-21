@@ -12,5 +12,10 @@
 		width: 10px;
 		height: 10px;
 		border-color: $gray-600 !important;
+
+		@include media-breakpoint-up(lg) {
+			width: 15px;
+			height: 15px;
+		}
 	}
 }

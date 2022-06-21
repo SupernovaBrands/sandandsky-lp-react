@@ -7,6 +7,7 @@ const SingleChoice = (props) => {
         answers,
         buttonType,
         inputType,
+        btnClass,
     } = props;
 
     const {
@@ -38,6 +39,7 @@ const SingleChoice = (props) => {
         const selected = answers[event.target.value];
         setSelectedItem(selected);
         answerAction(selected);
+        setDisable(false);
     };
 
     const percentVal = (rangeValue - rangeMin) * 100 / (rangeMax - rangeMin);
@@ -55,14 +57,14 @@ const SingleChoice = (props) => {
     }
 
     return (
-        <div className="col-12 px-0">
-            <div className={`${inputType === 'Button' ? 'row' : 'position-relative pt-3'} justify-content-center ${inputType === 'RangeSlider' && props.showAllLabel ? 'overflow-hidden' : ''}`}>
+        <div className={`col-12 px-0 pt-1 ${inputType === 'RangeSlider' ? 'pt-lg-5 mt-lg-4' : ''}`}>
+            <div className={`${inputType === 'Button' ? 'row' : 'position-relative pt-4 pt-lg-5'} justify-content-center ${inputType === 'RangeSlider' && props.showAllLabel ? 'overflow-hidden' : ''}`}>
                 {inputType === 'Button' && answers.map((answer, index) => {
                     const classes = answer === selectedItem ? 'bg-secondary-light border--default-selected' : '';
                     return (
                         <div key={index} className={`${classesCol} mt-g mt-lg-3`}>
                             <button
-                                className={`border--default ${classes} position-relative btn btn__choice-bigger btn-lg w-100 btn-outline fw-normal h-100 px-g px-lg-3 py-2 py-lg-g`}
+                                className={`border--default ${classes} position-relative btn ${btnClass} btn-lg w-100 btn-outline fw-normal h-100 ${btnClass === 'btn__choice-medium' ? 'px-2' : 'px-g'} px-lg-2 py-2 py-lg-g`}
                                 onClick={() => selectItem(index)}>
                                 {answer}
                             </button>
@@ -76,7 +78,7 @@ const SingleChoice = (props) => {
                             <span style={percentLeft} className="position-absolute range__value">{answers[rangeValue]}</span>
                         )}
                         {props.showAllLabel && (
-                            <div className="row mx-n4 mx-lg-n6">
+                            <div className="row mx-n4 mx-lg-n6 pb-2">
                                 {answers.map((answer, index) => {
                                     return(
                                         <div key={index} className="col-3">{answer}</div>

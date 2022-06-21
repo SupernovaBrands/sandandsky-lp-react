@@ -294,7 +294,7 @@ const Survey = () => {
 
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : 'px-g'} container`}>
-			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start' : 'align-content-start mt-4'} `}>
+			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start' : 'align-content-start'} `}>
 				{ currentPosition === 'start' && (
 				<>
 					<div className="px-g d-flex align-items-center flex-column justify-content-center text-center">
@@ -312,7 +312,8 @@ const Survey = () => {
 
 				{ currentPosition !== 'start' && currentPosition !== 'finished' && (
 				<>
-					<div className="text-center">
+					<div className="text-center position-relative">
+                        <SplashTop className="d-none d-lg-block question-box__decoration-top position-absolute end-0" />
                         {Questions.map((item, index) => {
                             const key = `question-${index}`;
                             if (currentQuestion === index + 1) {
@@ -329,15 +330,17 @@ const Survey = () => {
                                                 setCurrentQuestion={setQuestionState}
                                                 currentQuestion={currentQuestion}
                                                 key={key}
-                                                colSize="col-lg-6 offset-lg-3"
+                                                colSize='col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'
                                                 question={item.question}
                                                 caption={item.caption ? item.caption : ''}
+                                                captionClass={item.captionClass ? item.captionClass : ''}
                                                 category={item.category}
                                                 >
                                                 <MultipleChoice answers={item.answers}
                                                     lastFull={item.lastFull}
                                                     maxChoose={item.maxChoose}
                                                     lastDisableForAll={item.lastDisableForAll}
+                                                    btnClass={item.btnClass}
                                                     />
                                             </QuestionBox>
                                         );
@@ -353,12 +356,19 @@ const Survey = () => {
                                                 currentQuestion={currentQuestion}
                                                 totalSteps={Questions.length}
                                                 key={key}
-                                                colSize="col-lg-6 offset-lg-3"
+                                                colSize='col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'
                                                 question={item.question}
                                                 caption={item.caption ? item.caption : ''}
+                                                captionClass={item.captionClass ? item.captionClass : ''}
                                                 category={item.category}
                                                 >
-                                                <SingleChoice answers={item.answers} buttonType={item.buttonType} inputType={item.inputType} showAllLabel={item.showAllLabel}/>
+                                                <SingleChoice
+                                                    answers={item.answers}
+                                                    buttonType={item.buttonType}
+                                                    inputType={item.inputType}
+                                                    showAllLabel={item.showAllLabel}
+                                                    btnClass={item.btnClass}
+                                                    />
                                             </QuestionBox>
                                         );
                                 }
