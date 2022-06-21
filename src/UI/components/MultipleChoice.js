@@ -1,8 +1,6 @@
 import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { SurveyContext } from './QuestionBox';
-import { ReactComponent as Close } from '../../assets/close.svg';
-import { ReactComponent as Check } from '../../assets/check.svg';
 
 const MultipleChoice = (props) => {
     const {
@@ -27,13 +25,6 @@ const MultipleChoice = (props) => {
     }
 
     const [disableRest, setDisableRest] = useState(disableData);
-
-    const clearOther = () => {
-        let currentItems = [...selectedItems];
-        currentItems = currentItems.filter((item,index)=> !item.includes('other:'))
-        setSelectedItems(currentItems);
-        answerAction(currentItems);
-    }
 
     const updateItems = (text, disableAll = false) => {
         let currentItems = [...selectedItems];
@@ -74,14 +65,6 @@ const MultipleChoice = (props) => {
             if (e.target.localName === 'input') { // execute only for target label, since click on label would trigger click by input also
                 updateItems(answers[index].label, answers[index].type === 'checkboxAll');
             }
-        }
-    };
-
-    const inputChangeHandle = (e) => {
-        if (e.target.value) {
-            updateItems(`other: ${e.target.value}`);
-        } else if (e.target.value === '') {
-            clearOther();
         }
     };
 

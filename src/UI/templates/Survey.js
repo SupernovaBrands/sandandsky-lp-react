@@ -22,7 +22,6 @@ const Survey = () => {
     const site = searchParams.get('site');
     const gId = searchParams.get('gaid');
     const surveyState = searchParams.get('state');
-    const language = searchParams.get('lang');
 
 	const setCookieAnsweredQuestion = (object) => {
         if (typeof object === 'object') {
@@ -78,14 +77,7 @@ const Survey = () => {
 	// states
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
-    const [progressValue, setProgress] = useState(currentQuestion / Questions.length * 100);
     const [currentAnswer, setAnswer] = useState(answerData);
-
-	let lang = 'en';
-
-    if (language && ['en','de','fr'].includes(language)) {
-        lang = language;
-    }
 
     const postMessageCookie = (key, val) => {
         if (window.top === window.self) return;
@@ -118,7 +110,6 @@ const Survey = () => {
             postMessageCookie('surveyPosition', `question-${currentQuestion}`);
         }
 
-        setProgress(currentQuestion / Questions.length * 100);
     }, [currentQuestion, currentPosition]);
 
     const answerAction = (question, answers) => {
