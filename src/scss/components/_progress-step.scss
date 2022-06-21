@@ -1,0 +1,16 @@
+.progress--step {
+	&:before {
+		content: '';
+		border-top: 1px solid $gray-600;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+
+	.rounded-circle {
+		width: 10px;
+		height: 10px;
+		border-color: $gray-600 !important;
+	}
+}

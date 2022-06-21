@@ -39,11 +39,27 @@
                     left: auto;
                     right: 0;
                 }
-            }    
+            }
             .single-choice__title {
                 margin-right: -45%;
                 padding-left: 45%;
             }
         }
     }
+}
+
+.btn__choice-bigger {
+    min-height: calc-em(80);
+
+    @include media-breakpoint-up(lg) {
+        min-height: calc-em(70);
+    }
+}
+
+.progress--range {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    z-index: -1;
 }

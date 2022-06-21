@@ -1,19 +1,4 @@
 .question-box {
-    &__title {
-        font-size: $h2-font-size;
-        font-weight: $headings-font-weight;
-        @include media-breakpoint-up(lg) {
-            font-size: $h1-font-size;
-        }
-    }
-    
-    .footer-action {
-        @include media-breakpoint-down(lg) {
-            .btn-next {
-                width: calc(100% - #{$grid-gutter-width-lg});
-            }
-        }
-    }
 
     &.analyzing {
         height: 100vh;
@@ -25,7 +10,25 @@
 
         @include media-breakpoint-up(lg) {
             width: calc-em(150);
-            height: calc-em(150);    
+            height: calc-em(150);
+        }
+    }
+
+    .border--default {
+        &:before {
+            content: '';
+            border: 1px solid $border-color;
+            position: absolute;
+            border-radius: $btn-border-radius;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &-selected::before {
+            border-width: 2px;
+            border-color: $secondary;
         }
     }
 }
