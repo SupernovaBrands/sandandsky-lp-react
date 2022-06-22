@@ -5,16 +5,11 @@
 
 @import 'common';
 
-@import 'components/product-image-carousel.scss';
-@import 'components/product-card.scss';
-
-@import 'templates/product.scss';
 @import 'templates/survey.scss';
 @import 'components/multiple-choice';
 @import 'components/single-choice.scss';
 @import 'components/question-box.scss';
 @import 'components/progress-step';
-
 
 .container {
     &--survey {

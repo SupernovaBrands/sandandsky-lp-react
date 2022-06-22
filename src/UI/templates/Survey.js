@@ -10,10 +10,15 @@ import { useResizeDetector } from 'react-resize-detector';
 import { setCookie, getCookie } from "../../modules/Utils";
 import ProductVariants from "../../modules/ProductVariants";
 import { useSearchParams } from "react-router-dom";
+import getSkinType from '../../modules/skin-type';
 
 import { ReactComponent as LoaderSvg } from '../../assets/loader.svg';
 import { ReactComponent as SplashTop } from '../../assets/splash-top.svg';
 import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
+import getProductResult from '../../modules/product-result';
+import getEnvironmentStress from '../../modules/environment-stress';
+import SurveyResult from '../components/SurveyResult';
+
 
 window.getCookie = getCookie;
 
@@ -71,13 +76,15 @@ const Survey = () => {
     }
     const initialCurrentQuestion = getCookie('currentQuestion') ? parseInt(getCookie('currentQuestion'), 10) : 1;
     const answerData = getCookieAnsweredQuestion() ? getCookieAnsweredQuestion() : {};
-	const selectedSite = site ? site : 'dev.cocoandeve.com';
+    const answerResult = getCookie('surveyResult') ? JSON.parse(getCookie('surveyResult')) : {};
+	const selectedSite = site ? site : 'dev.sandandsky.com';
 	const variants = ProductVariants[selectedSite];
 
 	// states
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
+
 
     const postMessageCookie = (key, val) => {
         if (window.top === window.self) return;
@@ -102,7 +109,7 @@ const Survey = () => {
     }, [currentPosition]);
 
     useEffect(() => {
-        if (currentQuestion <= Questions.length && currentPosition !== 'finished' && currentPosition !== 'start') {
+        if (currentQuestion <= Questions.length && currentPosition !== 'finished' && currentPosition !== 'start' && currentPosition !== 'result') {
             setCookie('currentQuestion', currentQuestion);
             setCookie('surveyPosition', `question-${currentQuestion}`);
             // send cookie data to the parent window
@@ -128,76 +135,93 @@ const Survey = () => {
     }
 
 	const gettingResult = (close=false) => {
-        // check first answer
-        const firstAnswer = currentAnswer[1];
-        const firstQuestion = Questions[0];
-        const firstAnswered = firstQuestion.answers.indexOf(firstAnswer) + 1;
 
-        // check second answer
-        // const secondAnswer = currentAnswer[2];
-        // const secondQuestion = Questions[1];
-        // const secondAnswered = firstQuestion.answers.indexOf(secondAnswer) + 1;
 
-        // check third answer
-        const thirdAnswer = currentAnswer[3];
-        const thirdQuestion = Questions[2];
-        const thirdAnswered = thirdQuestion.answers.indexOf(thirdAnswer) + 1;
+        const skinType = getSkinType(currentAnswer);
+        const envStressResult = getEnvironmentStress(currentAnswer);
 
-        let sku = 'CE0000032020'; // foam medium
-        if (firstAnswered === 1) {
-            if (thirdAnswered === 2) {
-                sku = 'CE0000032020'; // foam medium
-            } else if (thirdAnswered === 1) {
-                sku = 'CE0000432040'; // drops medium
-            } else {
-                sku = 'CE0001202020'; // glow essential medium
-            }
-        } else if (firstAnswered === 2) {
-            if (thirdAnswered === 2) {
-                sku = 'CE0000032040'; // foam dark
-            } else if (thirdAnswered === 1) {
-                sku = 'CE0000432030'; // drops dark
-            } else {
-                sku = 'CE0001962020'; // glow essential dark
-            }
-        } else if (firstAnswered === 3) {
-            if (thirdAnswered === 2) {
-                sku = ['us.cocoandeve.com', 'www.cocoandeve.com'].includes(site) ? 'CE0000036060' : 'CE0000032060'; // foam ultra dark
-            } else if (thirdAnswered === 1) {
-                sku = 'CE0000432030'; // drops dark
-            } else {
-                sku = 'CE0001962020'; // glow essential dark
-            }
+        const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
+
+        if (close) {
+            setCookie('surveyPosition', 'finished');
+            setPosition('finished');
+            postMessageCookie('surveyPosition', 'finished');
+            setCookie('surveyResult', JSON.stringify({
+                skinType,
+                envStressResult,
+                productsRecommend,
+                activePriority
+            }));
+
+            setTimeout(function () {
+                setCookie('surveyPosition', 'result');
+                setPosition('result');
+                postMessageCookie('surveyPosition', 'result');
+            }, 2000);
         }
 
-        const findVariant = variants.find((variant) => variant.sku === sku);
-        console.log(sku, findVariant, 'variant data');
+        console.log('currentAnswer', currentAnswer);
 
-        if (findVariant) {
 
-            if (window.top !== window.self && currentPosition === 'finished') {
-                postMessageCookie('surveyResult', findVariant.product_handle);
-                postMessageCookie('surveyResultSku', findVariant.sku);
-                postMessageCookie('surveySubmitNew', true);
-                clearCookie();
-                setTimeout(function(){
-                    window.top.location.href = `https://${selectedSite}/products/${findVariant.product_handle}?survey=result&sku=${findVariant.sku}`;
-                }, 3000);
-            }
+        // return false;
 
-            if (close) {
-                setCookie('surveyPosition', 'finished');
-                setPosition('finished');
-                postMessageCookie('surveyPosition', 'finished');
-                postMessageCookie('surveyResult', findVariant.product_handle);
-                postMessageCookie('surveyResultSku', findVariant.sku);
-                postMessageCookie('surveySubmitNew', true);
-                clearCookie();
-                setTimeout(function(){
-                    window.top.location.href = `https://${selectedSite}/products/${findVariant.product_handle}?survey=result&sku=${findVariant.sku}`;
-                }, 3000);
-            }
-        }
+        // let sku = 'CE0000032020'; // foam medium
+        // if (firstAnswered === 1) {
+        //     if (thirdAnswered === 2) {
+        //         sku = 'CE0000032020'; // foam medium
+        //     } else if (thirdAnswered === 1) {
+        //         sku = 'CE0000432040'; // drops medium
+        //     } else {
+        //         sku = 'CE0001202020'; // glow essential medium
+        //     }
+        // } else if (firstAnswered === 2) {
+        //     if (thirdAnswered === 2) {
+        //         sku = 'CE0000032040'; // foam dark
+        //     } else if (thirdAnswered === 1) {
+        //         sku = 'CE0000432030'; // drops dark
+        //     } else {
+        //         sku = 'CE0001962020'; // glow essential dark
+        //     }
+        // } else if (firstAnswered === 3) {
+        //     if (thirdAnswered === 2) {
+        //         sku = ['us.cocoandeve.com', 'www.cocoandeve.com'].includes(site) ? 'CE0000036060' : 'CE0000032060'; // foam ultra dark
+        //     } else if (thirdAnswered === 1) {
+        //         sku = 'CE0000432030'; // drops dark
+        //     } else {
+        //         sku = 'CE0001962020'; // glow essential dark
+        //     }
+        // }
+
+        // const findVariant = variants.find((variant) => variant.sku === sku);
+        // console.log(sku, findVariant, 'variant data');
+
+        // if (findVariant) {
+
+        //     if (window.top !== window.self && currentPosition === 'finished') {
+        //         postMessageCookie('surveyResult', findVariant.product_handle);
+        //         postMessageCookie('surveyResultSku', findVariant.sku);
+        //         postMessageCookie('surveySubmitNew', true);
+        //         clearCookie();
+        //         setTimeout(function(){
+        //             console.log('redirect');
+        //             // window.top.location.href = `https://${selectedSite}/products/${findVariant.product_handle}?survey=result&sku=${findVariant.sku}`;
+        //         }, 3000);
+        //     }
+
+        //     if (close) {
+        //         setCookie('surveyPosition', 'finished');
+        //         setPosition('finished');
+        //         postMessageCookie('surveyPosition', 'finished');
+        //         postMessageCookie('surveyResult', findVariant.product_handle);
+        //         postMessageCookie('surveyResultSku', findVariant.sku);
+        //         postMessageCookie('surveySubmitNew', true);
+        //         clearCookie();
+        //         setTimeout(function(){
+        //             console.log('redirect');
+        //             // window.top.location.href = `https://${selectedSite}/products/${findVariant.product_handle}?survey=result&sku=${findVariant.sku}`;
+        //         }, 3000);
+        //     }
+        // }
     }
 
 	const setQuestionState = (questionIndex) => {
@@ -253,7 +277,7 @@ const Survey = () => {
             }
         }
         const data = { _ga: gId, questions_answers: dataForSaving };
-        fetch('https://api.cocoandeve.com/surveys', {
+        fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -281,10 +305,14 @@ const Survey = () => {
         postIframeHeight('height', height);
     }, [height]);
 
-	// console.log('currentPosition', currentPosition);
+    if (currentPosition === 'result') {
+        console.log('answerResult', answerResult);
+    }
+
+    const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 
 	return (
-		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : 'px-g'} container`}>
+		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
 			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start' : 'align-content-start'} `}>
 				{ currentPosition === 'start' && (
 				<>
@@ -301,7 +329,7 @@ const Survey = () => {
 					</div>
 				</>)}
 
-				{ currentPosition !== 'start' && currentPosition !== 'finished' && (
+				{ currentPosition !== 'start' && currentPosition !== 'finished' && currentPosition !== 'result' && (
 				<>
 					<div className="text-center position-relative">
                         <SplashTop className="d-none d-lg-block question-box__decoration-top position-absolute end-0" />
@@ -375,6 +403,10 @@ const Survey = () => {
 						<LoaderSvg className="loader mt-0 mb-0"/>
 					</div>
 				)}
+
+                { currentPosition === 'result' && (
+                    <SurveyResult answerResult={answerResult} />
+                )}
 			</div>
 		</div>
 	)

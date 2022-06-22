@@ -16,7 +16,7 @@ const Questions = [
     {
         question: 'How many hours of sun are you exposed to daily?',
         answers: [
-            '1 hours',
+            '1 hour',
             '2 hours',
             '3 hours',
             '4 hours',

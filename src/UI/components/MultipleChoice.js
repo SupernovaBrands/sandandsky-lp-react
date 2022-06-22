@@ -71,7 +71,6 @@ const MultipleChoice = (props) => {
     return (
         <div className="row">
             {answers.map((answer, index) => {
-                console.log('index', index);
                 const full = lastFull && index + 1 === answers.length ? 'col-12' : 'col-6';
                 const classes = `d-flex rounded align-items-center mb-g mb-lg-3 ${btnClass} position-relative border--default`;
                 const disabledClass = disableRest && !selectedItems.includes(answer.label) ? 'disabled' : '';
