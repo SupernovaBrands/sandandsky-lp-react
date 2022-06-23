@@ -21,4 +21,9 @@
 			.minus { display: none; }
 		}
 	}
+
+	&__priority .accordion-button .svg--active-priority {
+		transform: scale(.8);
+		width: auto;
+	}
 }

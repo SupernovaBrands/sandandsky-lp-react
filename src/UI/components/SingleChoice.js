@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useContext, useState } from 'react';
 import { SurveyContext } from './QuestionBox';
+import RangeSlider from './RangeSlider';
 
 const SingleChoice = (props) => {
     const {
@@ -86,12 +87,7 @@ const SingleChoice = (props) => {
                                 })}
                             </div>
                         )}
-                        <div className="position-relative">
-                            <input type="range" value={rangeValue} className="form-range" min="0" max={rangeMax} step="1" id="range" onChange={handleRangeChange} />
-                            <div className="progress progress--range">
-                                <div id="progress--range__bar" className="progress-bar" style={percentWidth} role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
+                        <RangeSlider rangeValue={rangeValue} rangeMax={rangeMax} handleRangeChange={handleRangeChange} percentWidth={percentWidth} />
                     </>
                 )}
             </div>

@@ -5,8 +5,15 @@ import { ReactComponent as ChevronUp } from '../../assets/chevron-up.svg';
 import { ReactComponent as ChevronDown } from '../../assets/chevron-down.svg';
 import activeDescription from '../../modules/priority-actives';
 import productList from '../../modules/product-list';
+// import { useSearchParams } from "react-router-dom";
+// import { useEffect, useState } from 'react';
+import SurveyCard from './SurveyCard';
 
 const SurveyResult = (props) => {
+	// const [resultProducts, setProducts] = useState([]);
+
+	// const [searchParams] = useSearchParams();
+    // const site = searchParams.get('site');
 	const {activePriority, envStressResult, productsRecommend, skinType} = props.answerResult;
 
 	const accordionHandle = (e) => {
@@ -25,93 +32,175 @@ const SurveyResult = (props) => {
             if (collapse._element.classList.contains('show')) {
                 document.getElementById(`collapse${btnIndex}`).classList.remove('collapsed');
             } else {
-                document.getElementById(`collapse${btnIndex}`).classList.add('collapsed');
+				document.querySelector(`#btnCollapse${btnIndex}`).classList.toggle('collapsed');
             }
         }, 390);
     };
 
-	console.log('productsRecommend', productsRecommend);
+	// const selectedSite = site ? site : 'dev';
+	// useEffect(() => {
+	// 	setProducts([]);
+	// 	for (let i=0; i<=productsRecommend.length - 1; i+=1) {
+	// 		const productInfo = productList[productsRecommend[i]];
+	// 		fetch(`https://${selectedSite}/products/${productInfo.handle}.json`)
+	// 			.then((response) => response.json())
+	// 			.then((data) => {
+	// 				setProducts(oldArray => [...oldArray, data.product]);
+	// 			});
+	// 	}
+	// }, [productList]);
+
+	const resultProducts = [];
+	for (let i=0; i<= productsRecommend.length - 1; i += 1) {
+		const productInfo = productList[productsRecommend[i]];
+		resultProducts.push(productInfo);
+	}
+
+	let rangeValue;
+	switch (envStressResult.title) {
+		case 'LOW':
+			rangeValue = 0;
+			break;
+
+		case 'AVERAGE':
+			rangeValue = 1;
+			break;
+
+		default:
+			rangeValue = 2;
+			break;
+	}
+	const rangeMin = 0;
+	const rangeMax = 2;
 
 	return (
 		<section className="survey-result mt-4">
-			<div className="container px-g">
+			<div className="d-lg-none container px-g">
 				<p className="h2 mb-2">Your Skin Analysis</p>
 				<p>Below is your skin analysis:</p>
 			</div>
 			<div className="survey-result__bg">
-				<div className="container px-2 py-4 my-g">
-					<div className="accordion" id="surveyResult">
-						<div className="accordion-item border-0 mb-g">
-							<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse1" id="btnCollapse1" data-btnindex="1" onClick={accordionHandle}>
-								Skin Type
-								<p className="d-flex align-items-center font-size-sm mb-0">{skinType.title}
-									<ChevronDown className="minus ms-2" />
-									<ChevronUp className="plus ms-2" />
-								</p>
-							</div>
-							<div id="collapse1" className="accordion-collapse bg-white mt-1 collapse" data-bs-parent="#surveyResult">
-								<p className="p-g font-size-sm">
-									<strong className="mb-g d-block">{skinType.title}</strong>
-									{skinType.desc}
-								</p>
-							</div>
+				<div className="container px-2 py-4 my-g my-lg-4">
+					<div className="row">
+						<div className="col-12 col-lg-6">
+							<p className="d-none d-lg-block h1 mb-2">Your Skin Analysis</p>
+							<p className="d-none d-lg-block survey-result__subtitle">Below is your skin analysis:</p>
 						</div>
-						<div className="accordion-item border-0">
-							<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse2" id="btnCollapse2" data-btnindex="2" onClick={accordionHandle}>
-								Environmental Stress
-								<p className="d-flex align-items-center font-size-sm mb-0">Result
-									<ChevronDown className="minus ms-2" />
-									<ChevronUp className="plus ms-2" />
-								</p>
-							</div>
-							<div id="collapse2" className="accordion-collapse bg-white mt-1 collapse" data-bs-parent="#surveyResult">
-								<p className="p-g font-size-sm">
-									<strong className="mb-g d-block">{envStressResult.title.charAt(0).toUpperCase()+envStressResult.title.toLowerCase().slice(1)}</strong>
-									{envStressResult.desc}
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="container px-g mt-4 mb-g">
-				<p className="h2 mb-2">Priority Actives</p>
-				<p>These active ingredients have been identified to suit your skin’s needs and concerns:</p>
-			</div>
-
-			<div className="survey-result__bg">
-				<div className="container px-2 py-4 my-g">
-					<div className="accordion" id="surveyResult_2">
-						{activePriority && activePriority.map((item, index) => {
-							const itemIndex = index + 3;
-							const itemHandle = item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-							return (
-								<div key={index} className="accordion-item border-0 mb-g">
-									<div className="accordion-button shadow-sm bg-white justify-content-start rounded" data-target={`collapse${itemIndex}`} id={`btnCollapse${itemIndex}`} data-btnindex={itemIndex} onClick={accordionHandle}>
-										{activeDescription[itemHandle].icon}
-										{activeDescription[itemHandle].title}
-										<p className="d-flex align-items-center font-size-sm mb-0 ms-auto">
+						<div className="col-12 col-lg-6">
+							<div className="accordion" id="surveyResult">
+								<div className="accordion-item border-0 mb-g">
+									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse1" id="btnCollapse1" data-btnindex="1" onClick={accordionHandle}>
+										Skin Type
+										<p className="d-flex align-items-center font-size-sm mb-0">{skinType.title}
 											<ChevronDown className="minus ms-2" />
 											<ChevronUp className="plus ms-2" />
 										</p>
 									</div>
-									<div id={`collapse${itemIndex}`} className="accordion-collapse bg-white mt-1 collapse" data-bs-parent="#surveyResult_2">
-										<div className="p-g row">
-											<div className="col-5 text-center">Icon</div>
-											<div className="col-7 text-center border-start">{activeDescription[itemHandle].desc}</div>
-										</div>
+									<div id="collapse1" className="accordion-collapse bg-white mt-1 collapse" data-bs-parent="#surveyResult">
+										<p className="p-g px-lg-4 survey-result__desc">
+											<strong className="mb-g d-block">{skinType.title}</strong>
+											{skinType.desc}
+										</p>
 									</div>
 								</div>
-							)
-						})}
+								<div className="accordion-item border-0">
+									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse2" id="btnCollapse2" data-btnindex="2" onClick={accordionHandle}>
+										Environmental Stress
+										<div className="d-flex align-items-center font-size-sm mb-0" >
+											<input className="survey-result__range" type="range" min={rangeMin} max={rangeMax} step="1" value={rangeValue} readOnly={true} data-target="collapse2" id="btnCollapse2" data-btnindex="2" onTouchStart={accordionHandle} />
+											<ChevronDown className="minus ms-2" />
+											<ChevronUp className="plus ms-2" />
+										</div>
+									</div>
+									<div id="collapse2" className="accordion-collapse bg-white mt-1 collapse" data-bs-parent="#surveyResult">
+										<p className="p-g px-lg-4 survey-result__desc">
+											<strong className="mb-g d-block">{envStressResult.title.charAt(0).toUpperCase()+envStressResult.title.toLowerCase().slice(1)}</strong>
+											{envStressResult.desc}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="container px-g mt-4 mb-g d-lg-none">
+				<p className="h2 mb-2">Priority Actives</p>
+				<p>These active ingredients have been identified to suit your skin’s needs and concerns:</p>
+			</div>
+
+			<div className="survey-result__bg survey-result__priority-actives">
+				<div className="container px-2 py-4 my-g">
+					<div className="row">
+						<div className="col-12 col-lg-6">
+							<p className="h1 mb-2 d-none d-lg-block mb-2">Priority Actives</p>
+							<p className="d-none d-lg-block survey-result__subtitle">These active ingredients have been identified to<br />suit your skin’s needs and concerns:</p>
+						</div>
+						<div className="col-12 col-lg-6">
+							<div className="accordion d-lg-none accordion__priority" id="surveyResult_2">
+								{activePriority && activePriority.map((item, index) => {
+									const itemIndex = index + 3;
+									return (
+										<div key={index} className="accordion-item border-0 mb-g">
+											<div className="accordion-button ps-2 shadow-sm bg-white justify-content-start rounded" data-target={`collapse${itemIndex}`} id={`btnCollapse${itemIndex}`} data-btnindex={itemIndex} onClick={accordionHandle}>
+												{activeDescription[item].icon}
+												<span className="ms-1">{activeDescription[item].title}</span>
+												<p className="d-flex align-items-center font-size-sm mb-0 ms-auto">
+													<ChevronDown className="minus ms-2" />
+													<ChevronUp className="plus ms-2" />
+												</p>
+											</div>
+											<div id={`collapse${itemIndex}`} className="accordion-collapse bg-white mt-1 collapse" data-bs-parent="#surveyResult_2">
+												<div className="p-g row align-items-center">
+													<div className="col-5 text-center">
+														{activeDescription[item].icon}
+														<strong className="d-block mt-g px-g">{activeDescription[item].title}</strong>
+													</div>
+													<div className="col-7 text-center border-start">{activeDescription[item].desc}</div>
+												</div>
+											</div>
+										</div>
+									)
+								})}
+							</div>
+
+							<div className="row d-none d-lg-flex px-lg-hg">
+								{activePriority && activePriority.map((item, index) => {
+									return (
+										<div key={index} className="col-lg-4 px-lg-hg">
+											<div className="pt-2 px-g bg-white text-center h-100">
+												{activeDescription[item].icon}
+												<p className="fw-bold border-bottom py-g">{activeDescription[item].title}</p>
+												<p className="pt-2 pb-3">{activeDescription[item].desc}</p>
+											</div>
+										</div>
+									);
+								})}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<div className="container px-g mt-4 mb-g">
-				<p className="h2 mb-2">Your Skincare Essentials</p>
+				<p className="survey-result__product fw-bold mb-2">Your Skincare Essentials</p>
 				<p>Below are the essential products for your skin based off your skin analysis:</p>
+			</div>
+
+			<div className="container px-0 px-lg-g">
+				<div className="row">
+					{resultProducts.length > 0 && resultProducts.map((item, index) => {
+						return(
+							<div key={index} className="col-12 col-lg-4">
+								<SurveyCard
+									activePriority={activeDescription[activePriority[index]]}
+									productDetail={item}
+									productList={productList[productsRecommend[index]]} />
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</section>
 	);

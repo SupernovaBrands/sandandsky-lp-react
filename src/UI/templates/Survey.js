@@ -8,7 +8,6 @@ import MultipleChoice from '../components/MultipleChoice';
 import { useResizeDetector } from 'react-resize-detector';
 
 import { setCookie, getCookie } from "../../modules/Utils";
-import ProductVariants from "../../modules/ProductVariants";
 import { useSearchParams } from "react-router-dom";
 import getSkinType from '../../modules/skin-type';
 
@@ -77,8 +76,6 @@ const Survey = () => {
     const initialCurrentQuestion = getCookie('currentQuestion') ? parseInt(getCookie('currentQuestion'), 10) : 1;
     const answerData = getCookieAnsweredQuestion() ? getCookieAnsweredQuestion() : {};
     const answerResult = getCookie('surveyResult') ? JSON.parse(getCookie('surveyResult')) : {};
-	const selectedSite = site ? site : 'dev.sandandsky.com';
-	const variants = ProductVariants[selectedSite];
 
 	// states
     const [currentPosition, setPosition] = useState(initialState);
@@ -159,69 +156,6 @@ const Survey = () => {
                 postMessageCookie('surveyPosition', 'result');
             }, 2000);
         }
-
-        console.log('currentAnswer', currentAnswer);
-
-
-        // return false;
-
-        // let sku = 'CE0000032020'; // foam medium
-        // if (firstAnswered === 1) {
-        //     if (thirdAnswered === 2) {
-        //         sku = 'CE0000032020'; // foam medium
-        //     } else if (thirdAnswered === 1) {
-        //         sku = 'CE0000432040'; // drops medium
-        //     } else {
-        //         sku = 'CE0001202020'; // glow essential medium
-        //     }
-        // } else if (firstAnswered === 2) {
-        //     if (thirdAnswered === 2) {
-        //         sku = 'CE0000032040'; // foam dark
-        //     } else if (thirdAnswered === 1) {
-        //         sku = 'CE0000432030'; // drops dark
-        //     } else {
-        //         sku = 'CE0001962020'; // glow essential dark
-        //     }
-        // } else if (firstAnswered === 3) {
-        //     if (thirdAnswered === 2) {
-        //         sku = ['us.cocoandeve.com', 'www.cocoandeve.com'].includes(site) ? 'CE0000036060' : 'CE0000032060'; // foam ultra dark
-        //     } else if (thirdAnswered === 1) {
-        //         sku = 'CE0000432030'; // drops dark
-        //     } else {
-        //         sku = 'CE0001962020'; // glow essential dark
-        //     }
-        // }
-
-        // const findVariant = variants.find((variant) => variant.sku === sku);
-        // console.log(sku, findVariant, 'variant data');
-
-        // if (findVariant) {
-
-        //     if (window.top !== window.self && currentPosition === 'finished') {
-        //         postMessageCookie('surveyResult', findVariant.product_handle);
-        //         postMessageCookie('surveyResultSku', findVariant.sku);
-        //         postMessageCookie('surveySubmitNew', true);
-        //         clearCookie();
-        //         setTimeout(function(){
-        //             console.log('redirect');
-        //             // window.top.location.href = `https://${selectedSite}/products/${findVariant.product_handle}?survey=result&sku=${findVariant.sku}`;
-        //         }, 3000);
-        //     }
-
-        //     if (close) {
-        //         setCookie('surveyPosition', 'finished');
-        //         setPosition('finished');
-        //         postMessageCookie('surveyPosition', 'finished');
-        //         postMessageCookie('surveyResult', findVariant.product_handle);
-        //         postMessageCookie('surveyResultSku', findVariant.sku);
-        //         postMessageCookie('surveySubmitNew', true);
-        //         clearCookie();
-        //         setTimeout(function(){
-        //             console.log('redirect');
-        //             // window.top.location.href = `https://${selectedSite}/products/${findVariant.product_handle}?survey=result&sku=${findVariant.sku}`;
-        //         }, 3000);
-        //     }
-        // }
     }
 
 	const setQuestionState = (questionIndex) => {
@@ -304,10 +238,6 @@ const Survey = () => {
     useEffect(() => {
         postIframeHeight('height', height);
     }, [height]);
-
-    if (currentPosition === 'result') {
-        console.log('answerResult', answerResult);
-    }
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 

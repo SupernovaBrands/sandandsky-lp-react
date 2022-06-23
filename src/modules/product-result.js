@@ -688,7 +688,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         break;
                 }
                 break;
-            case skinConcernsQ[8]: //Dullness or uneven skin tone
+            default: //Dullness or uneven skin tone
                 switch (ageRangesA) {
                     case ageRanges[0] || ageRanges[1]:// <20, 20-25
                         switch (skinTypeAnswer) {
@@ -771,8 +771,6 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         }
                         break;
                 }
-                break;
-            default:
                 break;
         }
 	return {productsRecommend, activePriority}

@@ -92,3 +92,17 @@ export const isABTest = (testID) => new Promise((resolve) => {
 export const truncateWords = (str, no_words) => {
     return str.split(" ").splice(0,no_words).join(" ");
 }
+
+export const getItemRange = (itemTitle) => {
+	let range = 'Aussie Skincare Essentials';
+	if (itemTitle.includes('Tasmanian Spring Water')) {
+		range = 'Tasmanian Spring Water';
+	} else if (itemTitle.includes('Australian Pink Clay')) {
+		range = 'Australian Pink Clay';
+	} else if (itemTitle.includes('Australian Emu Apple')) {
+		range = 'Australian Emu Apple';
+	} else if (itemTitle.includes('Oil Control')) {
+		range = 'Oil Control';
+	}
+	return range;
+};

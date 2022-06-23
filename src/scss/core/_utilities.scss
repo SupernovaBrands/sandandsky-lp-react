@@ -61,3 +61,21 @@
 		}
 	}
 }
+
+// Half gutter padding
+@include media-breakpoint-down(md) {
+	.pe-hg, .px-hg {
+		padding-right: $grid-gutter-width * 0.5 !important;
+	}
+	.ps-hg, .px-hg {
+		padding-left: $grid-gutter-width * 0.5 !important;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.pe-lg-hg, .px-lg-hg {
+		padding-right: $grid-gutter-width * 0.5 !important;
+	}
+	.ps-lg-hg, .px-lg-hg {
+		padding-left: $grid-gutter-width * 0.5 !important;
+	}
+}

@@ -8,38 +8,38 @@ import { ReactComponent as VitaminE } from '../assets/vitamin-e.svg';
 import { ReactComponent as SalicylicAcid } from '../assets/salicylic-acid.svg';
 
 const activeDescription = {
-	'salicylic-acid': {
-		icon: <SalicylicAcid />,
+	'Salicylic Acid': {
+		icon: <SalicylicAcid className="svg--active-priority" />,
 		title: 'Salicylic Acid',
 		desc: 'Salicylic acid is a BHA well-known for eliminating oil, reducing acne by exfoliating the skin and keeping pores clear.',
 	},
-	'niacinamide': {
-		icon: <Niacinamide />,
+	'Niacinamide': {
+		icon: <Niacinamide className="svg--active-priority" />,
 		title: 'Niacinamide',
 		desc: 'Niacinamide is a form of vitamin B3 that helps build proteins in the skin, retains moisture and offers protection against environmental damage.',
 	},
-	'vitamin-c': {
-		icon: <VitaminC />,
+	'Vitamin C': {
+		icon: <VitaminC className="svg--active-priority" />,
 		title: 'Vitamin C',
 		desc: 'Vitamin C is an antioxidant that helps heal blemishes, reduce hyperpigmentation, and give your skin an out-of-this-world glow.'
 	},
-	'vitamin-e': {
-		icon: <VitaminE />,
+	'Vitamin E': {
+		icon: <VitaminE className="svg--active-priority" />,
 		title: 'Vitamin E',
 		desc: 'Vitamin E is an anti-inflammatory agent in the skin that has moisturizing and healing benefits, and helps to strengthen skin barrier function.'
 	},
-	'ahas': {
-		icon: <Ahas />,
+	'AHAs': {
+		icon: <Ahas className="svg--active-priority" />,
 		title: 'AHAs',
 		desc: 'AHAs help to exfoliate the skin and treat acne. Over time, AHAs may help to improve skin texture, fade dark spots, and reduce the visible signs of aging.'
 	},
-	'hyaluronic-acid': {
-		icon: <HyaluronicAcid />,
+	'Hyaluronic Acid': {
+		icon: <HyaluronicAcid className="svg--active-priority" />,
 		title: 'Hyaluronic Acid',
 		desc: 'Hyaluronic acid helps increase skin moisture and reduce the appearance of fine lines and wrinkles.'
 	},
-	'vegan-squalane': {
-		icon: <VeganSqualane />,
+	'Vegan Squalane': {
+		icon: <VeganSqualane className="svg--active-priority" />,
 		title: 'Vegan Squalane',
 		desc: 'Squalane has anti-inflammatory properties that can reduce redness and swelling, as it helps moisturize and repair dry, rough skin to improve skin texture and appearance.'
 	}
