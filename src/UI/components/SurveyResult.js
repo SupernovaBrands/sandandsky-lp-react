@@ -191,6 +191,7 @@ const SurveyResult = (props) => {
 			<div className="container px-0 px-lg-g">
 				<div className="row">
 					{resultProducts.length > 0 && resultProducts.map((item, index) => {
+						console.log('item', item);
 						return(
 							<div key={index} className="col-12 col-lg-4">
 								<SurveyCard

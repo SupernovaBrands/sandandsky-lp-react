@@ -81,6 +81,7 @@ const Survey = () => {
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
+    const [currentResult, setResult] = useState(answerResult);
 
 
     const postMessageCookie = (key, val) => {
@@ -143,17 +144,23 @@ const Survey = () => {
             setCookie('surveyPosition', 'finished');
             setPosition('finished');
             postMessageCookie('surveyPosition', 'finished');
-            setCookie('surveyResult', JSON.stringify({
+            const surveyResultObj = {
                 skinType,
                 envStressResult,
                 productsRecommend,
                 activePriority
-            }));
+            };
+            const surveyResultJson = JSON.stringify(surveyResultObj);
+            setCookie('surveyResult', surveyResultJson);
+            postMessageCookie('surveyResult', surveyResultJson);
+            setResult(surveyResultObj);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
                 setPosition('result');
                 postMessageCookie('surveyPosition', 'result');
+                setCookie('surveyResult', surveyResultJson);
+                postMessageCookie('surveyResult', surveyResultJson);
             }, 2000);
         }
     }
@@ -222,7 +229,7 @@ const Survey = () => {
     }
 
     useEffect(() => {
-        if (currentPosition === 'finished') gettingResult();
+        if (currentPosition === 'finished' || currentPosition === 'result') gettingResult();
     }, [currentPosition]);
 
     const postIframeHeight = (key, val) => {
@@ -335,7 +342,7 @@ const Survey = () => {
 				)}
 
                 { currentPosition === 'result' && (
-                    <SurveyResult answerResult={answerResult} />
+                    <SurveyResult answerResult={currentResult} />
                 )}
 			</div>
 		</div>

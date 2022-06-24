@@ -38,7 +38,7 @@ const SurveyCard = (props) => {
         }, 390);
     };
 
-	const selectedSite = site ? site : 'dev';
+	const selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
 
 	return (
 		<div className="survey-result__product-list">
