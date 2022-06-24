@@ -77,11 +77,12 @@ const MultipleChoice = (props) => {
                 const itemClasses = selectedItems.includes(answer.label) ? 'border--default-selected position-relative bg-secondary-light' : '';
                 return (
                     <div key={index} className={full}>
-                        <div className={`${disabledClass} ${classes} ${itemClasses}`}>
+                        <div className={`${disabledClass} ${classes} ${itemClasses}`} role="button">
                             <label
                                 className="d-flex checkbox-number align-items-center px-sm-1 w-100 p-2 justify-content-center zindex-1"
                                 htmlFor={`${index}-flexCheckDefault`}
-                                onClick={chooseItems(index)}>
+                                onClick={chooseItems(index)}
+                                role="button">
                                     <input
                                         className='d-none'
                                         type="checkbox"
