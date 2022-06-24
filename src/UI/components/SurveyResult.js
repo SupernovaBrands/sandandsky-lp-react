@@ -75,7 +75,7 @@ const SurveyResult = (props) => {
 	const rangeMax = 2;
 
 	return (
-		<section className="survey-result mt-4">
+		<section className="survey-result mt-4 mt-lg-0">
 			<div className="d-lg-none container px-g">
 				<p className="h2 mb-2">Your Skin Analysis</p>
 				<p>Below is your skin analysis:</p>

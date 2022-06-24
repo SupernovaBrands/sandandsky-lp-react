@@ -259,7 +259,7 @@ const Survey = () => {
                         </div>
 						<h1 className="mb-g">Discover your routine to flawless skin</h1>
 						<p className="font-size-sm mb-4">Find the perfect solution to your skin’s needs in just a few steps!</p>
-						<button className="btn btn-secondary text-white" onClick={() => setPosition('question-1')}>Take the quiz</button>
+						<button className="btn btn-primary text-white" onClick={() => setPosition('question-1')}>Take the quiz</button>
                         <div className="w-100 text-start mt-5 pt-5 ms-ng ms-lg-0">
                             <SplashBottom />
                         </div>

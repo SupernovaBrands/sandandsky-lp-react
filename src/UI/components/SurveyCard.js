@@ -2,7 +2,6 @@ import { getItemRange } from "../../modules/Utils";
 import { ReactComponent as Minus } from '../../assets/minus.svg';
 import { ReactComponent as Plus } from '../../assets/plus.svg';
 
-import { Collapse } from 'bootstrap';
 import { useSearchParams } from "react-router-dom";
 const SurveyCard = (props) => {
 
@@ -18,6 +17,17 @@ const SurveyCard = (props) => {
 
 	const titleRange = getItemRange(productDetail.title);
 	const selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
+
+	const learnMoreSendGA = (e) => {
+		if (window.top === window.self) return true;
+
+		window.parent.postMessage({
+			'func': 'callGaEvent',
+			'category': 'Survey',
+			'action': 'Learn More',
+			'label': e.target.dataset.title,
+		}, `https://${site}`);
+	};
 
 	return (
 		<div className="survey-result__product-list">
@@ -53,7 +63,7 @@ const SurveyCard = (props) => {
 				</div>
 				<div className="row">
 					<div className="col-12">
-						<a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} className="btn btn-block btn-primary w-100">Learn More</a>
+						<a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} className="btn btn-block btn-primary w-100" data-title={productDetail.title} onClick={learnMoreSendGA}>Learn More</a>
 					</div>
 				</div>
 			</div>
