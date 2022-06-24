@@ -17,7 +17,8 @@ const SurveyResult = (props) => {
 	const {activePriority, envStressResult, productsRecommend, skinType} = props.answerResult;
 
 	const accordionHandle = (e) => {
-        const btnToggle = document.querySelectorAll('.accordion-button');
+		const parentId = e.currentTarget.dataset.parent;
+        const btnToggle = document.querySelectorAll(`${parentId} .accordion-button`);
         for (let i = 0; i < btnToggle.length; i++) {
             btnToggle[i].classList.remove('collapsed');
         }
@@ -89,7 +90,7 @@ const SurveyResult = (props) => {
 						<div className="col-12 col-lg-6">
 							<div className="accordion" id="surveyResult">
 								<div className="accordion-item border-0 mb-g">
-									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse1" id="btnCollapse1" data-btnindex="1" onClick={accordionHandle}>
+									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse1" id="btnCollapse1" data-btnindex="1" onClick={accordionHandle} data-parent="#surveyResult">
 										Skin Type
 										<p className="d-flex align-items-center font-size-sm mb-0">{skinType.title}
 											<ChevronDown className="minus ms-2" />
@@ -104,7 +105,7 @@ const SurveyResult = (props) => {
 									</div>
 								</div>
 								<div className="accordion-item border-0">
-									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse2" id="btnCollapse2" data-btnindex="2" onClick={accordionHandle}>
+									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse2" id="btnCollapse2" data-btnindex="2" onClick={accordionHandle} data-parent="#surveyResult">
 										Environmental Stress
 										<div className="d-flex align-items-center font-size-sm mb-0" >
 											<input className="survey-result__range" type="range" min={rangeMin} max={rangeMax} step="1" value={rangeValue} readOnly={true} data-target="collapse2" id="btnCollapse2" data-btnindex="2" onTouchStart={accordionHandle} />
@@ -143,7 +144,7 @@ const SurveyResult = (props) => {
 									const itemIndex = index + 3;
 									return (
 										<div key={index} className="accordion-item border-0 mb-g">
-											<div className="accordion-button ps-2 shadow-sm bg-white justify-content-start rounded" data-target={`collapse${itemIndex}`} id={`btnCollapse${itemIndex}`} data-btnindex={itemIndex} onClick={accordionHandle}>
+											<div className="accordion-button ps-2 shadow-sm bg-white justify-content-start rounded" data-target={`collapse${itemIndex}`} id={`btnCollapse${itemIndex}`} data-btnindex={itemIndex} onClick={accordionHandle}  data-parent="#surveyResult_2">
 												{activeDescription[item].icon}
 												<span className="ms-1">{activeDescription[item].title}</span>
 												<p className="d-flex align-items-center font-size-sm mb-0 ms-auto">
@@ -189,12 +190,12 @@ const SurveyResult = (props) => {
 			</div>
 
 			<div className="container px-0 px-lg-g">
-				<div className="row">
+				<div className="row" id="accordion__products">
 					{resultProducts.length > 0 && resultProducts.map((item, index) => {
-						console.log('item', item);
 						return(
 							<div key={index} className="col-12 col-lg-4">
 								<SurveyCard
+									accordionHandle={accordionHandle}
 									activePriority={activeDescription[activePriority[index]]}
 									productDetail={item}
 									productList={productList[productsRecommend[index]]} />

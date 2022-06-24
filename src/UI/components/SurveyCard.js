@@ -10,34 +10,13 @@ const SurveyCard = (props) => {
 		productDetail,
 		productList,
 		activePriority,
+		accordionHandle,
 	} = props;
 
 	const [searchParams] = useSearchParams();
 	const site = searchParams.get('site');
 
 	const titleRange = getItemRange(productDetail.title);
-
-	const accordionHandle = (e) => {
-        const btnToggle = document.querySelectorAll('.accordion-button');
-        for (let i = 0; i < btnToggle.length; i++) {
-            btnToggle[i].classList.remove('collapsed');
-        }
-
-        const collapse = new Collapse(document.getElementById(e.currentTarget.dataset.target), {
-            toggle: true,
-        });
-
-        const btnIndex = e.currentTarget.dataset.btnindex;
-        document.querySelector(`#btnCollapse${btnIndex}`).classList.toggle('collapsed');
-        setTimeout(function () {
-            if (collapse._element.classList.contains('show')) {
-                document.getElementById(`collapseProduct${btnIndex}`).classList.remove('collapsed');
-            } else {
-				document.querySelector(`#btnCollapse${btnIndex}`).classList.toggle('collapsed');
-            }
-        }, 390);
-    };
-
 	const selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
 
 	return (
@@ -57,12 +36,12 @@ const SurveyCard = (props) => {
 							{activePriority.title}
 						</p>
 						<div className="accordion border-top border-bottom">
-							<button className="accordion-button shadow-none bg-transparent text-body px-0 border-0 py-2 mb-0 d-flex justify-content-between font-size-sm" data-target={`collapseProduct${productDetail[selectedSite].id}`} id={`btnCollapse${productDetail[selectedSite].id}`} data-btnindex={productDetail[selectedSite].id} onClick={accordionHandle}>
+							<button className="accordion-button shadow-none bg-transparent text-body px-0 border-0 py-2 mb-0 d-flex justify-content-between font-size-sm" data-target={`collapse${productDetail[selectedSite].id}`} id={`btnCollapse${productDetail[selectedSite].id}`} data-btnindex={productDetail[selectedSite].id} onClick={accordionHandle} data-parent="#accordion__products">
 								How to Use
 								<Plus className='minus' />
 								<Minus className='plus' />
 							</button>
-							<div className="collapse" id={`collapseProduct${productDetail[selectedSite].id}`}>
+							<div className="collapse" id={`collapse${productDetail[selectedSite].id}`} data-bs-parent="#accordion__products">
 								<p className="mb-0 pb-2">{productList.howto}</p>
 							</div>
 						</div>
