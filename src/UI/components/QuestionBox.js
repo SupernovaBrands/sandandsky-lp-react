@@ -61,7 +61,7 @@ const QuestionBox = (props) => {
                         currentQuestion > 1 && (<a href="/" className="col-3 col-lg-2 text-start text-underline text-body font-size-sm mb-1" onClick={prevAction()}>Previous</a>)
                     }
                     <div className={`col-6 col-lg-4 ${currentQuestion > 1 ? 'offset-lg-2' : ''}`}>
-                        <button className="btn btn-secondary text-white btn-next w-100" onClick={nextAction()} disabled={isDisabled}>{ isLastQuestion ? 'View my results' : 'Next' }</button>
+                        <button className="btn btn-primary text-white btn-next w-100" onClick={nextAction()} disabled={isDisabled}>{ isLastQuestion ? 'View my results' : 'Next' }</button>
                     </div>
                 </div>
                 <SplashBottom className="d-none d-lg-block question-box__decoration-bottom position-absolute start-0 bottom-0" />
