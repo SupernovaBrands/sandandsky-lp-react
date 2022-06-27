@@ -34,7 +34,7 @@ const MultipleChoice = (props) => {
             if (text.trim() !== 'other:') currentItems.push(text);
         } else if (text === 'None') {
             currentItems = ['None'];
-            setDisableRest(true);
+            // setDisableRest(true);
             setSelectedItems(currentItems);
             answerAction(currentItems);
         } else {
