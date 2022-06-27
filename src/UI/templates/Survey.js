@@ -291,7 +291,6 @@ const Survey = () => {
                                                 caption={item.caption ? item.caption : ''}
                                                 captionClass={item.captionClass ? item.captionClass : ''}
                                                 category={item.category}
-                                                defaultEnabled={true}
                                                 >
                                                 <MultipleChoice answers={item.answers}
                                                     lastFull={item.lastFull}

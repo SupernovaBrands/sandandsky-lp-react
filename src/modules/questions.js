@@ -79,6 +79,7 @@ const Questions = [
             {label: 'Toner'},
             {label: 'Serum'},
             {label: 'Moisturiser'},
+            {label: 'None'},
         ],
         caption: '*Choose up to 6',
         captionClass: 'w-100 font-size-sm mb-4',
