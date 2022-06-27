@@ -20,6 +20,7 @@ const QuestionBox = (props) => {
         height,
         totalSteps,
         category,
+        defaultEnabled,
     } = props;
 
     const prevAction = () => {
@@ -42,7 +43,11 @@ const QuestionBox = (props) => {
     }
 
     const defaultSelected = currentAnswer && currentAnswer[currentQuestion] ? currentAnswer[currentQuestion] : null;
-    const [isDisabled, setDisable] = useState(defaultSelected ? false : true);
+    const defaultStateEnable = defaultSelected ? defaultSelected : !defaultEnabled;
+
+    const disableState = defaultSelected ? false : defaultStateEnable;
+
+    const [isDisabled, setDisable] = useState(disableState);
     const isLastQuestion = Questions.length === currentQuestion;
 
     return (

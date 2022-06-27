@@ -27,6 +27,8 @@ const SurveyCard = (props) => {
 			'action': 'Learn More',
 			'label': e.target.dataset.title,
 		}, `https://${site}`);
+
+		window.parent.location.href = e.target.href;
 	};
 
 	return (

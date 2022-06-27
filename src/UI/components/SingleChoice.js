@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { SurveyContext } from './QuestionBox';
 import RangeSlider from './RangeSlider';
 
@@ -42,6 +42,12 @@ const SingleChoice = (props) => {
         answerAction(selected);
         setDisable(false);
     };
+
+    useEffect(() => {
+        if (inputType === 'RangeSlider') {
+            answerAction(answers[0]);
+        }
+    }, []);
 
     const percentVal = (rangeValue - rangeMin) * 100 / (rangeMax - rangeMin);
     const percentWidth = {

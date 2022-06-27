@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { SurveyContext } from './QuestionBox';
 
@@ -67,6 +67,10 @@ const MultipleChoice = (props) => {
             }
         }
     };
+
+    useEffect(() => {
+        answerAction('');
+    }, []);
 
     return (
         <div className="row">
