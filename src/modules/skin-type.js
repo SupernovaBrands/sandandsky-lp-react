@@ -35,7 +35,8 @@ const getSkinType = (currentAnswers) => {
 
 	switch (skinConcerns) {
 		// Clogged or enlarged pores, Blemishes or acne
-		case skinConcernsAnswers[0] || skinConcernsAnswers[1]:
+		case skinConcernsAnswers[0]:
+		case skinConcernsAnswers[1]:
 			switch(skinType) {
 				case skinTypeAnswers[0]:
 					skinResult = skinResultList['Oily'];
@@ -69,7 +70,10 @@ const getSkinType = (currentAnswers) => {
 			};
 			break;
 		// Scarring or uneven skin texture, Redness, Dryness and dehydration, Fine lines or wrinkles
-		case skinConcernsAnswers[3] || skinConcernsAnswers[4] || skinConcernsAnswers[5] || skinConcernsAnswers[6]:
+		case skinConcernsAnswers[3]:
+		case skinConcernsAnswers[4]:
+		case skinConcernsAnswers[5]:
+		case skinConcernsAnswers[6]:
 			switch(skinType) {
 				case skinTypeAnswers[0]:
 					skinResult = skinResultList['Oily'];
@@ -86,7 +90,8 @@ const getSkinType = (currentAnswers) => {
 			};
 			break;
 		// Dark spots or hyperpigmentation, Dullness or uneven skin tone
-		case skinConcernsAnswers[7] || skinConcernsAnswers[8]:
+		case skinConcernsAnswers[7]:
+		case skinConcernsAnswers[8]:
 			switch(skinType) {
 				case skinTypeAnswers[0]:
 					skinResult.title = 'Oily';
