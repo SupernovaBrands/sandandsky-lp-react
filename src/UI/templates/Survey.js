@@ -17,7 +17,7 @@ import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
 import getProductResult from '../../modules/product-result';
 import getEnvironmentStress from '../../modules/environment-stress';
 import SurveyResult from '../components/SurveyResult';
-
+import productList from '../../modules/product-list';
 
 window.getCookie = getCookie;
 
@@ -140,6 +140,13 @@ const Survey = () => {
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
 
+        const productHandle = [];
+        productsRecommend.forEach((item) => {
+            productHandle.push({
+                handle: productList[item].handle,
+            });
+        });
+
         if (close) {
             setCookie('surveyPosition', 'finished');
             setPosition('finished');
@@ -148,8 +155,10 @@ const Survey = () => {
                 skinType,
                 envStressResult,
                 productsRecommend,
+                productHandle,
                 activePriority
             };
+
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie('surveyResult', surveyResultJson);
