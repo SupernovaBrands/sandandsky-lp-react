@@ -142,9 +142,7 @@ const Survey = () => {
 
         const productHandle = [];
         productsRecommend.forEach((item) => {
-            productHandle.push({
-                handle: productList[item].handle,
-            });
+            productHandle.push(productList[item].handle);
         });
 
         if (close) {
