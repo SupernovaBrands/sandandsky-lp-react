@@ -141,8 +141,10 @@ const Survey = () => {
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
 
         const productHandle = [];
+        const productSkus = [];
         productsRecommend.forEach((item) => {
             productHandle.push(productList[item].handle);
+            productSkus.push(productList[item].sku);
         });
 
         if (close) {
@@ -154,6 +156,7 @@ const Survey = () => {
                 envStressResult,
                 productsRecommend,
                 productHandle,
+                productSkus,
                 activePriority
             };
 
