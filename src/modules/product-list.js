@@ -4,6 +4,7 @@ const productList = {
 		usp: 'Deeply detoxes and tightens pores in 10 minutes with Australian Pink Clay, a magnet for toxins',
 		howto: 'Use 2-3 times a week for about 10 minutes or until dry',
 		title: 'Australian Pink Clay Porefining Face Mask',
+		sku: 'SS0000012010',
 		dev: {
 			id: 39409261805639,
 			price: '39.90',
@@ -16,6 +17,7 @@ const productList = {
 		usp: 'Removes makeup, tightens pores and gently exfoliates with AHAs',
 		howto: 'Use it daily as a morning and night cleanser',
 		title: 'Australian Pink Clay Deep Pore Cleanser',
+		sku: 'SS0001612020',
 		dev: {
 			id: 39409197580359,
 			price: '29.90',
@@ -28,6 +30,7 @@ const productList = {
 		usp: 'Mattify skin, clear congestion and resurface skin with Bamboo & Macadamia for gentle physical exfoliation',
 		howto: 'Use up to 3 times a week after cleansing, and before serums or toners',
 		title: 'Australian Pink Clay Flash Perfection Exfoliator',
+		sku: 'SS0000022020',
 		dev: {
 			id: 32227653910599,
 			price: '36.90',
@@ -40,6 +43,7 @@ const productList = {
 		usp: 'Ultra-nourishing, brightens and protects skin with super-potent antioxidants, Hyaluronic Acid and Kakadu Plum',
 		howto: 'Use 2-3 times a week for about 10 minutes for best results',
 		title: 'Australian Emu Apple Super Bounce Mask',
+		sku: 'SS0000102020',
 		dev: {
 			id: 32227654402119,
 			price: '94.90',
@@ -52,6 +56,7 @@ const productList = {
 		howto: 'Morning or night, apply 4-6 drops to clean skin and massage in circular motions',
 		usp: 'Defeat dryness, dull skin & daily pollutants with this bi-phase serum for extra nourishment',
 		title: 'Australian Emu Apple Dreamy Glow Drops',
+		sku: 'SS0000112020',
 		dev: {
 			id: 39409199218759,
 			price: '54.90',
@@ -64,6 +69,7 @@ const productList = {
 		howto: 'Day or night, pour a half-spoon of polish, lather it and gently massage onto cleansed skin for 15 seconds',
 		usp: 'Glow beyond bright skin with our advanced, triple-action enzyme powder exfoliant, packed with antioxidants and Vitamin C',
 		title: 'Australian Emu Apple Enzyme Powder Polish',
+		sku: 'SS0000122020',
 		dev: {
 			id: 32772333731911,
 			price: '44.90',
@@ -76,6 +82,7 @@ const productList = {
 		howto: 'Use 2-3 times a week, leave on for 10 minutes for an instant hydration perk',
 		usp: 'Intensively hydrates, soothes redness and strengthens skin barrier in 10 minutes with Hyaluronic Acid, Squalane and Pentavitin',
 		title: 'Tasmanian Spring Water Intense Hydrating Mask',
+		sku: 'SS0002242020',
 		dev: {
 			id: 39567979839559,
 			price: '35.00',
@@ -88,6 +95,7 @@ const productList = {
 		howto: 'Use morning or night as the final step of your skincare routine',
 		usp: 'Drench and quench with our ultra-hydrating gel-cream that smoothens skin and targets wrinkles with Fermented Sea Kelp',
 		title: 'Tasmanian Spring Water Hydration Boost Cream',
+		sku: 'SS0000442020',
 		dev: {
 			id: 39409201774663,
 			price: '64.00',
@@ -100,6 +108,7 @@ const productList = {
 		howto: 'Morning or night, apply 4-6 drops after cleansing or exfoliating and massage in circular motions',
 		usp: 'Ultra-hydrating serum strengthens and smoothens skin barrier, powered by essential minerals, probiotics and Hyaluronic Acid',
 		title: 'Tasmanian Spring Water Splash Serum',
+		sku: 'SS0000402020',
 		dev: {
 			id: 39408221454407,
 			price: '51.90',
@@ -112,6 +121,7 @@ const productList = {
 		howto: 'Use 2-3 times a week for about 5-10 minutes',
 		usp: 'Combats acne, unclogs pores and eliminates sebum for clear skin, with powerful ingredients like Salicylic Acid and Prebiotics',
 		title: 'Oil Control Clearing Face Mask',
+		sku: 'SS0001182020',
 		dev: {
 			id: 39652548771911,
 			price: '34.90',
@@ -124,6 +134,7 @@ const productList = {
 		howto: 'Use it daily as a morning and night cleanser',
 		usp: 'Unclogs pores, regulates sebum production and soothes skin to combat blemishes, with Salicylic Acid and Old Man’s Weed',
 		title: 'Oil Control Clearing Cleanser',
+		sku: 'SS0001172020',
 		dev: {
 			id: 39652548411463,
 			price: '29.90',
