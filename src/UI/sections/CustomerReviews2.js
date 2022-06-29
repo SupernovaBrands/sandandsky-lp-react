@@ -104,7 +104,7 @@ const CustomerReview2 = () => {
                 <div className="carousel--scroll position-relative" id="customerReviews2">
                     <div className="carousel-inner d-flex flex-nowrap row w-auto" role="listbox">
                     {CUSTOMER_REVIEWS.map((item, index) => (
-                        <div className="carousel-item col-9 col-md-4 rounded px-0">
+                        <div key={`Review2${index}`} className="carousel-item col-9 col-md-4 rounded px-0">
                             {item.content}
                         </div>
                     ))}
@@ -115,7 +115,7 @@ const CustomerReview2 = () => {
                             <div className="scrollbar--thumb"></div>
                         </div>
                     </div>
-            
+
                     <a className="carousel-control-prev text-body ms-ng" role="button">
                         <span className="carousel-control-prev-icon carousel-control--background d-flex justify-content-center align-items-center" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" className="svg"><path d="m16.2 1.885-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>

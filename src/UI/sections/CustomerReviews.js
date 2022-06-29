@@ -32,12 +32,14 @@ const CustomerReviews = () => {
     ]
 
     const onMore = (event) => {
+        event.preventDefault();
         event.target.closest('p').querySelector('.review-card__more-text').classList.remove('d-none');
         event.target.closest('p').querySelector('.review-card__more-truncated').classList.add('d-none');
         event.target.closest('p').querySelector('.review-card__more').classList.add('d-none');
     }
 
     const onLess = (event) => {
+        event.preventDefault();
         event.target.closest('p').querySelector('.review-card__more-text').classList.add('d-none');
         event.target.closest('p').querySelector('.review-card__more-truncated').classList.remove('d-none');
         event.target.closest('p').querySelector('.review-card__more').classList.remove('d-none');
@@ -65,24 +67,24 @@ const CustomerReviews = () => {
                                 <figcaption className="m-0 bg-secondary-light font-size-sm px-g py-3">
                                     <p className="mb-3 text-body">{item.name}</p>
                                     <p className="d-block text-body">
-                                        <span class="review-card__more-truncated text-break">{ truncateWords(item.text, 17) }... </span>
-                                        <span class="d-none review-card__more-text text-break">
+                                        <span className="review-card__more-truncated text-break">{ truncateWords(item.text, 17) }... </span>
+                                        <span className="d-none review-card__more-text text-break">
                                             {item.text}
-                                            <a href="javascript:void(0)" class="text-underline text-body review-card__less ms-1" onClick={onLess.bind(this)}>Less</a>
+                                            <a href="#" className="text-underline text-body review-card__less ms-1" onClick={onLess.bind(this)}>Less</a>
                                         </span>
-			                            <a href="javascript:void(0)" class="text-underline text-body review-card__more" onClick={onMore.bind(this)}>More</a>
+			                            <a href="#" className="text-underline text-body review-card__more" onClick={onMore.bind(this)}>More</a>
                                     </p>
                                 </figcaption>
                             </figure>
                         ))}
                     </div>
-            
+
                     <div className="container mt-3 px-0 review-carousel__scroll">
                         <div className="scrollbar">
                             <div className="scrollbar--thumb"></div>
                         </div>
                     </div>
-            
+
                     <a className="carousel-control-prev text-body ms-ng" role="button">
                         <span className="carousel-control-prev-icon carousel-control--background d-flex justify-content-center align-items-center" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.627 22.627" className="svg"><path d="m16.2 1.885-9.428 9.428 9.428 9.428-1.886 1.886L3 11.313 14.314 0z"></path></svg>

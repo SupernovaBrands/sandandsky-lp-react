@@ -1,4 +1,3 @@
-// [RangePage]
 @import '_core';
 
 @import "~bootstrap/scss/functions";
@@ -9,16 +8,33 @@
 // Layout & components
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/transitions";
-@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/carousel";
 
+
+// Utilities
 @import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
 
-@import '_core';
-@import 'common';
 
-@import 'components/product-card.scss';
+@import 'core/fonts';
+@import 'core/type';
+@import 'core/grid';
+@import 'core/utilities';
 
-@import 'templates/range';
+@import 'components/svgs';
+@import 'components/forms';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/accordion';
+
+@import 'sections/header';
+@import 'sections/footer';
+
+@import 'sections/a-beauty-review';
+@import 'sections/review-carousel';

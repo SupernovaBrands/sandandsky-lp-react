@@ -3,6 +3,7 @@ import ProductForm from '../sections/ProductForm';
 import '../../product.scss';
 import ProductImagePreview from "../components/ProductImagePreview";
 import ProductProvider from '../../store/ProductProvider';
+import FAQCONTENT from '../../store/product-faq';
 
 const CustomerReviews = lazy(() => import('../sections/CustomerReviews'));
 const CustomerReviews2 = lazy(() => import('../sections/CustomerReviews2'));
@@ -17,7 +18,7 @@ const ProductDetail = (props) => {
                 <CustomerReviews />
                 <Recognize />
                 <CustomerReviews2 />
-                <FaqAccordion />
+                <FaqAccordion FAQData={FAQCONTENT} />
             </Suspense>
         </ProductProvider>
     )
