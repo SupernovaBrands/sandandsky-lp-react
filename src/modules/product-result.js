@@ -126,7 +126,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', ''];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
                                     productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Serum'];
