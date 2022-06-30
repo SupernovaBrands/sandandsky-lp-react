@@ -6,4 +6,43 @@
 	&__review {
 		color: $black;
 	}
+
+	&__text {
+		font-size: $font-size-sm;
+		text-decoration: none;
+		color: $body-color;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: $font-size-base;
+		}
+	}
+
+	&__text-sm {
+		font-size: $font-size-xs;
+		@include media-breakpoint-up(lg) {
+			font-size: $font-size-sm;
+		}
+	}
+}
+
+
+// secondary image
+.img--hover {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	a:hover & {
+		opacity: 1;
+		transition: opacity .2s;
+		visibility: visible;
+	}
 }

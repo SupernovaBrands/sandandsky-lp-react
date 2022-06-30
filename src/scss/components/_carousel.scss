@@ -226,6 +226,10 @@
 		.carousel-item {
 			display: block;
 			margin-right: 0;
+
+			&.col-6 {
+				max-width: 50%;
+			}
 		}
 
 		.carousel-inner {

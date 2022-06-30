@@ -9,11 +9,11 @@ const RangeApcFAQ = [
 	},
 	{
 		title: 'What are the benefits of using Australian Pink Clay?',
-		content: "<p>A</p>",
+		content: "<p>If you want to wave goodbye to dull, dry or congested skin, it’s time to say hello to Australian Pink Clay! From a brighter complexion in 10 minutes to fewer pimples and tighter pores, here are some additional benefits that our Australian Pink Clay provides:</p><ul class='list-unstyled'><li>- Enriched with detoxifying and brightening ingredients to perk up dull complexion and give it back its <b>radiant natural glow – fast</b>.</li><li>- Containing purifying minerals, it acts like a powerful magnet to combat pollution and promote a <b>healthy, happy, detoxified complexion</b>.</li><li>- Drawing out dirt, impurities and excess oils from deep within the skin, it helps to <b>prevent blemish-causing blockages while tightening pores.</b></li><li>- With anti-microbial and anti-inflammatory properties, it <b>detoxifies skin and balances sebum production</b> to purify pores and <b>prevent future breakouts</b> from occurring.</li><li>- Giving the skin an ultra-deep, extra-thorough clean, they help prevent congestion, eradicate bumps and <b>promote a smooth, soft, even complexion.</b></li></ul>",
 	},
 	{
 		title: 'Can I combine the Australian Pink Clay with other products?',
-		content: '<p>Use the cleanser morning and night. For sensitive skin, use it as a night cleanser. Use the mask 2-3 times a week for oily/combination skin and 1-2 times a week for sensitive/dry skin.</p>',
+		content: '<p>Our Sand & Sky products are designed to slot easily into any skincare routine, for a taste of holiday skin. While all of our products can be used together, our products are highly active, so there are a few guidelines to follow to ensure you\'re not having too much of a good thing.</p><br /><p>Because of the particularly active nature of our Australian Pink Clay Mask, we recommend not combining it with other active ingredients on the same day. This gives your skin a rest on the actives, and time to realise the amazing results of our multi-tasking formulas. You should not exfoliate with our products more than 3 times a week. That means, if using our Australian Pink Clay Flash Perfection Exfoliator, you can use them up to 3 times a week. Avoid using our Australian Pink Clay Porefining Face Mask or Deep Pore Cleanser on the same day as the Flash Perfection Exfoliating Treatment.</p>',
 	}
 ];
 
