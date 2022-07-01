@@ -260,7 +260,7 @@ const Survey = () => {
 
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
-			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start' : 'align-content-start'} `}>
+			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start pt-4' : 'align-content-start'} `}>
 				{ currentPosition === 'start' && (
 				<>
 					<div className="px-g d-flex align-items-center flex-column justify-content-center text-center">
