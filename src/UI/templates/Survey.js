@@ -7,7 +7,7 @@ import SingleChoice from '../components/SingleChoice';
 import MultipleChoice from '../components/MultipleChoice';
 import { useResizeDetector } from 'react-resize-detector';
 
-import { setCookie, getCookie } from "../../modules/Utils";
+import { setCookie, getCookie, postIframeHeight } from "../../modules/Utils";
 import { useSearchParams } from "react-router-dom";
 import getSkinType from '../../modules/skin-type';
 
@@ -243,19 +243,8 @@ const Survey = () => {
     useEffect(() => {
         if (currentPosition === 'finished' || currentPosition === 'result') gettingResult();
     }, [currentPosition]);
-
-    const postIframeHeight = (key, val) => {
-        if (window.top === window.self) return;
-
-        window.parent.postMessage({
-            'func': 'updateIframeHeight',
-            'key': key,
-            'value': val,
-        }, `https://${site}`);
-    }
-
     useEffect(() => {
-        postIframeHeight('height', height);
+        postIframeHeight('height', height, site);
     }, [height]);
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
