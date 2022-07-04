@@ -269,7 +269,7 @@ const Survey = () => {
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
     const getQueryString = () => {
         if (window.top === window.self) return {};
-        const queryStringKeyValue = window.parent.location.search.replace('?', '').split('&');
+        const queryStringKeyValue = window.top.location.search.replace('?', '').split('&');
         const qsJsonObject = {};
         if (queryStringKeyValue !== '') {
             for (let i = 0; i < queryStringKeyValue.length; i++) {
