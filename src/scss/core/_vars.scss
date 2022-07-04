@@ -196,15 +196,15 @@ $enable-negative-margins: true;
 // Range
 $form-range-track-height: 0.688rem;
 $form-range-track-bg: transparent;
-$form-range-thumb-bg: $secondary;
+$form-range-thumb-bg: $primary;
 $form-range-thumb-width: 1.625rem;
 $form-range-track-border-radius: 0.625rem;
-$form-range-thumb-active-bg: tint-color($secondary, 70%);
+$form-range-thumb-active-bg: tint-color($primary, 70%);
 
 // Progress
 $progress-height: 0.688rem;
 $progress-bg: $secondary-light;
-$progress-bar-bg: $secondary;
+$progress-bar-bg: $primary;
 $progress-border-radius: 0.625rem;
 $progress-bar-animation-timing: none;
 $progress-bar-transition: none;

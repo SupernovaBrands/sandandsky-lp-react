@@ -1,8 +1,8 @@
 const ProgressBarStep = (props) => {
 	const stepItem = [];
 	for (let i = 1; i <= props.totalQuestions; i += 1) {
-		let classes = 'border rounded-circle zindex-1 ';
-		classes += props.currentQuestion >= i ? 'bg-secondary-light' : 'bg-white';
+		let classes = 'border border-primary rounded-circle zindex-1 ';
+		classes += props.currentQuestion >= i ? 'bg-primary' : 'bg-white';
 		if (i === 1) {
 			classes += ' me-2';
 		} else if (i === props.totalQuestions) {
