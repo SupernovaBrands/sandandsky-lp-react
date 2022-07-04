@@ -82,6 +82,7 @@ const Survey = () => {
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
     const [currentResult, setResult] = useState(answerResult);
+    const [resultParam, setResultParam] = useState(false);
 
 
     const postMessageCookie = (key, val) => {
@@ -257,6 +258,19 @@ const Survey = () => {
     }, [height]);
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
+    const getQueryString = () => {
+        if (window.top === window.self) return {};
+        const queryStringKeyValue = window.parent.location.search.replace('?', '').split('&');
+        const qsJsonObject = {};
+        if (queryStringKeyValue !== '') {
+            for (let i = 0; i < queryStringKeyValue.length; i++) {
+                qsJsonObject[queryStringKeyValue[i].split('=')[0]] = queryStringKeyValue[i].split('=')[1];
+            }
+        }
+        return qsJsonObject;
+    }
+
+    const isResultParam = getQueryString().surveyResult === '1' ? true : false;
 
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
@@ -276,7 +290,7 @@ const Survey = () => {
 					</div>
 				</>)}
 
-				{ currentPosition !== 'start' && currentPosition !== 'finished' && currentPosition !== 'result' && (
+				{ !isResultParam && currentPosition !== 'start' && currentPosition !== 'finished' && currentPosition !== 'result' && (
 				<>
 					<div className="text-center position-relative">
                         <SplashTop className="d-none d-lg-block question-box__decoration-top position-absolute end-0" />
