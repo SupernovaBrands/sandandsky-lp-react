@@ -16,7 +16,6 @@ import { ReactComponent as SplashTop } from '../../assets/splash-top.svg';
 import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
 import getProductResult from '../../modules/product-result';
 import getEnvironmentStress from '../../modules/environment-stress';
-import SurveyResult from '../components/SurveyResult';
 import productList from '../../modules/product-list';
 
 window.getCookie = getCookie;
@@ -75,14 +74,11 @@ const Survey = () => {
     }
     const initialCurrentQuestion = getCookie('currentQuestion') ? parseInt(getCookie('currentQuestion'), 10) : 1;
     const answerData = getCookieAnsweredQuestion() ? getCookieAnsweredQuestion() : {};
-    const answerResult = getCookie('surveyResult') ? JSON.parse(getCookie('surveyResult')) : {};
 
 	// states
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
-    const [currentResult, setResult] = useState(answerResult);
-    const [resultParam, setResultParam] = useState(false);
 
 
     const postMessageCookie = (key, val) => {
@@ -144,8 +140,11 @@ const Survey = () => {
 
         const productHandle = [];
         const productSkus = [];
+        console.log('productsRecommend', productsRecommend);
         productsRecommend.forEach((item) => {
-            productHandle.push(productList[item].handle);
+            // console.log('productList', productList['TSW Serum'].handle);
+            console.log('productsRecommend item', item);
+            // productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
         });
 
@@ -165,7 +164,6 @@ const Survey = () => {
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie('surveyResult', surveyResultJson);
-            setResult(surveyResultObj);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
@@ -342,16 +340,12 @@ const Survey = () => {
                     </div>
 				</>)}
 
-				{ currentPosition === 'finished' && (
+				{ (currentPosition === 'finished' || currentPosition === 'result') && (
 					<div className="question-box analyzing d-flex justify-content-center align-items-center flex-column">
 						<p className="question-box__title">Analysing your answers</p>
 						<LoaderSvg className="loader mt-0 mb-0"/>
 					</div>
 				)}
-
-                { currentPosition === 'result' && (
-                    <SurveyResult answerResult={currentResult} />
-                )}
 			</div>
 		</div>
 	)

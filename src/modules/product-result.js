@@ -251,7 +251,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleaser', 'APC Mask', 'TSW Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
                                     productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
@@ -278,7 +278,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Exfo', 'AEA Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Exfoliator', 'AEA Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'AEA Serum'];
@@ -318,7 +318,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Exfo', 'AEA Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Exfoliator', 'AEA Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'AEA Serum'];
