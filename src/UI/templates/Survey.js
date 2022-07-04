@@ -134,6 +134,7 @@ const Survey = () => {
     }
 
 	const gettingResult = (close=false) => {
+        const selectedSite = site ? site : 'dev.sandandsky.com';
 
 
         const skinType = getSkinType(currentAnswer);
@@ -173,7 +174,12 @@ const Survey = () => {
                 setCookie('surveyResult', surveyResultJson);
                 postMessageCookie('surveyResult', surveyResultJson);
                 clearCookie();
-            }, 2000);
+                if (window.top !== window.self) {
+                    setTimeout(function () {
+                        window.top.location.href = `https://${selectedSite}/pages/survey-result/`;
+                    }, 500);
+                }
+            }, 1500);
         }
     }
 
