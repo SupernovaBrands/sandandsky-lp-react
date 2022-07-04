@@ -172,15 +172,7 @@ const Survey = () => {
                 postMessageCookie('surveyPosition', 'result');
                 setCookie('surveyResult', surveyResultJson);
                 postMessageCookie('surveyResult', surveyResultJson);
-                if (window.top !== window.self) {
-                    let urlTop = window.top.location.href;
-                    if (urlTop.indexOf('?') > -1) {
-                        urlTop += '&surveyResult=1';
-                    } else {
-                        urlTop += '?surveyResult=1';
-                    }
-                    window.top.location.href = urlTop;
-                }
+                clearCookie();
             }, 2000);
         }
     }
@@ -267,19 +259,6 @@ const Survey = () => {
     }, [height]);
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
-    const getQueryString = () => {
-        if (window.top === window.self) return {};
-        const queryStringKeyValue = window.top.location.search.replace('?', '').split('&');
-        const qsJsonObject = {};
-        if (queryStringKeyValue !== '') {
-            for (let i = 0; i < queryStringKeyValue.length; i++) {
-                qsJsonObject[queryStringKeyValue[i].split('=')[0]] = queryStringKeyValue[i].split('=')[1];
-            }
-        }
-        return qsJsonObject;
-    }
-
-    const isResultParam = getQueryString().surveyResult === '1' ? true : false;
 
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
@@ -299,7 +278,7 @@ const Survey = () => {
 					</div>
 				</>)}
 
-				{ !isResultParam && currentPosition !== 'start' && currentPosition !== 'finished' && currentPosition !== 'result' && (
+				{ currentPosition !== 'start' && currentPosition !== 'finished' && currentPosition !== 'result' && (
 				<>
 					<div className="text-center position-relative">
                         <SplashTop className="d-none d-lg-block question-box__decoration-top position-absolute end-0" />
