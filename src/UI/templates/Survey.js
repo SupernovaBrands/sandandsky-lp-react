@@ -142,9 +142,7 @@ const Survey = () => {
         const productSkus = [];
         console.log('productsRecommend', productsRecommend);
         productsRecommend.forEach((item) => {
-            // console.log('productList', productList['TSW Serum'].handle);
-            console.log('productsRecommend item', item);
-            // productHandle.push(productList[item].handle);
+            productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
         });
 
