@@ -172,6 +172,15 @@ const Survey = () => {
                 postMessageCookie('surveyPosition', 'result');
                 setCookie('surveyResult', surveyResultJson);
                 postMessageCookie('surveyResult', surveyResultJson);
+                if (window.top !== window.self) {
+                    let urlTop = window.top.location.href;
+                    if (urlTop.indexOf('?') > -1) {
+                        urlTop += '&surveyResult=1';
+                    } else {
+                        urlTop += '?surveyResult=1';
+                    }
+                    window.top.location.href = urlTop;
+                }
             }, 2000);
         }
     }
