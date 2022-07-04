@@ -140,7 +140,6 @@ const Survey = () => {
 
         const productHandle = [];
         const productSkus = [];
-        console.log('productsRecommend', productsRecommend);
         productsRecommend.forEach((item) => {
             productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
