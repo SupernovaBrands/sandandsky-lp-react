@@ -46,7 +46,7 @@ const CarouselTab = (props) => {
 
 	return (
 		<div className='text-center mb-4 overflow-hidden'>
-			<ul className='nav nav-tabs border-0 range__tab justify-content-center mb-3' id='carouselTab' role='tablist'>
+			<ul className='nav nav-tabs border-0 range__tab justify-content-center mb-3 mx-n1' id='carouselTab' role='tablist'>
 				{tabs.map((item, idx) => (
 					<li key={idx} className='nav-item px-hg' role='presentation'>
 						<button
