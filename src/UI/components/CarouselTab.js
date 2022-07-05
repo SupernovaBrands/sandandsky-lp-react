@@ -31,7 +31,6 @@ const CarouselTab = (props) => {
 			const carousel = document.querySelector(`${bsTarget} .carousel--scroll`);
 			const carouselItem = document.querySelectorAll(`${bsTarget} .carousel--scroll .carousel-item`);
 			const scrollBarDiv = carousel.querySelector('.scrollbar').closest('.mx-lg-n1');
-			console.log('scrollBarDiv', scrollBarDiv);
 			const carouselNext = carousel.querySelector('.carousel-control-next');
 			if (carouselItem.length > 2) {
 				scrollBarDiv.classList.remove('d-none');
