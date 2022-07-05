@@ -1,9 +1,53 @@
-.range__tab .nav-item {
-	flex: 1 0 0;
+.range__tab {
+	.nav-link.active {
+		font-weight: bold;
+
+		&:before {
+			border-bottom: 2px solid $primary;
+			content: '';
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+		}
+	}
 }
 
 @include media-breakpoint-up(lg) {
 	.range__formula-title {
 		@include font-size($h1-font-size);
 	}
+}
+
+.carousel--range {
+	.carousel--scroll {
+		.carousel-control-next,
+		.carousel-control-prev {
+
+			@include media-breakpoint-up(lg) {
+				top: calc-em(79.335);
+				transform: none;
+			}
+
+			@include media-breakpoint-up(xl) {
+				top: calc-em(109.5);
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			.carousel-control {
+				&--background {
+					height: calc-em(60);
+				}
+
+				&-next {
+					right: $grid-gutter-width;
+				}
+
+				&-prev {
+					left: $grid-gutter-width;
+				}
+			}
+		}
+	}
+
 }

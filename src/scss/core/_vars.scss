@@ -84,12 +84,14 @@ $body-color: #484848;
 $gray-100: #F8F8F8;
 $gray-400: #CECECE;
 $gray-600: #969696;
+$gray-700: #595959;
 
 $theme-colors: (
   'primary': $primary,
   'secondary': $secondary,
   'secondary-light': $secondary-light,
-  'gray-100': $gray-100
+  'gray-100': $gray-100,
+  'gray-700': $gray-700,
 );
 
 // Border

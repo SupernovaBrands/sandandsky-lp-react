@@ -14,17 +14,21 @@ const adjustScrollThumb = (thumb, inner, scrollParent) => {
 const carouselScroll = (carouselId) => {
     setTimeout(() => {
         const carousel = document.getElementById(carouselId);
+        if (!carousel) {
+            return;
+        }
         const inner = carousel.querySelector('.carousel-inner');
         const items = carousel.querySelectorAll('.carousel-item');
         const scrollbar = carousel.querySelector('.scrollbar');
         const scrollThumb = carousel.querySelector('.scrollbar--thumb');
         const prevButton = carousel.querySelector('.carousel-control-prev');
         const nextButton = carousel.querySelector('.carousel-control-next');
+
         if (scrollbar) {
             carousel.addEventListener('adjustThumb', () => { adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode); });
             if (scrollThumb) adjustScrollThumb(scrollThumb, inner, scrollbar.parentNode);
             if (items.length < 5 && 768 <= window.innerWidth) {
-                
+
                 scrollbar.classList.add('d-none');
             }
         }
@@ -37,7 +41,7 @@ const carouselScroll = (carouselId) => {
 
         const checkButton = () => {
             if (inner.scrollLeft <= 15) {
-                
+
                 if (!prevButton.classList.contains('carousel-control-prev--always-show')) {
                     prevButton.classList.add('d-none');
                 } else {

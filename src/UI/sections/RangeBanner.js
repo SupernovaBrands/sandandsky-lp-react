@@ -3,8 +3,8 @@ const RangeBanner = () => {
 	return (
 		<section className='range__banner jumbotron'>
 			<div className='d-lg-none text-center'>
-				<h1 className='mb-1'>Australian Pink Clay</h1>
-				<p className='mb-1'>Detoxify • Refine • Soothe</p>
+				<h1 className='mb-2'>Australian Pink Clay</h1>
+				<p className='mb-g'>Detoxify • Refine • Soothe</p>
 			</div>
 
 			<picture className="d-block w-100">

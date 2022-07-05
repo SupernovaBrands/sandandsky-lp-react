@@ -13,9 +13,11 @@ const RangeFormula = () => {
 						<img className='w-100 pe-lg-6 mb-3' alt='Revolutionary Formula' src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e0c5a014-5faa-4ae0-a0b0-978610dcbd00/828x" loading="lazy" />
 					</picture>
 					<div className='col-12 col-lg-5 px-g'>
-						<h2 className='range__formula-title text-center text-lg-start'>Australian Pink Clay results</h2>
-						<p className='h4 text-center text-lg-start mb-0 fw-normal'>It's our cult-favourite for a reason. Watch your skin improve in a matter of minutes!</p>
-						<ul className='list-unstyled row mt-2 mb-0 range__formula-list'>
+						<h2 className='h1 text-center text-lg-start'>Australian Pink Clay results</h2>
+						<div className='text-center text-lg-start'>
+							<p className='h4 mb-2 fw-normal d-inline-block'>It's our cult-favourite for a reason. Watch <br className='d-block d-lg-none' />your skin <br className='d-none d-lg-block' />improve in a matter of minutes!</p>
+						</div>
+						<ul className='list-unstyled row mt-2 mb-0 range__formula-list pe-lg-5'>
 							<li className='col-12 d-flex align-items-center mb-2'>
 								<Cherkmark className='me-g d-flex flex-shrink-0 justify-content-center' />
 								Draws out impurities, excess oil, toxins, and pollutants from the skin

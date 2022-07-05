@@ -36,7 +36,7 @@ const ProductForm = (props) => {
         }
         window.location.href = buttonUrl;
     }
-    
+
     return (
         <div className="container mb-0 mt-lg-3">
             <div className="row align-items-start">
@@ -45,7 +45,7 @@ const ProductForm = (props) => {
                     <h4 className='text-center text-lg-start fw-normal order-lg-0'>Australian Pink Clay</h4>
                     <h1 className='text-center text-lg-start order-lg-0'>Pore Tight Kit</h1>
                     <div className="d-flex mb-2 justify-content-center justify-content-lg-start order-lg-0">
-                        <ReviewStar score={4.8} /> 
+                        <ReviewStar score={4.8} />
                         <span className='ms-1'> <a href="https://www.sandandsky.com/products/pore-tight-kit#write-a-review" className='text-underline text-dark'>407 Reviews</a></span>
                     </div>
                     <p className="mb-2 order-lg-0 text-center text-lg-start">
