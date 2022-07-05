@@ -1,11 +1,12 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from 'react-router-dom';
 import Layout from './UI/layout/Layout';
-import SurveyResultTemplate from "./UI/templates/SurveyResultTemplate";
+// import SurveyResultTemplate from "./UI/templates/SurveyResultTemplate";
 
 const ProductDetail = lazy(() => import('./UI/templates/ProductDetail'));
 const Survey = lazy(() => import('./UI/templates/Survey'));
 const ApcRange = lazy(() => import('./UI/templates/ApcRange'));
+const SurveyResultTemplate = lazy(() => import('./UI/templates/SurveyResultTemplate'));
 
 const App = () => {
   const noHeader = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/'
