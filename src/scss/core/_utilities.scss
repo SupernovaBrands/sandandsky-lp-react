@@ -63,7 +63,7 @@
 }
 
 // Half gutter padding
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
 	.pe-hg, .px-hg {
 		padding-right: $grid-gutter-width * 0.5 !important;
 	}

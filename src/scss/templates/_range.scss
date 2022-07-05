@@ -23,6 +23,9 @@
 		.carousel-control-next,
 		.carousel-control-prev {
 
+			top: 22.85%;
+			transform: translateY(-22.85%);
+
 			@include media-breakpoint-up(lg) {
 				top: calc-em(79.335);
 				transform: none;
@@ -33,7 +36,7 @@
 			}
 		}
 
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			.carousel-control {
 				&--background {
 					height: calc-em(60);
