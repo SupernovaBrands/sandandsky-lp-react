@@ -21,7 +21,7 @@ const getEnvironmentStress = (currentAnswers) => {
 
 	let resultKey;
 
-	if (['1 hour', '2 hours', '3 hours', '4 hours'].includes(hourAnswer)) {
+	if (['Less than 1 hour', '2 hours', '3 hours', '4 hours'].includes(hourAnswer)) {
 		if (['No', 'Uncertain'].includes(airAnswer) && ['None', 'Low'].includes(stressAnswer)) {
 			resultKey = 'LOW';
 		} else if (['Yes'].includes(airAnswer) && ['Medium', 'High'].includes(stressAnswer)) {

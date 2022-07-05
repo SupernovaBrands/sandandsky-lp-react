@@ -16,7 +16,7 @@ const Questions = [
     {
         question: 'How many hours of sun are you exposed to daily?',
         answers: [
-            '1 hour',
+            'Less than 1 hour',
             '2 hours',
             '3 hours',
             '4 hours',
@@ -79,6 +79,7 @@ const Questions = [
             {label: 'Toner'},
             {label: 'Serum'},
             {label: 'Moisturiser'},
+            {label: 'None'},
         ],
         caption: '*Choose up to 6',
         captionClass: 'w-100 font-size-sm mb-4',

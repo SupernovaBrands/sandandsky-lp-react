@@ -18,7 +18,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
     switch (skinConcernsA) {
         case skinConcernsQ[0]: //Clogged or enlarged pores
             switch (ageRangesA) {
-                case ageRanges[0] || ageRanges[1]: // <20, 20-25
+                case ageRanges[0]: // <20, 20-25
+                case ageRanges[1]:
                     switch (skinTypeAnswer) {
                         case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                             if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -102,7 +103,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[1]: //Blemishes or acne
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -124,7 +126,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', ''];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
                                     productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Serum'];
@@ -186,7 +188,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[2]: //Excess oil
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -248,7 +251,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleaser', 'APC Mask', 'TSW Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
                                     productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
@@ -270,11 +273,12 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[3]: //Scarring or uneven skin texture
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Exfo', 'AEA Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Exfoliator', 'AEA Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'AEA Serum'];
@@ -314,7 +318,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Exfo', 'AEA Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Exfoliator', 'AEA Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'AEA Serum'];
@@ -354,7 +358,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[4]: //Redness
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -438,7 +443,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[5]: //Dryness and dehydration
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -522,7 +528,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[6]: //Fine lines or wrinkles
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -606,7 +613,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             case skinConcernsQ[7]: //Dark spots or hyperpigmentation
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
@@ -690,7 +698,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 break;
             default: //Dullness or uneven skin tone
                 switch (ageRangesA) {
-                    case ageRanges[0] || ageRanges[1]:// <20, 20-25
+                    case ageRanges[0]:// <20, 20-25
+                    case ageRanges[1]:
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {

@@ -7,7 +7,7 @@ import SingleChoice from '../components/SingleChoice';
 import MultipleChoice from '../components/MultipleChoice';
 import { useResizeDetector } from 'react-resize-detector';
 
-import { setCookie, getCookie } from "../../modules/Utils";
+import { setCookie, getCookie, postIframeHeight } from "../../modules/Utils";
 import { useSearchParams } from "react-router-dom";
 import getSkinType from '../../modules/skin-type';
 
@@ -16,8 +16,7 @@ import { ReactComponent as SplashTop } from '../../assets/splash-top.svg';
 import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
 import getProductResult from '../../modules/product-result';
 import getEnvironmentStress from '../../modules/environment-stress';
-import SurveyResult from '../components/SurveyResult';
-
+import productList from '../../modules/product-list';
 
 window.getCookie = getCookie;
 
@@ -75,13 +74,11 @@ const Survey = () => {
     }
     const initialCurrentQuestion = getCookie('currentQuestion') ? parseInt(getCookie('currentQuestion'), 10) : 1;
     const answerData = getCookieAnsweredQuestion() ? getCookieAnsweredQuestion() : {};
-    const answerResult = getCookie('surveyResult') ? JSON.parse(getCookie('surveyResult')) : {};
 
 	// states
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
-    const [currentResult, setResult] = useState(answerResult);
 
 
     const postMessageCookie = (key, val) => {
@@ -133,12 +130,20 @@ const Survey = () => {
     }
 
 	const gettingResult = (close=false) => {
+        const selectedSite = site ? site : 'dev.sandandsky.com';
 
 
         const skinType = getSkinType(currentAnswer);
         const envStressResult = getEnvironmentStress(currentAnswer);
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
+
+        const productHandle = [];
+        const productSkus = [];
+        productsRecommend.forEach((item) => {
+            productHandle.push(productList[item].handle);
+            productSkus.push(productList[item].sku);
+        });
 
         if (close) {
             setCookie('surveyPosition', 'finished');
@@ -148,12 +153,14 @@ const Survey = () => {
                 skinType,
                 envStressResult,
                 productsRecommend,
+                productHandle,
+                productSkus,
                 activePriority
             };
+
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie('surveyResult', surveyResultJson);
-            setResult(surveyResultObj);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
@@ -161,7 +168,13 @@ const Survey = () => {
                 postMessageCookie('surveyPosition', 'result');
                 setCookie('surveyResult', surveyResultJson);
                 postMessageCookie('surveyResult', surveyResultJson);
-            }, 2000);
+                clearCookie();
+                if (window.top !== window.self) {
+                    setTimeout(function () {
+                        window.top.location.href = `https://${selectedSite}/pages/survey-result/`;
+                    }, 500);
+                }
+            }, 1500);
         }
     }
 
@@ -231,26 +244,15 @@ const Survey = () => {
     useEffect(() => {
         if (currentPosition === 'finished' || currentPosition === 'result') gettingResult();
     }, [currentPosition]);
-
-    const postIframeHeight = (key, val) => {
-        if (window.top === window.self) return;
-
-        window.parent.postMessage({
-            'func': 'updateIframeHeight',
-            'key': key,
-            'value': val,
-        }, `https://${site}`);
-    }
-
     useEffect(() => {
-        postIframeHeight('height', height);
+        postIframeHeight('height', height, site);
     }, [height]);
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
-			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start' : 'align-content-start'} `}>
+			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start pt-4' : 'align-content-start'} `}>
 				{ currentPosition === 'start' && (
 				<>
 					<div className="px-g d-flex align-items-center flex-column justify-content-center text-center">
@@ -291,7 +293,6 @@ const Survey = () => {
                                                 caption={item.caption ? item.caption : ''}
                                                 captionClass={item.captionClass ? item.captionClass : ''}
                                                 category={item.category}
-                                                defaultEnabled={true}
                                                 >
                                                 <MultipleChoice answers={item.answers}
                                                     lastFull={item.lastFull}
@@ -336,16 +337,12 @@ const Survey = () => {
                     </div>
 				</>)}
 
-				{ currentPosition === 'finished' && (
+				{ (currentPosition === 'finished' || currentPosition === 'result') && (
 					<div className="question-box analyzing d-flex justify-content-center align-items-center flex-column">
 						<p className="question-box__title">Analysing your answers</p>
 						<LoaderSvg className="loader mt-0 mb-0"/>
 					</div>
 				)}
-
-                { currentPosition === 'result' && (
-                    <SurveyResult answerResult={currentResult} />
-                )}
 			</div>
 		</div>
 	)

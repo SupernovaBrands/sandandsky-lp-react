@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { SurveyContext } from './QuestionBox';
 
@@ -32,6 +32,11 @@ const MultipleChoice = (props) => {
             // clear other answer
             currentItems = currentItems.filter((item,index)=> !item.includes('other:'))
             if (text.trim() !== 'other:') currentItems.push(text);
+        } else if (text === 'None') {
+            currentItems = ['None'];
+            // setDisableRest(true);
+            setSelectedItems(currentItems);
+            answerAction(currentItems);
         } else {
             // clear when disableAll
             if (disableAll) {
@@ -54,10 +59,17 @@ const MultipleChoice = (props) => {
                 // push item
                 currentItems.push(text);
             }
+
+            const noneIndex = currentItems.indexOf('None');
+            if (currentItems.indexOf('None') >= 0) {
+                currentItems.splice(noneIndex, 1);
+            }
         }
+
         setDisable(false);
         setSelectedItems(currentItems);
         answerAction(currentItems);
+
     };
 
     const chooseItems = (index) => {
@@ -68,12 +80,8 @@ const MultipleChoice = (props) => {
         }
     };
 
-    useEffect(() => {
-        answerAction('');
-    }, []);
-
     return (
-        <div className="row">
+        <div className="row justify-content-center">
             {answers.map((answer, index) => {
                 const full = lastFull && index + 1 === answers.length ? 'col-12' : 'col-6';
                 const classes = `d-flex rounded align-items-center mb-g mb-lg-3 ${btnClass} position-relative border--default`;
@@ -81,7 +89,7 @@ const MultipleChoice = (props) => {
                 const itemClasses = selectedItems.includes(answer.label) ? 'border--default-selected position-relative bg-secondary-light' : '';
                 return (
                     <div key={index} className={full}>
-                        <div className={`${disabledClass} ${classes} ${itemClasses}`} role="button">
+                        <div className={`${answer.label !== 'None' ? disabledClass : ''} ${classes} ${itemClasses}`} role="button">
                             <label
                                 className="d-flex checkbox-number align-items-center px-sm-1 w-100 p-2 justify-content-center zindex-1"
                                 htmlFor={`${index}-flexCheckDefault`}

@@ -106,3 +106,13 @@ export const getItemRange = (itemTitle) => {
 	}
 	return range;
 };
+
+export const postIframeHeight = (key, val, site) => {
+	if (window.top === window.self) return;
+
+	window.parent.postMessage({
+		'func': 'updateIframeHeight',
+		'key': key,
+		'value': val,
+	}, `https://${site}`);
+};

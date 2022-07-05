@@ -4,11 +4,6 @@ import ReviewStar from '../components/ReviewStar';
 import QuantityBox from '../components/QuantityBox';
 import ProductContext from '../../store/product-context';
 
-import { ReactComponent as FormIcon1 } from '../../assets/ptk_icon_1.svg';
-import { ReactComponent as FormIcon2 } from '../../assets/ptk_icon_2.svg';
-import { ReactComponent as FormIcon3 } from '../../assets/ptk_icon_3.svg';
-import { ReactComponent as FormIcon4 } from '../../assets/ptk_icon_4.svg';
-
 const ProductForm = (props) => {
     let params = (new URL(document.location)).searchParams;
 	let activeStore = params.get("utm_store") || 'us';
@@ -73,19 +68,15 @@ const ProductForm = (props) => {
                     <p className="mb-2 mb-lg-3  order-lg-0">Step up your cleansing game with our three-piece kit containing everything you need for refined pores and clear skin. It includes a full-size cleanser, travel-size mask and reusable wipes.</p>
                     <ul className="product-form-icons list-unstyled row text-start order-lg-0 mb-0 mb-lg-3">
                         <li className='col-12 d-flex align-items-center mb-3'>
-                            <FormIcon1 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             Drastically tighten pores and refines skin
                         </li>
                         <li className='col-12 d-flex align-items-center mb-3'>
-                            <FormIcon2 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             Deep Pore Cleanser removes makeup and gently exfoliates with AHAs and luffa plant extract, suitable for daily use
                         </li>
                         <li className='col-12 d-flex align-items-center mb-3'>
-                            <FormIcon3 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             5-time award winner Australian Pink Clay Mask clears congestion and impurities in 10 minutes
                         </li>
                         <li className='col-12 d-flex align-items-center mb-3'>
-                            <FormIcon4 className='me-g d-flex flex-shrink-0 justify-content-center' />
                             Wipe down with reusable wipes for next-level cleansing
                         </li>
                     </ul>

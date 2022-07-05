@@ -60,7 +60,7 @@ const SurveyResult = (props) => {
 	let rangeValue;
 	switch (envStressResult.title) {
 		case 'LOW':
-			rangeValue = 0;
+			rangeValue = 0.25;
 			break;
 
 		case 'AVERAGE':
@@ -83,11 +83,11 @@ const SurveyResult = (props) => {
 			<div className="survey-result__bg">
 				<div className="container px-2 py-4 my-g my-lg-4">
 					<div className="row">
-						<div className="col-12 col-lg-6">
+						<div className="col-12 col-lg-5 col-xl-6">
 							<p className="d-none d-lg-block h1 mb-2">Your Skin Analysis</p>
 							<p className="d-none d-lg-block survey-result__subtitle">Below is your skin analysis:</p>
 						</div>
-						<div className="col-12 col-lg-6">
+						<div className="col-12 col-lg-7 col-xl-6">
 							<div className="accordion" id="surveyResult">
 								<div className="accordion-item border-0 mb-g">
 									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse1" id="btnCollapse1" data-btnindex="1" onClick={accordionHandle} data-parent="#surveyResult">
@@ -108,7 +108,7 @@ const SurveyResult = (props) => {
 									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse2" id="btnCollapse2" data-btnindex="2" onClick={accordionHandle} data-parent="#surveyResult">
 										Environmental Stress
 										<div className="d-flex align-items-center font-size-sm mb-0" >
-											<input className="survey-result__range" type="range" min={rangeMin} max={rangeMax} step="1" value={rangeValue} readOnly={true} data-target="collapse2" id="btnCollapse2" data-btnindex="2" onTouchStart={accordionHandle} />
+											<input className="survey-result__range" type="range" min={rangeMin} max={rangeMax} step="0.25" value={rangeValue} readOnly={true} data-target="collapse2" id="btnCollapse2" data-btnindex="2" onTouchStart={accordionHandle} role="button" />
 											<ChevronDown className="minus ms-2" />
 											<ChevronUp className="plus ms-2" />
 										</div>
@@ -134,11 +134,11 @@ const SurveyResult = (props) => {
 			<div className="survey-result__bg survey-result__priority-actives">
 				<div className="container px-2 py-4 my-g">
 					<div className="row">
-						<div className="col-12 col-lg-6">
+						<div className="col-12 col-lg-5 col-xl-6">
 							<p className="h1 mb-2 d-none d-lg-block mb-2">Priority Actives</p>
 							<p className="d-none d-lg-block survey-result__subtitle">These active ingredients have been identified to<br />suit your skin’s needs and concerns:</p>
 						</div>
-						<div className="col-12 col-lg-6">
+						<div className="col-12 col-lg-7 col-xl-6">
 							<div className="accordion d-lg-none accordion__priority" id="surveyResult_2">
 								{activePriority && activePriority.map((item, index) => {
 									const itemIndex = index + 3;
