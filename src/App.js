@@ -20,8 +20,8 @@ const App = () => {
           <Route path='/pore-tight-kit' element={<ProductDetail />} />
           <Route path='/australian-pink-clay-pore-tight-kit' element={<ProductDetail />} />
           <Route path='/test-18' element={<ProductDetail />} />
-          <Route path='/customers-survey' element={<Survey />} />
           <Route path='/range-apc' element={<ApcRange />} />
+          <Route path='/customers-survey' element={<Survey />} />
           <Route path='/survey-result' element={<SurveyResultTemplate />} />
         </Routes>
       </Suspense>
