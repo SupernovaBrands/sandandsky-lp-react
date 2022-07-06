@@ -50,7 +50,7 @@ const QuestionBox = (props) => {
     const [isDisabled, setDisable] = useState(disableState);
     const isLastQuestion = Questions.length === currentQuestion;
 
-    const footerAction = currentQuestion === 6 || currentQuestion === 7 ? 'my-lg-3' : 'pt-lg-5'
+    const footerAction = currentQuestion === 6 || currentQuestion === 7 ? 'my-lg-1' : 'pt-lg-5'
 
     return (
         <div className={`${colSize} col-12 d-flex flex-wrap justify-content-center question-box`}>
