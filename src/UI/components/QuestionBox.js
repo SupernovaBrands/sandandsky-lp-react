@@ -50,6 +50,8 @@ const QuestionBox = (props) => {
     const [isDisabled, setDisable] = useState(disableState);
     const isLastQuestion = Questions.length === currentQuestion;
 
+    const footerAction = currentQuestion === 6 || currentQuestion === 7 ? 'my-lg-3' : 'pt-lg-5'
+
     return (
         <div className={`${colSize} col-12 d-flex flex-wrap justify-content-center question-box`}>
             <ProgressBarStep category={category} currentQuestion={currentQuestion} totalQuestions={totalSteps} />
@@ -60,7 +62,7 @@ const QuestionBox = (props) => {
                     { children }
                 </SurveyContext.Provider>
             </div>
-            <div className="footer-action w-100 my-5 pt-lg-5 bg-white">
+            <div className={`footer-action w-100 bg-white my-5 ${footerAction}`}>
                 <div className={`row align-items-end ${currentQuestion > 1 ? '' : 'justify-content-center'}`}>
                     {
                         currentQuestion > 1 && (<a href="/" className="col-3 col-lg-2 text-start text-underline text-body font-size-sm mb-1" onClick={prevAction()}>Previous</a>)

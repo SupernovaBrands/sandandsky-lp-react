@@ -84,7 +84,8 @@ const MultipleChoice = (props) => {
         <div className="row justify-content-center">
             {answers.map((answer, index) => {
                 const full = lastFull && index + 1 === answers.length ? 'col-12' : 'col-6';
-                const classes = `d-flex rounded align-items-center mb-g mb-lg-3 ${btnClass} position-relative border--default`;
+                const isLastItem = index + 1 === answers.length;
+                const classes = `d-flex rounded align-items-center mb-g ${isLastItem ? '' : ' mb-lg-3'} ${btnClass} position-relative border--default`;
                 const disabledClass = disableRest && !selectedItems.includes(answer.label) ? 'disabled' : '';
                 const itemClasses = selectedItems.includes(answer.label) ? 'border--default-selected position-relative bg-secondary-light' : '';
                 return (
