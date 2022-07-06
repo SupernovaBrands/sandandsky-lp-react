@@ -22,6 +22,20 @@
 		}
 	}
 
+	&__range {
+		-webkit-appearance: none !important;
+		height: calc-em(6, 14);
+		border-radius: calc-em(10);
+		background-color: $range-tsw-light;
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			border-radius: 50%;
+			height: calc-em(18);
+			width: calc-em(18);
+			background: $range-tsw;
+		}
+	}
+
 	@include media-breakpoint-up(lg) {
 		&__range {
 			min-width: calc-em(240, 14);
@@ -31,4 +45,6 @@
 	&__product-list .svg--active-priority {
 		transform: scale(.6);
 	}
+
+
 }

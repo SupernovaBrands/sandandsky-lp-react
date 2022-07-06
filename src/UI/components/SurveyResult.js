@@ -58,21 +58,28 @@ const SurveyResult = (props) => {
 	}
 
 	let rangeValue;
+	let rangeStyleVal;
 	switch (envStressResult.title) {
 		case 'LOW':
 			rangeValue = 0.25;
+			rangeStyleVal = 0.125;
 			break;
 
 		case 'AVERAGE':
 			rangeValue = 1;
+			rangeStyleVal = 0.5;
 			break;
 
 		default:
 			rangeValue = 2;
+			rangeStyleVal = 1;
 			break;
 	}
 	const rangeMin = 0;
 	const rangeMax = 2;
+	const rangeStyle = {
+		'background-image': `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${rangeStyleVal}, #42A1CA), color-stop(${rangeStyleVal}, #DFF4F9))`
+	};
 
 	return (
 		<section className="survey-result mt-4 mt-lg-0">
@@ -108,7 +115,7 @@ const SurveyResult = (props) => {
 									<div className="accordion-button shadow-sm bg-white justify-content-between rounded" data-target="collapse2" id="btnCollapse2" data-btnindex="2" onClick={accordionHandle} data-parent="#surveyResult">
 										Environmental Stress
 										<div className="d-flex align-items-center font-size-sm mb-0" >
-											<input className="survey-result__range" type="range" min={rangeMin} max={rangeMax} step="0.25" value={rangeValue} readOnly={true} data-target="collapse2" id="btnCollapse2" data-btnindex="2" onTouchStart={accordionHandle} role="button" />
+											<input style={rangeStyle} className="survey-result__range" type="range" min={rangeMin} max={rangeMax} step="0.25" value={rangeValue} readOnly={true} data-target="collapse2" id="btnCollapse2" data-btnindex="2" onTouchStart={accordionHandle} role="button" />
 											<ChevronDown className="minus ms-2" />
 											<ChevronUp className="plus ms-2" />
 										</div>
