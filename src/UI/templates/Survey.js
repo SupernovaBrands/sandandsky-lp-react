@@ -62,6 +62,16 @@ const Survey = () => {
         return object;
     }
 
+    const postMessageData = (category, action, label) => {
+        if (window.top === window.self) return;
+        window.parent.postMessage({
+            'func': 'callGaEvent',
+            'category': category,
+            'action': action,
+            'label': label,
+        }, `https://${site}`);
+    }
+
 	// refference width and height
     const targetRef = useRef();
     const { width, height } = useResizeDetector({ targetRef });
@@ -69,6 +79,7 @@ const Survey = () => {
 	// initial data
     let initialState = getCookie('surveyPosition') || 'start';
     if (surveyState === 'started' && (getCookie('surveyPosition') === 'start' || getCookie('surveyPosition') === null || getCookie('surveyPosition') === '')) {
+        postMessageData('Survey', 'started');
         initialState = 'question-1';
         setCookie('answeredQuestion', '');
     }
@@ -79,7 +90,6 @@ const Survey = () => {
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
-
 
     const postMessageCookie = (key, val) => {
         if (window.top === window.self) return;
@@ -207,17 +217,14 @@ const Survey = () => {
         const gaAnswers = decodeAnswers(currentAnswer)
         const keys = Object.keys(gaAnswers);
 
+        postMessageData('Survey', 'completed');
+
         keys.forEach((key,index) => {
             const q = Questions[index];
             const a = gaAnswers[key];
             const label = q.question;
             const action = typeof(a) === 'object' ? a.join(',') : a;
-            window.parent.postMessage({
-                'func': 'callGaEvent',
-                'category': 'Survey',
-                'action': action,
-                'label': label,
-            }, `https://${site}`);
+            postMessageData('Survey', action, label);
         });
     }
 
@@ -250,6 +257,11 @@ const Survey = () => {
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 
+    const startQuiz = () => {
+        postMessageData('Survey', 'started');
+        setPosition('question-1');
+    };
+
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
 			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start pt-4' : 'align-content-start'} `}>
@@ -261,7 +273,7 @@ const Survey = () => {
                         </div>
 						<h1 className="mb-g">Discover your routine to flawless skin</h1>
 						<p className="font-size-sm mb-4">Find the perfect solution to your skin’s needs in just a few steps!</p>
-						<button className="btn btn-primary text-white" onClick={() => setPosition('question-1')}>Take the quiz</button>
+						<button className="btn btn-primary text-white" onClick={() => startQuiz()}>Take the quiz</button>
                         <div className="w-100 text-start mt-5 pt-5 ms-ng ms-lg-0">
                             <SplashBottom />
                         </div>
