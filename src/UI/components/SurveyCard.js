@@ -16,8 +16,8 @@ const SurveyCard = (props) => {
 	const site = searchParams.get('site');
 
 	const titleRange = getItemRange(productDetail.title);
-	let selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
-	selectedSite = (selectedSite === 'www') ? 'us' : selectedSite;
+	const selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
+	const storeDomain = (selectedSite === 'www') ? 'us' : selectedSite;
 
 	const learnMoreSendGA = (e) => {
 		if (window.top === window.self) return true;
@@ -38,7 +38,7 @@ const SurveyCard = (props) => {
 				<div className="row">
 					<div className="col-4">
 						<a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} aria-label={productDetail.title}>
-							<img src={productDetail[selectedSite].image} alt={productDetail.title} className="w-100 mb-3" />
+							<img src={productDetail[storeDomain].image} alt={productDetail.title} className="w-100 mb-3" />
 						</a>
 					</div>
 					<div className="col-8 ps-lg-0">
@@ -49,18 +49,18 @@ const SurveyCard = (props) => {
 							{activePriority.title}
 						</p>
 						<div className="accordion border-top border-bottom">
-							<button className="accordion-button shadow-none bg-transparent text-body px-0 border-0 py-2 mb-0 d-flex justify-content-between font-size-sm" data-target={`collapse${productDetail[selectedSite].id}`} id={`btnCollapse${productDetail[selectedSite].id}`} data-btnindex={productDetail[selectedSite].id} onClick={accordionHandle} data-parent="#accordion__products">
+							<button className="accordion-button shadow-none bg-transparent text-body px-0 border-0 py-2 mb-0 d-flex justify-content-between font-size-sm" data-target={`collapse${productDetail[storeDomain].id}`} id={`btnCollapse${productDetail[storeDomain].id}`} data-btnindex={productDetail[storeDomain].id} onClick={accordionHandle} data-parent="#accordion__products">
 								How to Use
 								<Plus className='minus' />
 								<Minus className='plus' />
 							</button>
-							<div className="collapse" id={`collapse${productDetail[selectedSite].id}`} data-bs-parent="#accordion__products">
+							<div className="collapse" id={`collapse${productDetail[storeDomain].id}`} data-bs-parent="#accordion__products">
 								<p className="mb-0 pb-2">{productList.howto}</p>
 							</div>
 						</div>
 						<div className="d-flex font-size-sm mt-g mb-3">
-							{productDetail[selectedSite].compare_at_price && <span className="text-decoration-line-through me-1">{productDetail[selectedSite].compare_at_price}</span>}
-							{productDetail[selectedSite].price && <span className="text-secondary fw-bold">{productDetail[selectedSite].price}</span>}
+							{productDetail[storeDomain].compare_at_price && <span className="text-decoration-line-through me-1">{productDetail[storeDomain].compare_at_price}</span>}
+							{productDetail[storeDomain].price && <span className="text-secondary fw-bold">{productDetail[storeDomain].price}</span>}
 						</div>
 					</div>
 				</div>
