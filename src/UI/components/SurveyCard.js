@@ -58,8 +58,8 @@ const SurveyCard = (props) => {
 							</div>
 						</div>
 						<div className="d-flex font-size-sm mt-g mb-3">
-							{productDetail[selectedSite].compare_at_price && <span className="text-decoration-line-through me-1">${productDetail[selectedSite].compare_at_price}</span>}
-							{productDetail[selectedSite].price && <span className="text-secondary fw-bold">${productDetail[selectedSite].price}</span>}
+							{productDetail[selectedSite].compare_at_price && <span className="text-decoration-line-through me-1">{productDetail[selectedSite].compare_at_price}</span>}
+							{productDetail[selectedSite].price && <span className="text-secondary fw-bold">{productDetail[selectedSite].price}</span>}
 						</div>
 					</div>
 				</div>
