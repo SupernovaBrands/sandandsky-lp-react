@@ -78,7 +78,7 @@ const SurveyResult = (props) => {
 	const rangeMin = 0;
 	const rangeMax = 2;
 	const rangeStyle = {
-		'background-image': `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${rangeStyleVal}, #42A1CA), color-stop(${rangeStyleVal}, #DFF4F9))`
+		backgroundImage: `-webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(${rangeStyleVal}, #42A1CA), color-stop(${rangeStyleVal}, #DFF4F9))`
 	};
 
 	return (
