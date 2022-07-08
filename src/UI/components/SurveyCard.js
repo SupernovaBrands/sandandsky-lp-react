@@ -16,7 +16,8 @@ const SurveyCard = (props) => {
 	const site = searchParams.get('site');
 
 	const titleRange = getItemRange(productDetail.title);
-	const selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
+	let selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';
+	selectedSite = (selectedSite === 'www') ? 'us' : selectedSite;
 
 	const learnMoreSendGA = (e) => {
 		if (window.top === window.self) return true;
