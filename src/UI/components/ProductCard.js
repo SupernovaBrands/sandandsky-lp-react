@@ -13,13 +13,13 @@ const ProductCard = (props) => {
 			</a>
 			<figcaption className='mt-2 flex-grow-1 d-flex flex-column'>
 				<p className="product-card__text-sm mb-2">{titleRange}</p>
-				<a href={`/products/${item.handle}`} className="product-card__text mb-2 fw-bold" aria-label={item.title}>
+				<a href={`${domain}/products/${item.handle}`} className="product-card__text mb-2 fw-bold" aria-label={item.title}>
 					{item.title.replace(titleRange, '').trim()}
 				</a>
 				<div className='mb-2 d-flex flex-grow-1 align-items-center mt-1'>
 					<StarFull className='svg text-secondary' />
 					<span className='ms-1 font-size-xs'>{item.ratingScore}/5.0</span>
-					<a href={`/products/${item.handle}`} className='ms-1 font-size-xs text-underline text-nowrap text-body'>{item.totalReviews} Reviews</a>
+					<a href={`${domain}/products/${item.handle}#write-a-review`} className='ms-1 font-size-xs text-underline text-nowrap text-body'>{item.totalReviews} Reviews</a>
 				</div>
 				<p className='product-card__text mb-2'>
 					<span className='fw-bold me-1'>{item[store].price}</span>
