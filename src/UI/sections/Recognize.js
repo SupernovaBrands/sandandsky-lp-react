@@ -4,7 +4,7 @@ import abeautyCarousel from "../../modules/a-beauty-review";
 const Recognize = () => {
     abeautyCarousel('a-beauty-review');
     return (
-        <div className="bg-gray-100 py-6" >
+        <div className="bg-gray-100 py-6 mt-4 mt-lg-0">
             <h2 className="container px-g h1 text-center mb-0">Recognized A-Beauty leader by…</h2>
             <div id="a-beauty-review" className="a-beauty-review container px-g carousel slide" data-bs-interval="7000" data-bs-wrap="false">
                 <ul className="list-unstyled carousel-inner mb-0 px-3 py-4 py-lg-5">

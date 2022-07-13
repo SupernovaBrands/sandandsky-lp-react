@@ -46,9 +46,9 @@ const CustomerReviews = () => {
     }
 
     return (
-        <section className="review-carousel py-4 py-lg-7 overflow-hidden position-relative">
+        <section className="review-carousel py-5 py-lg-7 overflow-hidden position-relative">
             <div className="container px-g">
-                <div className="d-flex justify-content-between align-items-center pt-lg-3 justify-content-center justify-content-lg-start">
+                <div className="d-flex align-items-center pt-lg-3 justify-content-center justify-content-lg-start">
                     <h2 className="h1 mb-3 mb-lg-5">Don’t take our word for it…</h2>
                 </div>
             </div>
