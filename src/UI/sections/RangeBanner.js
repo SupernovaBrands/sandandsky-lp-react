@@ -8,12 +8,12 @@ const RangeBanner = () => {
 			</div>
 
 			<picture className="d-block w-100">
-				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f3f82e1a-ea42-4354-17e8-baf3682e3800/1400x" media="(min-width: 768px)" type="image/webp" />
-				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/0f2c9f33-c4d8-44f8-5681-410317a01400/1400x" media="(min-width: 768px)" type="image/jpeg" />
-				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/2f541eea-7df8-4afc-e516-57ec6d5d8e00/828x" type="image/webp" />
-				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/41cd1db0-c033-428e-e24a-b877e6a17000/828x" type="image/jpeg" />
+				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/794dd288-3953-45af-848d-ea2a9d199600/2280x" media="(min-width: 768px)" type="image/webp" />
+				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1841fccd-7ec2-4523-5dcd-78d5fa0f6f00/2280x" media="(min-width: 768px)" type="image/jpeg" />
+				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/a192e3ee-849d-46d4-7ac7-633b61e9b500/828x" type="image/webp" />
+				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/69115651-1071-4dd0-c5af-b58cdae11500/828x" type="image/jpeg" />
 				<img
-					src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/41cd1db0-c033-428e-e24a-b877e6a17000/828x"
+					src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/69115651-1071-4dd0-c5af-b58cdae11500/828x"
 					alt="Range banner"
 					className="w-100 fit--cover" />
 			</picture>

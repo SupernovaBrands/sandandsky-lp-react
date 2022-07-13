@@ -6,11 +6,11 @@ const RangeFormula = () => {
 			<div className='container'>
 				<div className='row align-items-center'>
 					<picture className='col-12 col-lg-7 px-0 px-lg-g'>
-						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b77e97b9-9bc8-4b8a-7cec-31ff71848300/1140x" media="(min-width: 768px)" type="image/webp" />
-						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b4f916de-7542-4fa7-3d35-5a91c21c0a00/1140x" media="(min-width: 768px)" type="image/jpeg" />
-						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/70399208-a680-4365-052d-5cf260f51f00/828x" type="image/webp" />
-						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e0c5a014-5faa-4ae0-a0b0-978610dcbd00/828x" type="image/jpeg" />
-						<img className='w-100 pe-lg-6 mb-3' alt='Revolutionary Formula' src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e0c5a014-5faa-4ae0-a0b0-978610dcbd00/828x" loading="lazy" />
+						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d3048324-a7c0-439e-7519-3c61bc2ddc00/1400x" media="(min-width: 768px)" type="image/webp" />
+						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1c8dab2f-6956-4627-26f4-2ee3ffc4c000/1400x" media="(min-width: 768px)" type="image/jpeg" />
+						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d3048324-a7c0-439e-7519-3c61bc2ddc00/828x" type="image/webp" />
+						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1c8dab2f-6956-4627-26f4-2ee3ffc4c000/828x" type="image/jpeg" />
+						<img className='w-100 pe-lg-6 mb-3' alt='Revolutionary Formula' src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1c8dab2f-6956-4627-26f4-2ee3ffc4c000/828x" loading="lazy" />
 					</picture>
 					<div className='col-12 col-lg-5 px-g'>
 						<h2 className='h1 text-center text-lg-start'>Australian Pink Clay results</h2>

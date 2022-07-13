@@ -12,8 +12,8 @@ const ProductCard = (props) => {
 				<img className='w-100 img--hover' src={item.imgHover} alt={item.title} />
 			</a>
 			<figcaption className='mt-2 flex-grow-1 d-flex flex-column'>
-				<p className="product-card__text-sm mb-2 text-gray-700">{titleRange}</p>
-				<a href={`/products/${item.handle}`} className="product-card__text mb-2 fw-bold text-body" aria-label={item.title}>
+				<p className="product-card__text-sm mb-2">{titleRange}</p>
+				<a href={`/products/${item.handle}`} className="product-card__text mb-2 fw-bold" aria-label={item.title}>
 					{item.title.replace(titleRange, '').trim()}
 				</a>
 				<div className='mb-2 d-flex flex-grow-1 align-items-center mt-1'>
@@ -23,7 +23,7 @@ const ProductCard = (props) => {
 				</div>
 				<p className='product-card__text mb-2'>
 					<span className='fw-bold me-1'>{item[store].price}</span>
-					{item[store].comparePrice !== null && <span className='text-gray-700 text-linethrough'>{item[store].comparePrice}</span>}
+					{item[store].comparePrice !== null && <span className='text-linethrough'>{item[store].comparePrice}</span>}
 				</p>
 				<a href={`${domain}/products/${item.handle}`} className='btn btn-block btn-primary btn__submit'>Learn more</a>
 			</figcaption>

@@ -67,7 +67,7 @@ const CustomerReviews = () => {
                                 <figcaption className="m-0 bg-secondary-light font-size-sm px-g py-3">
                                     <p className="mb-3 text-body">{item.name}</p>
                                     <p className="d-block text-body">
-                                        <span className="review-card__more-truncated text-break">{ truncateWords(item.text, 17) }... </span>
+                                        <span className="review-card__more-truncated text-break">{ truncateWords(item.text, index === 3 ? 26 : 22) }... </span>
                                         <span className="d-none review-card__more-text text-break">
                                             {item.text}
                                             <a href="#" className="text-underline text-body review-card__less ms-1" onClick={onLess.bind(this)}>Less</a>

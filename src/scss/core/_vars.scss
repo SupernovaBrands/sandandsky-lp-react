@@ -65,6 +65,7 @@ $primary: #D7395A;
 $primary-hover: #c22748;
 $primary-light: #FFEFF2;
 $primary-dark: #AD1938;
+$link-black: #272727;
 
 // Products
 $range-apc: #FF6F8D;
@@ -92,6 +93,7 @@ $theme-colors: (
   'secondary-light': $secondary-light,
   'gray-100': $gray-100,
   'gray-700': $gray-700,
+  'link': $link-black,
 );
 
 // Border
@@ -189,7 +191,7 @@ $custom-control-indicator-checked-disabled-bg: $gray-400;
 $custom-control-indicator-border-color: white;
 
 // A
-$link-color: $body-color;
+$link-color: $link-black;
 $link-hover-decoration: none;
 $link-hover-color: $primary;
 
@@ -211,6 +213,8 @@ $progress-border-radius: 0.625rem;
 $progress-bar-animation-timing: none;
 $progress-bar-transition: none;
 
-
 // Accordion
 $accordion-bg: transparent;
+
+// Text
+$text-muted: $body-color;
