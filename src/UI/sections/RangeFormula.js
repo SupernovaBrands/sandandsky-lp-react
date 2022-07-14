@@ -7,10 +7,10 @@ const RangeFormula = () => {
 				<div className='row align-items-center'>
 					<picture className='col-12 col-lg-7 px-0 px-lg-g'>
 						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d3048324-a7c0-439e-7519-3c61bc2ddc00/1400x" media="(min-width: 768px)" type="image/webp" />
-						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1c8dab2f-6956-4627-26f4-2ee3ffc4c000/1400x" media="(min-width: 768px)" type="image/jpeg" />
+						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6d91b02a-80c1-4303-a805-50800b9fac00/1140x" media="(min-width: 768px)" type="image/jpeg" />
 						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d3048324-a7c0-439e-7519-3c61bc2ddc00/828x" type="image/webp" />
-						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1c8dab2f-6956-4627-26f4-2ee3ffc4c000/828x" type="image/jpeg" />
-						<img className='w-100 pe-lg-6 mb-3' alt='Revolutionary Formula' src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1c8dab2f-6956-4627-26f4-2ee3ffc4c000/828x" loading="lazy" />
+						<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6d91b02a-80c1-4303-a805-50800b9fac00/828x" type="image/jpeg" />
+						<img className='w-100 pe-lg-6 mb-3' alt='Revolutionary Formula' src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/042ffe01-b47a-49d8-e5f0-cf392e088d00/828x" loading="lazy" />
 					</picture>
 					<div className='col-12 col-lg-5 px-g'>
 						<h2 className='h1 text-center text-lg-start'>Australian Pink Clay results</h2>

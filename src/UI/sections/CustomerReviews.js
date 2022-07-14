@@ -1,33 +1,48 @@
 import carouselScroll from "../../modules/carousel-scroll";
-import { truncateWords } from '../../modules/Utils';
+import { truncateWords, useWindowSize } from '../../modules/Utils';
 
 const CustomerReviews = () => {
     carouselScroll('customerReviews');
+    const adjustThumb = () => {
+        const reviewCarousel = document.querySelector('#customerReviews');
+        reviewCarousel.dispatchEvent(new CustomEvent('adjustThumb'));
+    };
+    window.addEventListener('resize', adjustThumb);
+
+    const [width] = useWindowSize();
+    const reviewScroll = document.querySelector('#customerReviews .scrollbar');
+    if (reviewScroll) {
+        if (width < 991) {
+            reviewScroll.classList.remove('d-none');
+        } else {
+            reviewScroll.classList.add('d-none');
+        }
+    }
 
     const REVIEWS = [
         {
             name: '@pryaathwal',
             text: 'This mask is my saviour for helping me clear my congested pores. It make my skin feel so soft and radiant after one use!',
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1f8e983f-d70a-4d10-7c5a-d107e3024d00',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/81ae0738-aa7e-4e63-6a30-5f5b18a21100'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/db236cf0-92e9-4928-dc6a-9e8fa0afe300',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/859badc2-8138-415a-bcf5-e18a27c16700'
         },
         {
             name: '@Dalia',
             text: "The Australian Pink Clay is the only product I trust on my face! Your product has really helped my skin it's almost as if it's magic!",
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/39696f32-167d-4158-bb7b-5d69d02d4700',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/04d2e9eb-0fd7-443f-fda6-7b17bb6dfa00'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/5cfda92d-78e9-4e4e-6864-06c8772f8400',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b44f5786-cb9c-4bf6-b6f5-623c028ec700'
         },
         {
             name: '@ruchipage',
             text: "I've been using this over the past few weeks and it is such a reliable formula, from heavy to natural makeup this really does remove it all. But instead of stripping, it replenishes.",
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8e611144-8d7d-4a71-2ac7-458456523000',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/175a591f-4b81-430a-b314-196bd0f77a00'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e05c3a99-d5ae-49bb-6cf6-e79bc4d56400',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/0fd8ba55-e265-423f-e842-b4df19124f00'
         },
         {
             name: '@rebekahannemaguire',
             text: 'I have been using this cleanser in my routine one to two times a week and loving it. My skin feels so soft, bright and refreshed after using it. I also found it helped my hormonal breakouts disappear a lot faster than usual which is a big plus for me.',
-            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/10d49152-5507-467f-6734-5f060e3f5b00',
-            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e90f614d-0569-40ce-d0d7-8ae10279b000'
+            jpg: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4ab60b18-59c3-40b7-fc8d-dfb87ef95e00',
+            webp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8933d624-0b71-46e8-7047-e055aebdce00'
         },
     ]
 
