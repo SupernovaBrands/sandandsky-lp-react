@@ -22,8 +22,8 @@ const ProductCard = (props) => {
 					<a href={`${domain}/products/${item.handle}#write-a-review`} className='ms-1 font-size-xs text-underline text-nowrap text-body'>{item.totalReviews} Reviews</a>
 				</div>
 				<p className='product-card__text mb-2'>
-					<span className='fw-bold me-1'>{item[store].price}</span>
-					{item[store].comparePrice !== null && <span className='text-linethrough'>{item[store].comparePrice}</span>}
+					{item[store].comparePrice !== null && <span className='text-linethrough me-1'>{item[store].comparePrice}</span>}
+					<span className='fw-bold'>{item[store].price}</span>
 				</p>
 				<a href={`${domain}/products/${item.handle}`} className='btn btn-block btn-primary btn__submit'>Learn more</a>
 			</figcaption>
