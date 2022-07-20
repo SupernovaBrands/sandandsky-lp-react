@@ -1,5 +1,3 @@
-import { useWindowSize } from "../../modules/Utils";
-import CarouselTab from "../components/CarouselTab";
 import rangeProducts from "../../store/range-product";
 import ProductCard from "../components/ProductCard";
 import CarouselWrapper from "../components/CarouselWrapper";
@@ -7,8 +5,6 @@ import { useSearchParams } from "react-router-dom";
 
 const RangeCarousel = () => {
 
-	const [width] = useWindowSize();
-	const isMobile = width < 992;
 	const [searchParams] = useSearchParams();
 	const utmStore = searchParams.get('utm_store');
 
@@ -25,13 +21,15 @@ const RangeCarousel = () => {
 				<span className='h1'>Detoxifies skin and refines pores</span>
 				<a href={`${domain}/collections/all`} className='btn btn-lg btn-outline-primary border-primary d-none d-lg-inline'>Shop All</a>
 			</p>
-			{!isMobile &&
-				<CarouselWrapper id='apcRangeCarousel'>
-					{rangeProducts.map((item, idx) => (
-						<ProductCard key={idx} item={item} className='carousel-item' domain={domain} store={store} />
-					))}
-				</CarouselWrapper>}
-			{isMobile && <CarouselTab products={rangeProducts} domain={domain} store={store} />}
+			<CarouselWrapper id='apcRangeCarousel'>
+				{rangeProducts.map((item, idx) => (
+					<ProductCard key={idx} item={item} className='carousel-item' domain={domain} store={store} />
+				))}
+			</CarouselWrapper>
+			{/* {isMobile && <CarouselTab products={rangeProducts} domain={domain} store={store} />} */}
+			<div className='text-center mt-3 mb-4'>
+				<a href={`${domain}/collections/all`} className='d-inline-block d-lg-none mx-auto btn btn-lg btn-outline-primary border-primary'>Shop All</a>
+			</div>
 		</section>
 	);
 };
