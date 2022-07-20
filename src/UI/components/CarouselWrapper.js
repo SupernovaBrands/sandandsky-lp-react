@@ -8,7 +8,7 @@ const CarouselWrapper = (props) => {
 			<div className='carousel-inner d-flex flex-nowrap row w-auto px-hg'>
 				{props.children}
 			</div>
-			<div className='mt-g mt-lg-3 mx-2 mx-lg-n1'>
+			<div className='mt-2 mt-lg-3 mx-2 mx-lg-n1'>
 				<div className='scrollbar'>
 					<div className='scrollbar--thumb'></div>
 				</div>
