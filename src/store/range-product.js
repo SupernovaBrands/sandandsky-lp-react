@@ -265,6 +265,44 @@ const rangeProducts = [
 			comparePrice: "RM331.00",
 		},
 	},
+	{
+		title: "Australian Pink Clay Pink Clay Icon Kit",
+		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_Icons_Crop_222x279_crop_center.jpg?v=1637751245",
+		imgHover:
+			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/WEBSITE_CAROUSEL_APC-Fam_SB_150721_570x_5285f9c4-82ff-478f-a2bc-342b74f9395d_222x279_crop_center.jpg?v=1637325500",
+		ratingScore: 4.8,
+		totalReviews: 334,
+		mobileTab: ['exfoliation'],
+		handle: "australian-pink-clay-icon-kit",
+		us: {
+			price: "$111.60",
+			comparePrice: "$159.50",
+		},
+		ca: {
+			price: "$148.00",
+			comparePrice: "$211.50",
+		},
+		uk: {
+			price: "£101.80",
+			comparePrice: "£145.50",
+		},
+		eu: {
+			price: "€112,30",
+			comparePrice: "€160,50",
+		},
+		au: {
+			price: "$144.90",
+			comparePrice: "$241.50",
+		},
+		int: {
+			price: "$111.60",
+			comparePrice: "$159.50",
+		},
+		my: {
+			price: "RM496.00",
+			comparePrice: "RM707.00",
+		},
+	},
 ];
 
 export default rangeProducts;
