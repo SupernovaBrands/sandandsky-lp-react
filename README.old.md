@@ -1,1 +1,0 @@
-# sandandsky-lp-react
