@@ -1,21 +1,19 @@
 import SurveyResult from '../components/SurveyResult';
-import { getCookie, postIframeHeight } from "../../modules/Utils";
-import { useEffect, useRef } from 'react';
-import { useResizeDetector } from 'react-resize-detector';
-import { useSearchParams } from 'react-router-dom';
+import { getCookie } from "../../modules/Utils";
+import { useRef } from 'react';
 
 window.getCookie = getCookie;
 
 const SurveyResultTemplate = () => {
-	const [searchParams] = useSearchParams();
-	const site = searchParams.get('site');
+	// const [searchParams] = useSearchParams();
+	// const site = searchParams.get('site');
 
 	const targetRef = useRef();
-	const { width, height } = useResizeDetector({ targetRef });
+	// const { width, height } = useResizeDetector({ targetRef });
 
-	useEffect(() => {
-		postIframeHeight('height', height, site);
-	}, [height]);
+	// useEffect(() => {
+	// 	postIframeHeight('height', height, site);
+	// }, [height]);
 
 	const answerResult = getCookie('surveyResult') ? JSON.parse(getCookie('surveyResult')) : {};
 

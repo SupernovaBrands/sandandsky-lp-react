@@ -5,9 +5,9 @@ import Questions from "../../modules/questions";
 import QuestionBox from "../components/QuestionBox";
 import SingleChoice from '../components/SingleChoice';
 import MultipleChoice from '../components/MultipleChoice';
-import { useResizeDetector } from 'react-resize-detector';
+// import { useResizeDetector } from 'react-resize-detector';
 
-import { setCookie, getCookie, postIframeHeight } from "../../modules/Utils";
+import { setCookie, getCookie } from "../../modules/Utils";
 import { useSearchParams } from "react-router-dom";
 import getSkinType from '../../modules/skin-type';
 
@@ -74,7 +74,7 @@ const Survey = () => {
 
 	// refference width and height
     const targetRef = useRef();
-    const { width, height } = useResizeDetector({ targetRef });
+    // const { width, height } = useResizeDetector({ targetRef });
 
 	// initial data
     let initialState = getCookie('surveyPosition') || 'start';
@@ -183,6 +183,8 @@ const Survey = () => {
                     setTimeout(function () {
                         window.top.location.href = `https://${selectedSite}/pages/survey-result/`;
                     }, 500);
+                } else {
+                    window.location.href = '/survey-result';
                 }
             }, 1500);
         }
@@ -251,9 +253,9 @@ const Survey = () => {
     useEffect(() => {
         if (currentPosition === 'finished' || currentPosition === 'result') gettingResult();
     }, [currentPosition]);
-    useEffect(() => {
-        postIframeHeight('height', height, site);
-    }, [height]);
+    // useEffect(() => {
+    //     postIframeHeight('height', height, site);
+    // }, [height]);
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 
@@ -292,8 +294,8 @@ const Survey = () => {
                                         return (
                                             <QuestionBox
                                                 currentAnswer={decodeAnswers(currentAnswer)}
-                                                width={width}
-                                                height={height}
+                                                // width={width}
+                                                // height={height}
                                                 totalQuestions={item.answers.length}
                                                 totalSteps={Questions.length}
                                                 answerAction={answerAction}
@@ -318,8 +320,8 @@ const Survey = () => {
                                         return (
                                             <QuestionBox
                                                 currentAnswer={decodeAnswers(currentAnswer)}
-                                                width={width}
-                                                height={height}
+                                                // width={width}
+                                                // height={height}
                                                 totalQuestions={item.answers.length}
                                                 answerAction={answerAction}
                                                 setCurrentQuestion={setQuestionState}
