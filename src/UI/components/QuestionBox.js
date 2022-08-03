@@ -50,7 +50,8 @@ const QuestionBox = (props) => {
     const [isDisabled, setDisable] = useState(disableState);
     const isLastQuestion = Questions.length === currentQuestion;
 
-    const footerAction = currentQuestion === 6 || currentQuestion === 7 ? 'my-lg-3' : 'pt-lg-5'
+    const footerAction = currentQuestion === 6 || currentQuestion === 7 ? 'my-lg-3' : 'pt-lg-5';
+    console.log('currentQuestion', currentQuestion);
 
     return (
         <div className={`${colSize} col-12 d-flex flex-wrap justify-content-center question-box`}>
@@ -62,7 +63,7 @@ const QuestionBox = (props) => {
                     { children }
                 </SurveyContext.Provider>
             </div>
-            <div className={`footer-action w-100 bg-white my-5 ${footerAction}`}>
+            <div className={`footer-action w-100 bg-white ${currentQuestion === 6 ? 'my-2' : 'my-5'} ${footerAction}`}>
                 <div className={`row align-items-end ${currentQuestion > 1 ? '' : 'justify-content-center'}`}>
                     {
                         currentQuestion > 1 && (<a href="/" className="col-3 col-lg-2 text-start text-underline text-body font-size-sm mb-1" onClick={prevAction()}>Previous</a>)
