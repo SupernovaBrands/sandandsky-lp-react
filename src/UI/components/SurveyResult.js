@@ -20,8 +20,6 @@ const SurveyResult = (props) => {
 	const {activePriority, envStressResult, productsRecommend, skinType} = props.answerResult;
 
 	const accordionHandle = (e) => {
-		const height = document.querySelector('.survey-content').clientHeight;
-		postIframeHeight('height', height, site);
 		const parentId = e.currentTarget.dataset.parent;
         const btnToggle = document.querySelectorAll(`${parentId} .accordion-button`);
         for (let i = 0; i < btnToggle.length; i++) {
@@ -40,7 +38,9 @@ const SurveyResult = (props) => {
             } else {
 				document.querySelector(`#btnCollapse${btnIndex}`).classList.toggle('collapsed');
             }
-        }, 390);
+			const height = document.querySelector('.survey-content').clientHeight;
+			postIframeHeight('height', height, site);
+		}, 390);
     };
 
 	// const selectedSite = site ? site : 'dev';
