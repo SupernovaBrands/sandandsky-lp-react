@@ -5,6 +5,7 @@ import { ReactComponent as ChevronUp } from '../../assets/chevron-up.svg';
 import { ReactComponent as ChevronDown } from '../../assets/chevron-down.svg';
 import activeDescription from '../../modules/priority-actives';
 import productList from '../../modules/product-list';
+import { useSearchParams } from 'react-router-dom';
 import { postIframeHeight } from "../../modules/Utils";
 
 // import { useSearchParams } from "react-router-dom";
@@ -14,13 +15,13 @@ import SurveyCard from './SurveyCard';
 const SurveyResult = (props) => {
 	// const [resultProducts, setProducts] = useState([]);
 
-	// const [searchParams] = useSearchParams();
-    // const site = searchParams.get('site');
+	const [searchParams] = useSearchParams();
+    const site = searchParams.get('site');
 	const {activePriority, envStressResult, productsRecommend, skinType} = props.answerResult;
 
 	const accordionHandle = (e) => {
 		const height = document.querySelector('.survey-content').clientHeight;
-		postIframeHeight('height', height);
+		postIframeHeight('height', height, site);
 		const parentId = e.currentTarget.dataset.parent;
         const btnToggle = document.querySelectorAll(`${parentId} .accordion-button`);
         for (let i = 0; i < btnToggle.length; i++) {
