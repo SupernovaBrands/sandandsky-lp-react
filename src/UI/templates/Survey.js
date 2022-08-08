@@ -220,6 +220,7 @@ const Survey = () => {
         const keys = Object.keys(gaAnswers);
 
         postMessageData('Survey', 'completed');
+        postMessageCookie('surveySubmitNew', 'true');
 
         keys.forEach((key,index) => {
             const q = Questions[index];
