@@ -99,8 +99,8 @@ export const getItemRange = (itemTitle) => {
 		range = 'Tasmanian Spring Water';
 	} else if (itemTitle.includes('Australian Pink Clay')) {
 		range = 'Australian Pink Clay';
-	} else if (itemTitle.includes('Australian Emu Apple')) {
-		range = 'Australian Emu Apple';
+	} else if (itemTitle.includes('Australian Glow Berries')) {
+		range = 'Australian Glow Berries';
 	} else if (itemTitle.includes('Oil Control')) {
 		range = 'Oil Control';
 	}
