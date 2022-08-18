@@ -51,7 +51,6 @@ const QuestionBox = (props) => {
     const isLastQuestion = Questions.length === currentQuestion;
 
     const footerAction = currentQuestion === 6 || currentQuestion === 7 ? 'my-lg-3' : 'pt-lg-5';
-    console.log('currentQuestion', currentQuestion);
 
     return (
         <div className={`${colSize} col-12 d-flex flex-wrap justify-content-center question-box`}>
