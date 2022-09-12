@@ -25,7 +25,7 @@ const EmailForm = (props) => {
     }
 
     return (
-        <div className="survey-email-submit container bg-primary-light">
+        <div className="survey-email-submit container bg-primary-light mt-lg-5">
             <div className="row d-flex align-items-center text-center">
                 <div className="col-12 col-lg-6 p-0">
                     <picture className="ratio ratio-1x1 w-100 d-block">
