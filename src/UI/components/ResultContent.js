@@ -15,7 +15,7 @@ const ResultContent = (props) => {
                         <img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c197ee9c-de80-4abd-0e3c-aea8e4a6c600/828x" alt="" className="w-100 embed-responsive-item fit--cover"  />
                     </picture>
                 </div>
-                <div className="col-12 col-lg-5  px-0 py-3">
+                <div className="col-12 col-lg-5  px-0 py-4">
                     <div className="w-100 text-end me-ng me-lg-0 d-none d-lg-block">
                         <SplashTop />
                     </div>
