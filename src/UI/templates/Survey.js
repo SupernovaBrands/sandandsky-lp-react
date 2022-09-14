@@ -144,6 +144,7 @@ const Survey = () => {
 
 
         const skinType = getSkinType(currentAnswer);
+        console.log('skinType', skinType)
         const envStressResult = getEnvironmentStress(currentAnswer);
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);

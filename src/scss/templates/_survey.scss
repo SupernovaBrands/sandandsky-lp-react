@@ -52,13 +52,28 @@
 .survey-mask {
 	&.cover {
 		background-image: url(https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c90d704f-bdc4-4a96-cb87-e8fe67bba700/1140x);
-
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		
 		@include media-breakpoint-up(lg) {
 			background-image: url(https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/cc75c6b9-f09d-4e36-887f-1079785f5300/1140x);
 		}
 
 		.tooltip {
-			border: 1px solid $body-color;
+			width: 80%;
+
+			@include media-breakpoint-up(lg) {
+				width: 427px;
+			}
+		}
+
+		h1 {
+			font-size: 65px;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 105px;
+			}
 		}
 	}
 }
