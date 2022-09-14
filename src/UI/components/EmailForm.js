@@ -41,7 +41,7 @@ const EmailForm = (props) => {
                     </div>
                     <div className="emailBox px-g">
                         <p className="h1 mb-0">We’ve got your routine ready!</p>
-                        <p className="mt-2 h4 fw-normal col-lg-9 mx-auto">Enter your email to view your results! Plus, get a promocode for 15% OFF for your first purchase.</p>
+                        <p className="mt-2 h4 fw-normal col-lg-9 mx-auto px-lg-3">Enter your email to view your results! Plus, get a <b>promo code of 15% OFF your first purchase</b>.</p>
                         <div className="col-12 col-lg-11 ms-auto me-auto mt-4">
                             <div className="form-group">
                                 <form onSubmit={submitEmail}>

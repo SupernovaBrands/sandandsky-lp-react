@@ -20,10 +20,10 @@ const ResultContent = (props) => {
                         <SplashTop />
                     </div>
                     <div className="emailBox px-g mb-5 mb-lg-0">
-                        <p className="h1">Thanks! Here is your promocode:</p>
+                        <p className="h1">Thanks! Here is your <b>promo code</b>:</p>
                         <div className="col-12 col-lg-8 ms-auto me-auto mt-2 mb-7 mb-lg-0">
                             <span className='h1 px-4 py-1 text-primary rounded p-2 bg-light-gray d-inline-block bg-white'>SKIN15</span>
-                            <p className='mt-2 mb-4'>Promo applies only to first purchase.</p>
+                            <p className='mt-2 mb-4'><b>Promotion only applies to the first purchase.</b></p>
                             <button className="mt-2 btn btn-lg btn-primary w-100" onClick={viewMyResult}>View my results</button>
                         </div>
                     </div>
