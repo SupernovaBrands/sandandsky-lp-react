@@ -116,3 +116,45 @@ export const postIframeHeight = (key, val, site) => {
 		'value': val,
 	}, `https://${site}`);
 };
+
+export const decodeAnswers = (object) => {
+	Object.entries(object).forEach((data) => {
+		const key = data[0];
+		const value = data[1];
+		object[key] = decodeURI(value);
+	});
+	return object;
+}
+
+export const postMessageData = (category, action, label, site) => {
+	if (window.top === window.self) return;
+	window.parent.postMessage({
+		'func': 'callGaEvent',
+		'category': category,
+		'action': action,
+		'label': label,
+	}, `https://${site}`);
+}
+
+export const postMessageCookie = (key, val, site) => {
+	if (window.top === window.self) return;
+
+	window.parent.postMessage({
+		'func': 'setCookieFromMessage',
+		'key': key,
+		'value': val,
+	}, `https://${site}`);
+}
+
+export const getCookieAnsweredQuestion = () => {
+	if (getCookie('answeredQuestion')) {
+		const object = JSON.parse(getCookie('answeredQuestion'));
+		Object.entries(object).forEach((data) => {
+			const key = data[0];
+			const value = data[1];
+			object[key] = decodeURI(value);
+		});
+		return object;
+	}
+	return null;
+}

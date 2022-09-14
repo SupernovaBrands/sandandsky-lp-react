@@ -6,6 +6,7 @@ const ProductDetail = lazy(() => import('./UI/templates/ProductDetail'));
 const ApcRange = lazy(() => import('./UI/templates/ApcRange'));
 const Survey = lazy(() => import('./UI/templates/Survey'));
 const SurveyResultTemplate = lazy(() => import('./UI/templates/SurveyResultTemplate'));
+const SurveyMask = lazy(() => import('./UI/templates/SurveyMask'));
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path='/customers-survey' element={<Survey />} />
           <Route path='/survey-result' element={<SurveyResultTemplate />} />
           <Route path='/range-apc' element={<ApcRange />} />
+          <Route path='/mask-quiz-test' element={<SurveyMask />} />
         </Routes>
       </Suspense>
     </Layout>
