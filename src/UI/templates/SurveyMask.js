@@ -18,13 +18,9 @@ import {
 } from "../../modules/Utils";
 
 import { useSearchParams } from "react-router-dom";
-import getSkinType from '../../modules/skin-type';
 
 import { ReactComponent as LoaderSvg } from '../../assets/loader.svg';
-import { ReactComponent as SplashTop } from '../../assets/splash-top.svg';
-import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
-import getProductResult from '../../modules/product-result';
-import getEnvironmentStress from '../../modules/environment-stress';
+import getMaskProductResult from '../../modules/mask-product-result';
 import productList from '../../modules/product-list';
 
 window.getCookie = getCookie;
@@ -34,7 +30,6 @@ const SurveyMask = () => {
     const site = searchParams.get('site');
     const gId = searchParams.get('gaid');
     const surveyState = searchParams.get('state');
-    console.log(Questions)
     const targetRef = useRef();
 
     // INITIAL DATA
@@ -60,10 +55,10 @@ const SurveyMask = () => {
     };
 
     const answerAction = (question, answers) => {
+        console.log('answerAction', question, answers)
         currentAnswer[question] = answers;
         setAnswer(decodeAnswers(currentAnswer));
         setCookieAnsweredQuestion(decodeAnswers(currentAnswer));
-        console.log('currentAnswer', currentAnswer);
     };
 
     const setQuestionState = (questionIndex) => {
@@ -82,11 +77,11 @@ const SurveyMask = () => {
                 setQuestion(questionIndex);
             }
         } else if (questionIndex >= Questions.length) {
+            console.log('finish')
             gettingResult(true);
             // call saving data to analytics and database
             // saveData();
             postMessageGaParent();
-            gettingResult(true);
         }
     }
 
@@ -129,12 +124,11 @@ const SurveyMask = () => {
 
     const gettingResult = (close=false) => {
         const selectedSite = site ? site : 'dev.sandandsky.com';
-
-
-        const skinType = getSkinType(currentAnswer);
-        const envStressResult = getEnvironmentStress(currentAnswer);
-
-        const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
+        const { productsRecommend } = getMaskProductResult(Questions, currentAnswer);
+        console.log('currentAnswer', currentAnswer);
+        console.log('productsRecommend', productsRecommend)
+        /*
+        
 
         const productHandle = [];
         const productSkus = [];
@@ -176,6 +170,7 @@ const SurveyMask = () => {
                 }
             }, 1500);
         }
+        */
     }
 
     return (
@@ -211,6 +206,7 @@ const SurveyMask = () => {
                                                     key={key}
                                                     colSize='col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'
                                                     question={item.question}
+                                                    questionNote={item.questionNote}
                                                     caption={item.caption ? item.caption : ''}
                                                     captionClass={item.captionClass ? item.captionClass : ''}
                                                     category={item.category}
@@ -237,6 +233,7 @@ const SurveyMask = () => {
                                                     key={key}
                                                     colSize='col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'
                                                     question={item.question}
+                                                    questionNote={item.questionNote}
                                                     caption={item.caption ? item.caption : ''}
                                                     captionClass={item.captionClass ? item.captionClass : ''}
                                                     category={item.category}
