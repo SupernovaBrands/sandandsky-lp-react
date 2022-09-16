@@ -41,10 +41,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                             break;
                         case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                             if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
+                                productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Night Cream'];
                                 activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                             } else {
-                                productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
+                                productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Night Cream'];
                                 activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                             }
                             break;
@@ -81,10 +81,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Mask', 'AEA Serum', 'TSW Cream'];
+                                    productsRecommend = ['APC Mask', 'AEA Serum', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
+                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Night Cream'];
                                     activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -166,10 +166,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -211,10 +211,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -251,10 +251,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Serum'];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -381,10 +381,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
+                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Night Cream'];
                                     activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['AEA Enzyme Polish', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['AEA Enzyme Polish', 'TSW Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -412,17 +412,17 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[1]: //A combination of shiny and dry on different areas
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
+                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Night Cream'];
                                     activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 }
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Cream'];
-                                    activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'AHAs'];
+                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Night Cream'];
+                                    activePriority = ['Vegan Squalane', 'AHAs', 'Hyaluronic Acid'];
                                 } else {
                                     productsRecommend = ['AEA Enzyme Polish', 'TSW Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Niacinamide'];
@@ -460,17 +460,17 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
                                     activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Cream'];
-                                    activePriority = ['Vitamin E', 'Hyaluronic Acid', 'AHAs'];
+                                    productsRecommend = ['APC Mask', 'TSW Serum', 'TSW Night Cream'];
+                                    activePriority = ['Vitamin E', 'AHAs', 'Hyaluronic Acid'];
                                 }
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Cream'];
-                                    activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'AHAs'];
+                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Night Cream'];
+                                    activePriority = ['Vegan Squalane', 'AHAs', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Cream'];
-                                    activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'AHAs'];
+                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Night Cream'];
+                                    activePriority = ['Vegan Squalane', 'AHAs', 'Hyaluronic Acid'];
                                 }
                                 break;
                             default: //Red and flaky with uneven texture
@@ -500,17 +500,17 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['AEA Enzyme Polish', 'TSW Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Cream'];
-                                    activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'AHAs'];
+                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Night Cream'];
+                                    activePriority = ['Vegan Squalane', 'AHAs', 'Hyaluronic Acid'];
                                 }
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['TSW Mask', 'AEA Serum', 'TSW Cream'];
+                                    productsRecommend = ['TSW Mask', 'AEA Serum', 'TSW Night Cream'];
                                     activePriority = ['Vegan Squalane', 'Vitamin C', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Cream'];
-                                    activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'AHAs'];
+                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Night Cream'];
+                                    activePriority = ['Vegan Squalane', 'AHAs', 'Hyaluronic Acid'];
                                 }
                                 break;
                             default: //Red and flaky with uneven texture
@@ -551,10 +551,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -594,7 +594,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'AEA Moisturiser'];
                                     activePriority = ['AHAs', 'Hyaluronic Acid', 'Vitamin C'];
                                 } else {
-                                    productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'TSW Cream'];
+                                    productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'TSW Night Cream'];
                                     activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
                                 }
                                 break;
