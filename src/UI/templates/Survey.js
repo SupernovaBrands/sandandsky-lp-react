@@ -5,7 +5,8 @@ import Questions from "../../modules/questions";
 import QuestionBox from "../components/QuestionBox";
 import SingleChoice from '../components/SingleChoice';
 import MultipleChoice from '../components/MultipleChoice';
-// import { useResizeDetector } from 'react-resize-detector';
+import EmailForm from '../components/EmailForm';
+import ResultContent from '../components/ResultContent';
 
 import { setCookie, getCookie } from "../../modules/Utils";
 import { useSearchParams } from "react-router-dom";
@@ -62,6 +63,16 @@ const Survey = () => {
         return object;
     }
 
+    const postMessageToParentCookie = (key, val) => {
+        if (window.top === window.self) return;
+
+        window.parent.postMessage({
+            'func': 'setCookieFromMessage',
+            'key': key,
+            'value': val,
+        }, `https://${site}`);
+    }
+
     const postMessageData = (category, action, label) => {
         if (window.top === window.self) return;
         window.parent.postMessage({
@@ -84,12 +95,17 @@ const Survey = () => {
         setCookie('answeredQuestion', '');
     }
     const initialCurrentQuestion = getCookie('currentQuestion') ? parseInt(getCookie('currentQuestion'), 10) : 1;
+    const initialSubmitted = getCookie('quizEmail') ? true : false;
     const answerData = getCookieAnsweredQuestion() ? getCookieAnsweredQuestion() : {};
 
 	// states
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
+    const [submitted, setSubmitted] = useState(initialSubmitted);
+    const [redirect, setRedirect] = useState(false);
+    const [email, setEmail] = useState('');
+    const additionalStep = true;
 
     const postMessageCookie = (key, val) => {
         if (window.top === window.self) return;
@@ -111,6 +127,7 @@ const Survey = () => {
 
         // setCookie('surveyPosition', currentPosition);
         // postMessageCookie('surveyPosition', currentPosition); don't send to parent window when initialize survey state
+        if (currentPosition === 'finished' && !additionalStep) clearCookie();
     }, [currentPosition]);
 
     useEffect(() => {
@@ -139,9 +156,8 @@ const Survey = () => {
         postMessageCookie('answeredQuestion', '');
     }
 
-	const gettingResult = (close=false) => {
+	const gettingResult = (close = false) => {
         const selectedSite = site ? site : 'dev.sandandsky.com';
-
 
         const skinType = getSkinType(currentAnswer);
         const envStressResult = getEnvironmentStress(currentAnswer);
@@ -150,9 +166,11 @@ const Survey = () => {
 
         const productHandle = [];
         const productSkus = [];
-        productsRecommend.forEach((item) => {
+        let sku = '';
+        productsRecommend.forEach((item, index) => {
             productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
+            sku = `${sku}${index === 0 ? '' : ','}${productList[item].sku}`;
         });
 
         if (close) {
@@ -171,6 +189,7 @@ const Survey = () => {
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie('surveyResult', surveyResultJson);
+            saveData(sku);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
@@ -190,6 +209,11 @@ const Survey = () => {
         }
     }
 
+    const setFinished = () => {
+        setCookie('surveyPosition', 'finished');
+        setPosition('finished');
+    }
+
 	const setQuestionState = (questionIndex) => {
         if (questionIndex <= Questions.length) {
             const targetQuestion = Questions[questionIndex];
@@ -206,11 +230,17 @@ const Survey = () => {
                 setQuestion(questionIndex);
             }
         } else if (questionIndex >= Questions.length) {
-            gettingResult(true);
-            // call saving data to analytics and database
-            saveData();
-            postMessageGaParent();
-            gettingResult(true);
+            if (additionalStep) {
+                setFinished();
+                if (submitted) {
+                    gettingResult(true);
+                }
+            } else {
+                gettingResult(true);
+                // call saving data to analytics and database
+                postMessageGaParent();
+                gettingResult(true);
+            }
         }
     }
 
@@ -219,7 +249,7 @@ const Survey = () => {
         const gaAnswers = decodeAnswers(currentAnswer)
         const keys = Object.keys(gaAnswers);
 
-        postMessageData('Survey', 'completed');
+        postMessageData('Survey', 'completed', email);
         postMessageCookie('surveySubmitNew', 'true');
 
         keys.forEach((key,index) => {
@@ -231,7 +261,7 @@ const Survey = () => {
         });
     }
 
-    const saveData = () => {
+    const saveData = (sku) => {
         const dataForSaving = {};
         for (const [key, value] of Object.entries(currentAnswer)) {
             const idxQ = key - 1;
@@ -240,7 +270,8 @@ const Survey = () => {
                 dataForSaving[questionText] = value;
             }
         }
-        const data = { _ga: gId, questions_answers: dataForSaving };
+        console.log('productsRecommend', sku);
+        const data = { _ga: gId, questions_answers: dataForSaving, email, sku };
         fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
             headers: {
@@ -258,12 +289,38 @@ const Survey = () => {
     //     postIframeHeight('height', height, site);
     // }, [height]);
 
-    const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
+    const classes = currentPosition !== 'result' ? '' : 'overflow-hidden';
 
     const startQuiz = () => {
         postMessageData('Survey', 'started');
         setPosition('question-1');
     };
+
+    const viewMyResult = () => {
+        setRedirect(true);
+        postMessageGaParent();
+        gettingResult(true);
+    }
+
+    const skipEmail = () => {
+        gettingResult(true);
+    }
+
+    const onSubmit = (email) => {
+        setCookie('quizEmail', email);
+        setEmail(email);
+        setSubmitted(true);
+        postMessageToParentCookie('quizEmail', email);
+
+        if (window.top !== window.self) {
+            window.parent.postMessage({
+                'func': 'callGaEvent',
+                'category': 'Survey',
+                'action': 'submitEmail',
+                'label': email,
+            }, `https://${site}`);
+        }
+    }
 
 	return (
 		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
@@ -352,7 +409,15 @@ const Survey = () => {
                     </div>
 				</>)}
 
-				{ (currentPosition === 'finished' || currentPosition === 'result') && (
+                { (currentPosition === 'finished' && !submitted && additionalStep && !redirect) && (
+                    <EmailForm onSubmit={onSubmit} skipEmail={skipEmail}/>
+                )}
+
+                { currentPosition === 'finished' && submitted && additionalStep && !redirect && (
+                    <ResultContent viewMyResult={viewMyResult}/>
+                )}
+
+				{ ((currentPosition === 'finished' || currentPosition === 'result') && redirect) && (
 					<div className="question-box analyzing d-flex justify-content-center align-items-center flex-column">
 						<p className="question-box__title">Analysing your answers</p>
 						<LoaderSvg className="loader mt-0 mb-0"/>
