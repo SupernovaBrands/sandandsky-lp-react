@@ -187,7 +187,7 @@ const Survey = () => {
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie('surveyResult', surveyResultJson);
-            saveData();
+            saveData(productsRecommend);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
@@ -259,7 +259,7 @@ const Survey = () => {
         });
     }
 
-    const saveData = () => {
+    const saveData = (productsRecommend) => {
         const dataForSaving = {};
         for (const [key, value] of Object.entries(currentAnswer)) {
             const idxQ = key - 1;
@@ -268,7 +268,9 @@ const Survey = () => {
                 dataForSaving[questionText] = value;
             }
         }
-        const data = { _ga: gId, questions_answers: dataForSaving, email };
+        console.log('productsRecommend', productsRecommend)
+        const sku = productsRecommend.length ? productsRecommend.join(','): '';
+        const data = { _ga: gId, questions_answers: dataForSaving, email, sku };
         fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
             headers: {
