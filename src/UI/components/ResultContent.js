@@ -37,7 +37,6 @@ const ResultContent = (props) => {
 };
 
 ResultContent.propTypes = {
-    lang: PropTypes.string.isRequired,
     viewMyResult: PropTypes.func.isRequired,
 };
 
