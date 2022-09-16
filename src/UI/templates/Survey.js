@@ -166,9 +166,11 @@ const Survey = () => {
 
         const productHandle = [];
         const productSkus = [];
-        productsRecommend.forEach((item) => {
+        let sku = '';
+        productsRecommend.forEach((item, index) => {
             productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
+            sku = `${sku}${index === 0 ? '' : ','}${productList[item].sku}`;
         });
 
         if (close) {
@@ -187,7 +189,7 @@ const Survey = () => {
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie('surveyResult', surveyResultJson);
-            saveData(productsRecommend);
+            saveData(sku);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
@@ -259,7 +261,7 @@ const Survey = () => {
         });
     }
 
-    const saveData = (productsRecommend) => {
+    const saveData = (sku) => {
         const dataForSaving = {};
         for (const [key, value] of Object.entries(currentAnswer)) {
             const idxQ = key - 1;
@@ -268,8 +270,7 @@ const Survey = () => {
                 dataForSaving[questionText] = value;
             }
         }
-        console.log('productsRecommend', productsRecommend)
-        const sku = productsRecommend.length ? productsRecommend.join(','): '';
+        console.log('productsRecommend', sku);
         const data = { _ga: gId, questions_answers: dataForSaving, email, sku };
         fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
@@ -282,7 +283,6 @@ const Survey = () => {
     }
 
     useEffect(() => {
-        console.log('gettingResult', 2)
         if (currentPosition === 'finished' || currentPosition === 'result') gettingResult();
     }, [currentPosition]);
     // useEffect(() => {
@@ -299,6 +299,10 @@ const Survey = () => {
     const viewMyResult = () => {
         setRedirect(true);
         postMessageGaParent();
+        gettingResult(true);
+    }
+
+    const skipEmail = () => {
         gettingResult(true);
     }
 
@@ -406,7 +410,7 @@ const Survey = () => {
 				</>)}
 
                 { (currentPosition === 'finished' && !submitted && additionalStep && !redirect) && (
-                    <EmailForm onSubmit={onSubmit} viewMyResult={viewMyResult}/>
+                    <EmailForm onSubmit={onSubmit} skipEmail={skipEmail}/>
                 )}
 
                 { currentPosition === 'finished' && submitted && additionalStep && !redirect && (
