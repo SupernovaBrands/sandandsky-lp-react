@@ -6,7 +6,7 @@ import { ReactComponent as SplashTop } from '../../assets/splash-top.svg';
 import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
 
 const EmailForm = (props) => {
-    const { onSubmit, viewMyResult } = props;
+    const { onSubmit, skipEmail } = props;
 
     const [email, setEmail] = useState('');
     const [isValidEmail, setIsValidEmail] = useState(false);
@@ -61,7 +61,7 @@ const EmailForm = (props) => {
                             </div>
                         </div>
                         <div className="footer-action w-100 mt-4">
-                            <a href="#" className="d-block text-underline text-black w-100 mt-2 mb-lg-4" onClick={viewMyResult}>Skip this step</a>
+                            <a href="#" className="d-block text-underline text-black w-100 mt-2 mb-lg-4" onClick={skipEmail}>Skip this step</a>
                         </div>
                     </div>
                     <div className="w-100 text-start ms-ng ms-lg-0 d-none d-lg-block">
@@ -76,6 +76,7 @@ const EmailForm = (props) => {
 EmailForm.propTypes = {
     onSubmit: PropTypes.func.isRequired,
     viewMyResult: PropTypes.func.isRequired,
+    skipEmail: PropTypes.func.isRequired,
 };
 
 export default EmailForm;
