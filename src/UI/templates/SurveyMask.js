@@ -5,6 +5,8 @@ import Questions from "../../modules/mask-questions";
 import QuestionBox from "../components/QuestionBox";
 import SingleChoice from '../components/SingleChoice';
 import MultipleChoice from '../components/MultipleChoice';
+import EmailForm from '../components/EmailForm2';
+import ResultContent from '../components/ResultContent2';
 
 import { 
     setCookie,
@@ -14,7 +16,8 @@ import {
     postMessageCookie,
     getCookieAnsweredQuestion,
     setCookieAnsweredQuestion,
-    clearCookie
+    clearCookie,
+    postMessageToParentCookie,
 } from "../../modules/Utils";
 
 import { useSearchParams } from "react-router-dom";
@@ -40,12 +43,17 @@ const SurveyMask = () => {
         setCookie('answeredQuestion', '');
     }
     const initialCurrentQuestion = getCookie('currentQuestion') ? parseInt(getCookie('currentQuestion'), 10) : 1;
+    const initialSubmitted = getCookie('quizEmail') ? true : false;
     const answerData = getCookieAnsweredQuestion('getCookieAnsweredQuestionMask') ? getCookieAnsweredQuestion('getCookieAnsweredQuestionMask') : {};
 
     // INITIAL STATES
     const [currentPosition, setPosition] = useState(initialState);
 	const [currentQuestion, setQuestion] = useState(initialCurrentQuestion);
     const [currentAnswer, setAnswer] = useState(answerData);
+    const [submitted, setSubmitted] = useState(initialSubmitted);
+    const [redirect, setRedirect] = useState(false);
+    const [email, setEmail] = useState('');
+    const additionalStep = true;
 
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 
@@ -54,12 +62,43 @@ const SurveyMask = () => {
         setPosition('question-1');
     };
 
+    const setFinished = () => {
+        setCookie('surveyPosition', 'finished');
+        setPosition('finished');
+    }
+
     const answerAction = (question, answers) => {
         console.log('answerAction', question, answers)
         currentAnswer[question] = answers;
         setAnswer(decodeAnswers(currentAnswer));
         setCookieAnsweredQuestion(decodeAnswers(currentAnswer));
     };
+
+    const skipEmail = () => {
+        gettingResult(true);
+    }
+
+    const viewMyResult = () => {
+        setRedirect(true);
+        postMessageGaParent();
+        gettingResult(true);
+    }
+
+    const onSubmit = (email) => {
+        setCookie('quizEmail', email);
+        setEmail(email);
+        setSubmitted(true);
+        postMessageToParentCookie(site, 'quizEmail', email, site);
+
+        if (window.top !== window.self) {
+            window.parent.postMessage({
+                'func': 'callGaEvent',
+                'category': 'Survey',
+                'action': 'submitEmail',
+                'label': email,
+            }, `https://${site}`);
+        }
+    }
 
     const setQuestionState = (questionIndex) => {
         if (questionIndex <= Questions.length) {
@@ -77,11 +116,12 @@ const SurveyMask = () => {
                 setQuestion(questionIndex);
             }
         } else if (questionIndex >= Questions.length) {
-            console.log('finish', currentPosition)
-            // gettingResult(true);
-            // call saving data to analytics and database
-            // saveData();
+            console.log('finish', currentPosition);
             postMessageGaParent();
+            if (additionalStep) {
+                setFinished();
+                if (submitted) gettingResult(true);
+            }
         }
     }
 
@@ -111,7 +151,7 @@ const SurveyMask = () => {
         const keys = Object.keys(gaAnswers);
 
         postMessageData('Survey', 'completed');
-        postMessageCookie('surveySubmitNew', 'true');
+        postMessageCookie(site, 'surveySubmitNew', 'true');
 
         keys.forEach((key,index) => {
             const q = Questions[index];
@@ -140,7 +180,7 @@ const SurveyMask = () => {
         if (close) {
             setCookie('surveyPosition', 'finished');
             setPosition('finished');
-            postMessageCookie('surveyPosition', 'finished');
+            postMessageCookie(site, 'surveyPosition', 'finished');
             const surveyResultObj = {
                 skinType,
                 envStressResult,
@@ -152,14 +192,14 @@ const SurveyMask = () => {
 
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
-            postMessageCookie('surveyResult', surveyResultJson);
+            postMessageCookie(site, 'surveyResult', surveyResultJson);
 
             setTimeout(function () {
                 setCookie('surveyPosition', 'result');
                 setPosition('result');
-                postMessageCookie('surveyPosition', 'result');
+                postMessageCookie(site, 'surveyPosition', 'result');
                 setCookie('surveyResult', surveyResultJson);
-                postMessageCookie('surveyResult', surveyResultJson);
+                postMessageCookie(site, 'surveyResult', surveyResultJson);
                 clearCookie();
                 if (window.top !== window.self) {
                     setTimeout(function () {
@@ -253,6 +293,14 @@ const SurveyMask = () => {
                             })}
                         </div>
                     </>
+                )}
+
+                { (currentPosition === 'finished' && !submitted && !redirect) && (
+                    <EmailForm onSubmit={onSubmit} skipEmail={skipEmail}/>
+                )}
+
+                { currentPosition === 'finished' && submitted && !redirect && (
+                    <ResultContent viewMyResult={viewMyResult}/>
                 )}
 
                 { (currentPosition === 'finished' || currentPosition === 'result') && (

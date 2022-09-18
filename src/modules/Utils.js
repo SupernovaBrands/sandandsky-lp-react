@@ -126,7 +126,7 @@ export const decodeAnswers = (object) => {
 	return object;
 }
 
-export const postMessageData = (category, action, label, site) => {
+export const postMessageData = (site, category, action, label) => {
 	if (window.top === window.self) return;
 	window.parent.postMessage({
 		'func': 'callGaEvent',
@@ -136,7 +136,7 @@ export const postMessageData = (category, action, label, site) => {
 	}, `https://${site}`);
 }
 
-export const postMessageCookie = (key, val, site) => {
+export const postMessageCookie = (site, key, val) => {
 	if (window.top === window.self) return;
 
 	window.parent.postMessage({
@@ -180,4 +180,14 @@ export const clearCookie = () => {
 	postMessageCookie('currentQuestion', 1);
 	postMessageCookie('surveyPosition', 'start');
 	postMessageCookie('answeredQuestion', '');
+}
+
+export const postMessageToParentCookie = (site, key, val) => {
+	if (window.top === window.self) return;
+
+	window.parent.postMessage({
+		'func': 'setCookieFromMessage',
+		'key': key,
+		'value': val,
+	}, `https://${site}`);
 }
