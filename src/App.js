@@ -23,6 +23,7 @@ const App = () => {
           <Route path='/test-18' element={<ProductDetail />} />
           <Route path='/customers-survey' element={<Survey />} />
           <Route path='/survey-result' element={<SurveyResultTemplate />} />
+          <Route path='/survey-result-mask' element={<SurveyResultTemplate quizType='mask' />} />
           <Route path='/range-apc' element={<ApcRange />} />
           <Route path='/mask-quiz-test' element={<SurveyMask />} />
         </Routes>

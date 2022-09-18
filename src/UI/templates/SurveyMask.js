@@ -72,10 +72,11 @@ const SurveyMask = () => {
         currentAnswer[question] = answers;
         setAnswer(decodeAnswers(currentAnswer));
         setCookieAnsweredQuestion(decodeAnswers(currentAnswer));
+        console.log('currentAnswer2', currentAnswer)
     };
 
     const skipEmail = () => {
-        gettingResult(true);
+        gettingResult(true, true);
     }
 
     const viewMyResult = () => {
@@ -84,12 +85,14 @@ const SurveyMask = () => {
         gettingResult(true);
     }
 
-    const onSubmit = (email) => {
-        setCookie('quizEmail', email);
-        setEmail(email);
+    const onSubmit = (emailtoSave) => {
+        console.log('emailtoSave', emailtoSave)
+        setCookie('quizEmail', emailtoSave);
+        setEmail(emailtoSave);
         setSubmitted(true);
         postMessageToParentCookie(site, 'quizEmail', email, site);
-
+        setTimeout(() => { saveData(); }) 
+        console.log('email3', email);
         if (window.top !== window.self) {
             window.parent.postMessage({
                 'func': 'callGaEvent',
@@ -126,6 +129,7 @@ const SurveyMask = () => {
     }
 
     const saveData = () => {
+        console.log('email to save', getCookie('quizEmail'))
         const dataForSaving = {};
         for (const [key, value] of Object.entries(currentAnswer)) {
             const idxQ = key - 1;
@@ -134,7 +138,18 @@ const SurveyMask = () => {
                 dataForSaving[questionText] = value;
             }
         }
-        const data = { _ga: gId, questions_answers: dataForSaving };
+
+        const { productsRecommend } = getMaskProductResult(Questions, currentAnswer);
+        const productHandle = [];
+        const productSkus = [];
+        let sku = '';
+        productsRecommend.forEach((item, index) => {
+            productHandle.push(productList[item].handle);
+            productSkus.push(productList[item].sku);
+            sku = `${sku}${index === 0 ? '' : ','}${productList[item].sku}`;
+        });
+
+        const data = { _ga: gId, questions_answers: dataForSaving, email: getCookie('quizEmail'), sku, quizType: 'mask' };
         fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
             headers: {
@@ -162,32 +177,30 @@ const SurveyMask = () => {
         });
     }
 
-    const gettingResult = (close=false) => {
+    const gettingResult = (close = false, save = false) => {
         const selectedSite = site ? site : 'dev.sandandsky.com';
         const { productsRecommend } = getMaskProductResult(Questions, currentAnswer);
-        console.log('currentAnswer', currentAnswer);
-        console.log('productsRecommend', productsRecommend)
-        /*
-        
 
-        const productHandle = [];
-        const productSkus = [];
-        productsRecommend.forEach((item) => {
-            productHandle.push(productList[item].handle);
-            productSkus.push(productList[item].sku);
-        });
+        if (save) saveData();
 
         if (close) {
             setCookie('surveyPosition', 'finished');
             setPosition('finished');
             postMessageCookie(site, 'surveyPosition', 'finished');
+
+            const productHandle = [];
+            const productSkus = [];
+            productsRecommend.forEach((item, index) => {
+                productHandle.push(productList[item].handle);
+                productSkus.push(productList[item].sku);
+            });
+
             const surveyResultObj = {
-                skinType,
-                envStressResult,
                 productsRecommend,
                 productHandle,
                 productSkus,
-                activePriority
+                productHandle,
+                productSkus,
             };
 
             const surveyResultJson = JSON.stringify(surveyResultObj);
@@ -203,14 +216,13 @@ const SurveyMask = () => {
                 clearCookie();
                 if (window.top !== window.self) {
                     setTimeout(function () {
-                        window.top.location.href = `https://${selectedSite}/pages/survey-result/`;
+                        window.top.location.href = `https://${selectedSite}/pages/survey-result-mask/`;
                     }, 500);
                 } else {
-                    window.location.href = '/survey-result';
+                    window.location.href = '/survey-result-mask';
                 }
             }, 1500);
         }
-        */
     }
 
     return (
@@ -303,7 +315,7 @@ const SurveyMask = () => {
                     <ResultContent viewMyResult={viewMyResult}/>
                 )}
 
-                { (currentPosition === 'finished' || currentPosition === 'result') && (
+                { ((currentPosition === 'finished' || currentPosition === 'result') && redirect) && (
 					<div className="question-box analyzing d-flex justify-content-center align-items-center flex-column">
 						<p className="question-box__title">Analysing your answers</p>
 						<LoaderSvg className="loader mt-0 mb-0"/>

@@ -4,7 +4,7 @@ import { ReactComponent as Check } from '../../assets/check.svg';
 import { validateEmail } from '../../modules/Utils';
 
 const EmailForm = (props) => {
-    const { onSubmit, viewMyResult } = props;
+    const { onSubmit, skipEmail } = props;
 
     const [email, setEmail] = useState('');
     const [isValidEmail, setIsValidEmail] = useState(false);
@@ -31,7 +31,7 @@ const EmailForm = (props) => {
             <div className="col-12 col-lg-8 ms-auto me-auto mt-4">
                 <div className="form-group">
                     <form onSubmit={submitEmail}>
-                        <input type="email" className="form-control bg-light-gray border-0" placeholder="E-mail address" onChange={onEmailChange}/>
+                        <input type="email" className="form-control bg-light-gray" placeholder="E-mail address" onChange={onEmailChange}/>
                         <button type="submit" className="btn btn-lg d-block btn-primary mb-3 w-100 mt-2" disabled={!isValidEmail || !termChecked}>Submit</button>
                     </form>
                 </div>
@@ -47,7 +47,7 @@ const EmailForm = (props) => {
                 <p className="font-size-sm">By signing up, you agree to receive exclusive offers via email. Sign up not required for purchase. Opt out any time.</p>
             </div>
             <div className="footer-action w-100 pb-2 bg-white mt-4">
-                <a href="#" className="d-block text-underline text-black w-100 mt-2 mb-lg-4" onClick={viewMyResult}>Skip this step</a>
+                <a href="#" className="d-block text-underline text-black w-100 mt-2 mb-lg-4" onClick={skipEmail}>Skip this step</a>
             </div>
         </div>
     )
@@ -55,7 +55,7 @@ const EmailForm = (props) => {
 
 EmailForm.propTypes = {
     onSubmit: PropTypes.func.isRequired,
-    viewMyResult: PropTypes.func.isRequired,
+    skipEmail: PropTypes.func.isRequired,
 };
 
 export default EmailForm;

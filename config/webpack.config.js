@@ -723,6 +723,32 @@ module.exports = function (webpackEnv) {
           {},
           {
             inject: false,
+            template: 'public/survey-result-mask-remplate.html',
+            filename: 'survey-result-mask/index.html',
+          },
+          isEnvProduction
+            ? {
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
+            : undefined
+        )
+      ),
+      new HtmlWebpackPlugin(
+        Object.assign(
+          {},
+          {
+            inject: false,
             template: 'public/range-apc.html',
             filename: 'range-apc/index.html',
           },
