@@ -77,8 +77,8 @@ const SurveyMask = () => {
                 setQuestion(questionIndex);
             }
         } else if (questionIndex >= Questions.length) {
-            console.log('finish')
-            gettingResult(true);
+            console.log('finish', currentPosition)
+            // gettingResult(true);
             // call saving data to analytics and database
             // saveData();
             postMessageGaParent();
