@@ -8,6 +8,7 @@ export const SurveyContext = React.createContext();
 const QuestionBox = (props) => {
     const {
         question,
+        questionNote,
         caption,
         captionClass,
         children,
@@ -57,6 +58,7 @@ const QuestionBox = (props) => {
             <ProgressBarStep category={category} currentQuestion={currentQuestion} totalQuestions={totalSteps} />
             <div className="d-flex justify-content-center align-items-center flex-column question-box__content mb-2">
                 <p className={`${caption ? 'w-100' : 'w-100 mb-4 mb-lg-2'} h1 mt-4`}>{question}</p>
+                { questionNote && (<p>{questionNote}</p>)}
                 { caption && (<p className={captionClass}>{caption}</p>)}
                 <SurveyContext.Provider value={{answerAction: answer, currentQuestion: currentQuestion, width, height, setDisable: setDisable, currentAnswer }}>
                     { children }

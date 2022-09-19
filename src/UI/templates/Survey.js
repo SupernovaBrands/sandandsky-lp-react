@@ -160,6 +160,7 @@ const Survey = () => {
         const selectedSite = site ? site : 'dev.sandandsky.com';
 
         const skinType = getSkinType(currentAnswer);
+        console.log('skinType', skinType)
         const envStressResult = getEnvironmentStress(currentAnswer);
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);

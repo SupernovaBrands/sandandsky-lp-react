@@ -17,7 +17,7 @@ const SurveyResult = (props) => {
 
 	const [searchParams] = useSearchParams();
     const site = searchParams.get('site');
-	const {activePriority, envStressResult, productsRecommend, skinType} = props.answerResult;
+	const { activePriority, envStressResult, productsRecommend, skinType } = props.answerResult;
 
 	const accordionHandle = (e) => {
 		const parentId = e.currentTarget.dataset.parent;

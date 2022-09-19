@@ -4,6 +4,7 @@ const productList = {
 		usp: 'Deeply detoxes and tightens pores in 10 minutes with Australian Pink Clay, a magnet for toxins',
 		howto: 'Use 2-3 times a week for about 10 minutes or until dry',
 		title: 'Australian Pink Clay Porefining Face Mask',
+		description: 'Australian Pink Clay Mask Refine pores, clear congestion, and instantly boost radiance with our <span class="text-primary">Australian Pink Clay Mask</span>.',
 		sku: 'SS0000012010',
 		dev: {
 			id: 39409261805639,
@@ -59,6 +60,7 @@ const productList = {
 		usp: 'Removes makeup, tightens pores and gently exfoliates with AHAs',
 		howto: 'Use it daily as a morning and night cleanser',
 		title: 'Australian Pink Clay Deep Pore Cleanser',
+		description: '',
 		sku: 'SS0001612020',
 		dev: {
 			id: 39409197580359,
@@ -169,6 +171,7 @@ const productList = {
 		usp: 'Ultra-nourishing, brightens and protects skin with super-potent antioxidants, Hyaluronic Acid and Kakadu Plum',
 		howto: 'Use 2-3 times a week for about 10 minutes for best results',
 		title: 'Australian Glow Berries Super Bounce Mask',
+		description: 'Australian Glow Berries Super Bounce Mask Deeply hydrate, brighten and protect the skin with this antioxidant rich <span class="text-range-aea">Australian Glow Berries Super Bounce Mask</span>.',
 		sku: 'SS0000102020',
 		dev: {
 			id: 32227654402119,
@@ -334,6 +337,7 @@ const productList = {
 		howto: 'Use 2-3 times a week, leave on for 10 minutes for an instant hydration perk',
 		usp: 'Intensively hydrates, soothes redness and strengthens skin barrier in 10 minutes with Hyaluronic Acid, Squalane and Pentavitin',
 		title: 'Tasmanian Spring Water Intense Hydrating Mask',
+		description: 'The <span class="text-range-tsw">Tasmanian Spring Water Intense Hydrating Mask</span> intensively hydrates, soothes redness and repairs skin barrier, achieving instant luminous skin in 10 minutes.',
 		sku: 'SS0002242020',
 		dev: {
 			id: 39567979839559,
@@ -499,6 +503,7 @@ const productList = {
 		howto: 'Use 2-3 times a week for about 5-10 minutes',
 		usp: 'Combats acne, unclogs pores and eliminates sebum for clear skin, with powerful ingredients like Salicylic Acid and Prebiotics',
 		title: 'Oil Control Clearing Face Mask',
+		description: 'The nemesis of excess sebum, enlarged pores and blemishes, this <span class="text-range-oil">Oil Control Clearing Face Mask</span> rebalances microbiome, leaving skin clear of imperfections.',
 		sku: 'SS0001182020',
 		dev: {
 			id: 39652548771911,
