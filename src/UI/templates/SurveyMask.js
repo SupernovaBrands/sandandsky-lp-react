@@ -149,7 +149,7 @@ const SurveyMask = () => {
             sku = `${sku}${index === 0 ? '' : ','}${productList[item].sku}`;
         });
 
-        const data = { _ga: gId, questions_answers: dataForSaving, email: getCookie('quizEmail'), sku, quizType: 'mask' };
+        const data = { _ga: gId, questions_answers: dataForSaving, email: getCookie('quizEmail'), sku, quiz_type: 'mask' };
         fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
             headers: {
