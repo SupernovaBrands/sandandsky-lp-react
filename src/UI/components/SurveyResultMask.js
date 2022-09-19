@@ -1,9 +1,6 @@
 import '../../survey.scss';
 import { Collapse } from 'bootstrap';
 
-import { ReactComponent as ChevronUp } from '../../assets/chevron-up.svg';
-import { ReactComponent as ChevronDown } from '../../assets/chevron-down.svg';
-import activeDescription from '../../modules/priority-actives';
 import productList from '../../modules/product-list';
 import { useSearchParams } from 'react-router-dom';
 import { postIframeHeight, getItemRange } from "../../modules/Utils";
@@ -67,11 +64,11 @@ const SurveyResult = (props) => {
 	return (
 		<section className="survey-result mt-4 mt-lg-0">
 			<div className="survey-result__bg">
-				<div className="container px-2 py-4 my-g my-lg-4">
+				<div className="container px-2 py-4">
 					<div className="row">
 						<div className="col-12 col-lg-6 col-xl-6">
-							<p className="d-none d-lg-block h1 mb-2">Your Skin Analysis</p>
-							<p className="d-none d-lg-block survey-result__subtitle">Below is your skin analysis:</p>
+							<p className="h1 mb-2">Your Recommended Mask</p>
+							<p className="survey-result__subtitle" dangerouslySetInnerHTML={{ __html: productDetail.description }}></p>
 						</div>
                         <div className="col-12 col-lg-6 col-xl-6">
                             <div className="survey-result__product-list">
@@ -115,6 +112,11 @@ const SurveyResult = (props) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div  className='survey-result__save mx-2m-lg-5 p-3 bg-primary-light text-center mt-4 mt-lg-7'>
+                <h5 className='h2'>Save your quiz result!</h5>
+                <p className='mb-g'>Don’t loose your result, log into your account and we save it for you!</p>
+                <a href="/account" className='text-primary'>Log In or Sign Up</a>
             </div>
         </section>
 	);

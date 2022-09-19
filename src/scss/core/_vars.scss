@@ -89,11 +89,15 @@ $gray-700: #595959;
 
 $theme-colors: (
   'primary': $primary,
+  'primary-light': $primary-light,
   'secondary': $secondary,
   'secondary-light': $secondary-light,
   'gray-100': $gray-100,
   'gray-700': $gray-700,
   'link': $link-black,
+  'range-aea': $range-aea,
+  'range-tsw': $range-tsw,
+  'range-oil': $range-oil,
 );
 
 // Border

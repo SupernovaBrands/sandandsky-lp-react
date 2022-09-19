@@ -10,9 +10,9 @@ const SurveyMask = lazy(() => import('./UI/templates/SurveyMask'));
 
 
 const App = () => {
-  const noHeader = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/'
+  const noHeader = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/' || window.location.pathname === '/mask-survey/' || window.location.pathname === '/survey-result-mask/'
     || window.location.pathname === '/survey-result' || window.location.pathname === '/survey-result/';
-  const noFooter = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/'
+  const noFooter = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/' || window.location.pathname === '/mask-survey/' || window.location.pathname === '/survey-result-mask/'
     || window.location.pathname === '/survey-result' || window.location.pathname === '/survey-result/';
   return (
     <Layout noFooter={noFooter()} noHeader={noHeader()}>
@@ -25,7 +25,7 @@ const App = () => {
           <Route path='/survey-result' element={<SurveyResultTemplate />} />
           <Route path='/survey-result-mask' element={<SurveyResultTemplate quizType='mask' />} />
           <Route path='/range-apc' element={<ApcRange />} />
-          <Route path='/mask-quiz-test' element={<SurveyMask />} />
+          <Route path='/mask-survey' element={<SurveyMask />} />
         </Routes>
       </Suspense>
     </Layout>

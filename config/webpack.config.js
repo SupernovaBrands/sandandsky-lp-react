@@ -672,7 +672,7 @@ module.exports = function (webpackEnv) {
           {
             inject: false,
             template: 'public/survey-mask.html',
-            filename: 'mask-quiz-test/index.html',
+            filename: 'mask-survey/index.html',
           },
           isEnvProduction
             ? {
