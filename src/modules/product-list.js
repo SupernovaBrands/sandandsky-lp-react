@@ -714,6 +714,61 @@ const productList = {
 			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_GB_PDP_Moisturiser_1_Hero_54ad2de5-18ec-45d6-b5d2-b8370d467742_236x404_crop_center.jpg?v=1658936297',
 		},
 	},
+	'TSW Night Cream': {
+		handle: 'tasmanian-spring-water-renewing-night-cream',
+		howto: 'Use at night as the final step of your skincare routine, and after using any serums or oils',
+		usp: 'Deeply hydrates skin, prepping it for an overnight boosted regeneration and replenishing process, for more youthful radiance by morning',
+		title: 'Tasmanian Spring Water Renewing Night Cream',
+		sku: 'SS0000102040',
+		dev: {
+			id: 39769222086727,
+			price: '$49.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		ca: {
+			id: 40283577286741,
+			price: '$63.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		us: {
+			id: 40277848719465,
+			price: '$49.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		uk: {
+			id: 39868290564158,
+			price: '£43.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		eu: {
+			id: 39812349591629,
+			price: '€49,90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		au: {
+			id: 41968357769392,
+			price: '$71.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		int: {
+			id: 40043332436054,
+			price: '$49.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+		my: {
+			id: 41968357900464,
+			price: 'RM218.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
+		},
+	},
 };
 
 export default productList;
