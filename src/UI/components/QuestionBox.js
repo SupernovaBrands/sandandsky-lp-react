@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Questions from '../../modules/questions';
 import ProgressBarStep from './ProgressBarStep';
+import ProgressBarStep2 from './ProgressBarStep2';
 import { ReactComponent as SplashBottom } from '../../assets/splash-bottom.svg';
 
 export const SurveyContext = React.createContext();
@@ -23,6 +24,7 @@ const QuestionBox = (props) => {
         category,
         defaultEnabled,
         quizType,
+        progressBarType,
     } = props;
 
     const prevAction = () => {
@@ -56,7 +58,11 @@ const QuestionBox = (props) => {
 
     return (
         <div className={`${colSize} col-12 d-flex flex-wrap justify-content-center question-box`}>
-            <ProgressBarStep category={category} currentQuestion={currentQuestion} totalQuestions={totalSteps} />
+            { progressBarType === "2" ? (
+                <ProgressBarStep2 category={category} currentQuestion={currentQuestion} totalQuestions={totalSteps} />
+            ) : (
+                <ProgressBarStep category={category} currentQuestion={currentQuestion} totalQuestions={totalSteps} />
+            )}
             <div className="d-flex justify-content-center align-items-center flex-column question-box__content mb-2">
                 <p className={`${caption ? 'w-100' : 'w-100 mb-4 mb-lg-2'} h1 mt-4`}>{question}</p>
                 { questionNote && (<p>{questionNote}</p>)}
