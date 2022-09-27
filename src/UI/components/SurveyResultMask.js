@@ -75,7 +75,7 @@ const SurveyResult = (props) => {
                             <div className="survey-result__product-list">
                                 <div className="container p-g my-g  bg-white">
                                     <div className="row">
-                                        <div className="col-4">
+                                        <div className="col-6">
                                             <a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} aria-label={productDetail.title}>
                                                 <picture>
                                                     <source srcSet={productDetail[storeDomain].image.replace('236x404', '186x322')} media="(min-width: 992px)" />
@@ -83,7 +83,7 @@ const SurveyResult = (props) => {
                                                 </picture>
                                             </a>
                                         </div>
-                                        <div className="col-8 ps-lg-0">
+                                        <div className="col-6 ps-lg-0">
                                             <p className="font-size-sm mb-0">{titleRange}</p>
                                             <p className="mb-1 fw-bold">{productDetail.title.replace(titleRange, '').trim()}</p>
                                             
@@ -113,11 +113,6 @@ const SurveyResult = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div  className='survey-result__save mx-2m-lg-5 p-3 bg-primary-light text-center mt-4 mt-lg-7'>
-                <h5 className='h2'>Save your quiz result!</h5>
-                <p className='mb-g'>Don’t loose your result, log into your account and we save it for you!</p>
-                <a href="/account" className='text-primary'>Log In or Sign Up</a>
             </div>
         </section>
 	);
