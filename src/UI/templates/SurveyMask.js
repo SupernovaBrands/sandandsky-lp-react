@@ -290,6 +290,7 @@ const SurveyMask = () => {
                                                     captionClass={item.captionClass ? item.captionClass : ''}
                                                     category={item.category}
                                                     defaultEnabled={item.inputType === 'RangeSlider' ? true : null}
+                                                    quizType="mask"
                                                     >
                                                     <SingleChoice
                                                         answers={item.answers}

@@ -10,9 +10,9 @@ const SurveyMask = lazy(() => import('./UI/templates/SurveyMask'));
 
 
 const App = () => {
-  const noHeader = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/' || window.location.pathname === '/mask-survey/' || window.location.pathname === '/survey-result-mask/'
+  const noHeader = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/' || window.location.pathname === '/mask-survey' || window.location.pathname === '/mask-survey/' || window.location.pathname === '/survey-result-mask' || window.location.pathname === '/survey-result-mask/'
     || window.location.pathname === '/survey-result' || window.location.pathname === '/survey-result/';
-  const noFooter = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/' || window.location.pathname === '/mask-survey/' || window.location.pathname === '/survey-result-mask/'
+  const noFooter = () => window.location.pathname === '/customers-survey' || window.location.pathname === '/customers-survey/' || window.location.pathname === '/mask-survey' || window.location.pathname === '/mask-survey/' || window.location.pathname === '/survey-result-mask' || window.location.pathname === '/survey-result-mask/'
     || window.location.pathname === '/survey-result' || window.location.pathname === '/survey-result/';
   return (
     <Layout noFooter={noFooter()} noHeader={noHeader()}>

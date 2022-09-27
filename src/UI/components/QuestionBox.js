@@ -22,6 +22,7 @@ const QuestionBox = (props) => {
         totalSteps,
         category,
         defaultEnabled,
+        quizType,
     } = props;
 
     const prevAction = () => {
@@ -73,7 +74,7 @@ const QuestionBox = (props) => {
                         <button className="btn btn-primary text-white btn-next w-100" onClick={nextAction()} disabled={isDisabled}>{ isLastQuestion ? 'View my results' : 'Next' }</button>
                     </div>
                 </div>
-                <SplashBottom className="d-none d-lg-block question-box__decoration-bottom position-absolute start-0 bottom-0" />
+                { quizType !== 'mask' && (<SplashBottom className="d-none d-lg-block question-box__decoration-bottom position-absolute start-0 bottom-0" />)}
             </div>
         </div>
     )
