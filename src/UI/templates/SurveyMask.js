@@ -262,6 +262,7 @@ const SurveyMask = () => {
                                                     caption={item.caption ? item.caption : ''}
                                                     captionClass={item.captionClass ? item.captionClass : ''}
                                                     category={item.category}
+                                                    progressBarType='2'
                                                     >
                                                     <MultipleChoice answers={item.answers}
                                                         lastFull={item.lastFull}
@@ -291,6 +292,7 @@ const SurveyMask = () => {
                                                     category={item.category}
                                                     defaultEnabled={item.inputType === 'RangeSlider' ? true : null}
                                                     quizType="mask"
+                                                    progressBarType='2'
                                                     >
                                                     <SingleChoice
                                                         answers={item.answers}
