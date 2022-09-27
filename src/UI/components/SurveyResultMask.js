@@ -13,6 +13,7 @@ const SurveyResult = (props) => {
 	const [searchParams] = useSearchParams();
     const site = searchParams.get('site');
 	const { productsRecommend } = props.answerResult;
+    console.log('test', props.answerResult);
     const productDetail = productList[productsRecommend[0]];
     const titleRange = getItemRange(productDetail.title);
 	const selectedSite = site ? site.replace('.sandandsky.com', '') : 'dev';

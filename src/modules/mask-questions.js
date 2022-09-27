@@ -18,6 +18,7 @@ const Questions = [
         showAllLabel: null,
         category: '',
         btnClass: 'btn__choice-bigger',
+        buttonType: 'full',
     },
     {
         question: "What is your local climate like?",
@@ -28,6 +29,7 @@ const Questions = [
         showAllLabel: null,
         category: '',
         btnClass: 'btn__choice-bigger',
+        buttonType: 'full',
     },
     {
         question: "What is your main concern?",

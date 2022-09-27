@@ -70,6 +70,7 @@
 
 		h1 {
 			font-size: 65px;
+			font-weight: normal;
 
 			@include media-breakpoint-up(lg) {
 				font-size: 105px;
