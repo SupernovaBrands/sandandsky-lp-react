@@ -203,7 +203,6 @@ const SurveyMask = () => {
                 productHandle,
                 productSkus,
             };
-            /*
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie(site, 'surveyResult', surveyResultJson);
@@ -223,7 +222,6 @@ const SurveyMask = () => {
                     window.location.href = '/survey-result-mask';
                 }
             }, 1500);
-            */
         }
     }
 
