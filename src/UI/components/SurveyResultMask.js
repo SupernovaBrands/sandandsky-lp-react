@@ -73,7 +73,7 @@ const SurveyResult = (props) => {
 						</div>
                         <div className="col-12 col-lg-6 col-xl-6">
                             <div className="survey-result__product-list">
-                                <div className="container p-g my-g  bg-white">
+                                <div className="container p-g my-g">
                                     <div className="row">
                                         <div className="col-6">
                                             <a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} aria-label={productDetail.title}>
@@ -97,9 +97,9 @@ const SurveyResult = (props) => {
                                                     <p className="mb-0 pb-2">{productDetail.howto}</p>
                                                 </div>
                                             </div>
-                                            <div className="d-flex font-size-sm mt-g mb-3">
+                                            <div className="d-flex mt-g mb-3">
                                                 {productDetail[storeDomain].compare_at_price && <span className="text-decoration-line-through me-1 text-muted">{productDetail[storeDomain].compare_at_price}</span>}
-                                                {productDetail[storeDomain].price && <span className="text-secondary fw-bold">{productDetail[storeDomain].price}</span>}
+                                                {productDetail[storeDomain].price && <span className="text-primary fw-bold">{productDetail[storeDomain].price}</span>}
                                             </div>
                                         </div>
                                     </div>

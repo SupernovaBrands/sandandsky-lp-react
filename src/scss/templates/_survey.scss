@@ -4,7 +4,9 @@
 
 .survey-result {
 	&__bg {
-		background-color: $gray-100;
+		@include media-breakpoint-up(lg) {
+			background-color: $gray-100;
+		}
 	}
 
 	&__product {
@@ -46,7 +48,13 @@
 		transform: scale(.6);
 	}
 
+	&__product-list {
+		background-color: $gray-100;
 
+		@include media-breakpoint-up(lg) {
+			background-color: white;
+		}
+	}
 }
 
 .survey-mask {
