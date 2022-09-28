@@ -59,14 +59,14 @@
 
 .survey-mask {
 	&.cover {
-		background-image: url(https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c90d704f-bdc4-4a96-cb87-e8fe67bba700/1140x);
+		background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/mobile_976566d6-27c6-4027-8009-2259c48b19b3.jpg?v=1664352616);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: bottom;
 		
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/cc75c6b9-f09d-4e36-887f-1079785f5300/1140x);
+			background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/desktop_3.jpg?v=1664355959);
 		}
 
 		.tooltip {
