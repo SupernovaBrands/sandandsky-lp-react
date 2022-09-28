@@ -27,7 +27,7 @@ const EmailForm = (props) => {
     return (
         <div className="col-12 col-lg-6 mt-4 pt-0 pt-lg-4 text-center">
             <p className="h1 mb-0">We found your perfect mask</p>
-            <p className="mt-2 h4 fw-normal mx-3" dangerouslySetInnerHTML={{ __html: 'Enter your email to view your results! Plus, get a promo code 10% OFF for your first purchase.' }}></p>
+            <p className="mt-2 h4 fw-normal mx-3" dangerouslySetInnerHTML={{ __html: 'Enter your email to view your results! Plus, get a promo code 10% OFF your first purchase.' }}></p>
             <div className="col-12 col-lg-8 ms-auto me-auto mt-4">
                 <div className="form-group">
                     <form onSubmit={submitEmail}>
@@ -39,7 +39,7 @@ const EmailForm = (props) => {
                                     <Check className={`${!termChecked ? 'd-none' : ''} svg text-white`}/>
                                 </div>
                             </label>
-                            <label className="font-size-sm mx-1" dangerouslySetInnerHTML={{ __html: 'I agree to <a href="https://www.sandandsky.com/pages/privacy-policy">Privacy Policy & ToS</a>' }} htmlFor="agree"></label>
+                            <label className="font-size-sm mx-1" dangerouslySetInnerHTML={{ __html: 'I agree to <a href="https://www.sandandsky.com/pages/privacy-policy">Privacy Policy</a> & <a href="https://www.sandandsky.com/policies/terms-of-service">ToS</a>' }} htmlFor="agree"></label>
                         </div>
                         <p className="font-size-sm">By signing up, you agree to receive exclusive offers via email. Sign up not required for purchase. Opt out any time.</p>
                         <button type="submit" className="btn btn-lg d-block btn-primary mb-3 w-100 mt-2" disabled={!isValidEmail || !termChecked}>Submit</button>
