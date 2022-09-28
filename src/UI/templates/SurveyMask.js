@@ -180,6 +180,7 @@ const SurveyMask = () => {
     const gettingResult = (close = false, save = false) => {
         const selectedSite = site ? site : 'dev.sandandsky.com';
         const { productsRecommend } = getMaskProductResult(Questions, currentAnswer);
+        console.log('currentAnswer', currentAnswer, productsRecommend);
 
         if (save) saveData();
 
@@ -202,7 +203,7 @@ const SurveyMask = () => {
                 productHandle,
                 productSkus,
             };
-
+            /*
             const surveyResultJson = JSON.stringify(surveyResultObj);
             setCookie('surveyResult', surveyResultJson);
             postMessageCookie(site, 'surveyResult', surveyResultJson);
@@ -222,6 +223,7 @@ const SurveyMask = () => {
                     window.location.href = '/survey-result-mask';
                 }
             }, 1500);
+            */
         }
     }
 
