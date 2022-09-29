@@ -11,6 +11,7 @@ const getMaskProductResult = (Questions, currentAnswer) => {
 
     const skinConcertO = Questions[3].answers;
     const skinConcertA = currentAnswer[4];
+
     switch (skinFeelA) {
         case skinFeelO[0]:
             switch (skinConcertA) {
@@ -258,42 +259,15 @@ const getMaskProductResult = (Questions, currentAnswer) => {
         case skinFeelO[2]:
             switch (skinConcertA) {
                 case skinConcertO[0]:
-                    switch (climateA) {
-                        case climateO[0]:
-                            switch (waterA) {
-                                case waterO[0]:
-                                    productsRecommend = ['APC Mask'];
-                                    break;
-                                case waterO[1]:
-                                    productsRecommend = ['APC Mask'];
-                                    break;
-                                default:
-                                    productsRecommend = ['OC Mask'];
-                                    break;
-                            }
-                            break;
-                        case climateO[1]:
-                            switch (waterA) {
-                                case waterO[0]:
-                                    productsRecommend = ['APC Mask'];
-                                    break;
-                                case waterO[1]:
-                                    productsRecommend = ['APC Mask'];
-                                    break;
-                                default:
-                                    productsRecommend = ['OC Mask'];
-                                    break;
-                            }
-                            break;
-                        default:
-                            productsRecommend = ['OC Mask'];
-                            break;
-                    }
+                    productsRecommend = ['APC Mask'];
                     break;
                 case skinConcertO[1]:
-                    switch (climateA) {
-                        case climateO[2]:
-                            productsRecommend = ['OC Mask'];
+                    switch (waterA) {
+                        case waterO[0]:
+                            productsRecommend = ['TSW Mask'];
+                            break;
+                        case waterO[1]:
+                            productsRecommend = ['TSW Mask'];
                             break;
                         default:
                             productsRecommend = ['AEA Mask'];
@@ -301,25 +275,15 @@ const getMaskProductResult = (Questions, currentAnswer) => {
                     }
                     break;
                 case skinConcertO[2]:
-                    switch (waterA) {
-                        case waterO[0]:
-                            productsRecommend = ['AEA Mask'];
-                            break;
-                        case waterO[1]:
-                            productsRecommend = ['AEA Mask'];
-                            break;
-                        default:
-                            productsRecommend = ['OC Mask'];
-                            break;
-                    }
+                    productsRecommend = ['AEA Mask'];
                     break;
                 case skinConcertO[3]:
                     switch (climateA) {
                         case climateO[2]:
-                            productsRecommend = ['TSW Mask'];
+                            productsRecommend = ['APC Mask'];
                             break;
                         case climateO[3]:
-                            productsRecommend = ['TSW Mask'];
+                            productsRecommend = ['APC Mask'];
                             break;
                         default:
                             switch (waterA) {
@@ -330,7 +294,7 @@ const getMaskProductResult = (Questions, currentAnswer) => {
                                     productsRecommend = ['TSW Mask'];
                                     break;
                                 default:
-                                    productsRecommend = ['OC Mask'];
+                                    productsRecommend = ['APC Mask'];
                                     break;
                             }
                             break;
@@ -340,8 +304,47 @@ const getMaskProductResult = (Questions, currentAnswer) => {
                     productsRecommend = ['OC Mask'];
                     break;
                 case skinConcertO[5]:
-                    productsRecommend = ['OC Mask'];
-                    break;
+                    switch (climateA) {
+                        case climateO[2]:
+                            switch (waterA) {
+                                case waterO[0]:
+                                    productsRecommend = ['APC Mask'];
+                                    break;
+                                case waterO[1]:
+                                    productsRecommend = ['APC Mask'];
+                                    break;
+                                default:
+                                    productsRecommend = ['OC Mask'];
+                                    break;
+                            }
+                            break;
+                        case climateO[3]:
+                            switch (waterA) {
+                                case waterO[0]:
+                                    productsRecommend = ['APC Mask'];
+                                    break;
+                                case waterO[1]:
+                                    productsRecommend = ['APC Mask'];
+                                    break;
+                                default:
+                                    productsRecommend = ['OC Mask'];
+                                    break;
+                            }
+                            break;
+                        default:
+                            switch (waterA) {
+                                case waterO[0]:
+                                    productsRecommend = ['APC Mask'];
+                                    break;
+                                case waterO[1]:
+                                    productsRecommend = ['APC Mask'];
+                                    break;
+                                default:
+                                    productsRecommend = ['OC Mask'];
+                                    break;
+                            }
+                            break;
+                    }
             }
             break;
         case skinFeelO[3]:
