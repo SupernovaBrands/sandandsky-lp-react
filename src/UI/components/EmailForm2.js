@@ -27,7 +27,7 @@ const EmailForm = (props) => {
     return (
         <div className="col-12 col-lg-6 mt-4 pt-0 pt-lg-4 text-center">
             <p className="h1 mb-0">We found your perfect mask</p>
-            <p className="mt-2 h4 fw-normal mx-3" dangerouslySetInnerHTML={{ __html: 'Enter your email to view your results! Plus, get a promo code 10% OFF of your first purchase.' }}></p>
+            <p className="mt-2 h4 fw-normal mx-3" dangerouslySetInnerHTML={{ __html: 'Enter your email to view your results! Plus, get a promo code of 10% OFF your first purchase.' }}></p>
             <div className="col-12 col-lg-8 ms-auto me-auto mt-4">
                 <div className="form-group">
                     <form onSubmit={submitEmail}>
