@@ -4,7 +4,7 @@ const productList = {
 		usp: 'Deeply detoxes and tightens pores in 10 minutes with Australian Pink Clay, a magnet for toxins',
 		howto: 'Use 2-3 times a week for about 10 minutes or until dry',
 		title: 'Australian Pink Clay Porefining Face Mask',
-		description: 'Australian Pink Clay Mask Refine pores, clear congestion, and instantly boost radiance with our <span class="text-primary">Australian Pink Clay Mask</span>.',
+		description: 'Refine pores, clear congestion, and instantly boost radiance with our <span class="text-primary">Australian Pink Clay Mask</span>.',
 		sku: 'SS0000012010',
 		dev: {
 			id: 39409261805639,
@@ -187,7 +187,7 @@ const productList = {
 		usp: 'Ultra-nourishing, brightens and protects skin with super-potent antioxidants, Hyaluronic Acid and Kakadu Plum',
 		howto: 'Use 2-3 times a week for about 10 minutes for best results',
 		title: 'Australian Glow Berries Super Bounce Mask',
-		description: 'Australian Glow Berries Super Bounce Mask Deeply hydrate, brighten and protect the skin with this antioxidant rich <span class="text-range-aea">Australian Glow Berries Super Bounce Mask</span>.',
+		description: 'Deeply hydrate, brighten and protect the skin with this antioxidant rich <span class="text-range-aea">Australian Glow Berries Super Bounce Mask</span>.',
 		sku: 'SS0000102020',
 		dev: {
 			id: 32227654402119,
