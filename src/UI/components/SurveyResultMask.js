@@ -78,8 +78,8 @@ const SurveyResult = (props) => {
                                         <div className="col-6">
                                             <a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} aria-label={productDetail.title}>
                                                 <picture>
-                                                    <source srcSet={productDetail[storeDomain].image.replace('236x404', '186x322')} media="(min-width: 992px)" />
-                                                    <img src={productDetail[storeDomain].image} alt={productDetail.title} className="w-100 mb-3" />
+                                                    <source srcSet={productDetail[storeDomain].image2.replace('236x404', '186x322')} media="(min-width: 992px)" />
+                                                    <img src={productDetail[storeDomain].image2} alt={productDetail.title} className="w-100 mb-3" />
                                                 </picture>
                                             </a>
                                         </div>
