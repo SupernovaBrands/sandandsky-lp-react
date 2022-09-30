@@ -93,7 +93,7 @@ const SurveyResult = (props) => {
                                                     <Plus className='minus' />
                                                     <Minus className='plus' />
                                                 </button>
-                                                <div className="collapse" id={`collapse${productDetail[storeDomain].id}`} data-bs-parent="#accordion__products">
+                                                <div className="collapse show" id={`collapse${productDetail[storeDomain].id}`} data-bs-parent="#accordion__products">
                                                     <p className="mb-0 pb-2">{productDetail.howto}</p>
                                                 </div>
                                             </div>
