@@ -5,6 +5,9 @@
 	&[readonly]::placeholder {
 		color: $input-disabled-color;
 	}
+	&::placeholder {
+		color: $gray-700;
+	}
 }
 
 .form-group {
@@ -31,4 +34,3 @@
 		color: rgba(0, 0, 0, 0.2);
 	}
 }
-
