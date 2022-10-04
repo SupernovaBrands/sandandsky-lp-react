@@ -53,7 +53,7 @@ const EmailForm = (props) => {
                                                 <Check className={`${!termChecked ? 'd-none' : ''} svg text-white`}/>
                                             </div>
                                         </label>
-                                        <label className="font-size-sm" htmlFor="agree">I agree to <a target="_blank" href="https://www.sandandsky.com/pages/privacy-policy">Privacy Policy</a> &amp; <a target="_blank" href="https://www.cocoandeve.com/pages/terms-and-conditions">ToS</a></label>
+                                        <label className="font-size-sm" htmlFor="agree">I agree to <a target="_blank" href="https://www.sandandsky.com/pages/privacy-policy">Privacy Policy</a> &amp; <a target="_blank" href="https://www.sandandsky.com/policies/terms-of-service">ToS</a></label>
                                     </div>
                                     <p className="font-size-sm">By signing up, you agree to receive exclusive offers via email. Sign up not required for purchase. Opt out any time.</p>
                                     <button type="submit" className="btn btn-lg d-block btn-primary mb-3 px-6 mx-auto mt-3" disabled={!isValidEmail || !termChecked}>Submit</button>
