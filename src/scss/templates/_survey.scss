@@ -4,7 +4,9 @@
 
 .survey-result {
 	&__bg {
-		background-color: $gray-100;
+		@include media-breakpoint-up(lg) {
+			background-color: $gray-100;
+		}
 	}
 
 	&__product {
@@ -46,5 +48,42 @@
 		transform: scale(.6);
 	}
 
+	&__product-list {
+		background-color: $gray-100;
 
+		@include media-breakpoint-up(lg) {
+			background-color: white;
+		}
+	}
+}
+
+.survey-mask {
+	&.cover {
+		background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/mobile_976566d6-27c6-4027-8009-2259c48b19b3.jpg?v=1664352616);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom;
+		
+		@include media-breakpoint-up(lg) {
+			background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/desktop_3.jpg?v=1664355959);
+		}
+
+		.tooltip {
+			width: 80%;
+
+			@include media-breakpoint-up(lg) {
+				width: 427px;
+			}
+		}
+
+		h1 {
+			font-size: 65px;
+			font-weight: normal;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 105px;
+			}
+		}
+	}
 }

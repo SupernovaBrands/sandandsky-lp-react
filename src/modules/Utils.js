@@ -120,3 +120,78 @@ export const postIframeHeight = (key, val, site) => {
 		'value': val,
 	}, `https://${site}`);
 };
+
+export const decodeAnswers = (object) => {
+	Object.entries(object).forEach((data) => {
+		const key = data[0];
+		const value = data[1];
+		object[key] = decodeURI(value);
+	});
+	return object;
+}
+
+export const postMessageData = (site, category, action, label) => {
+	if (window.top === window.self) return;
+	window.parent.postMessage({
+		'func': 'callGaEvent',
+		'category': category,
+		'action': action,
+		'label': label,
+	}, `https://${site}`);
+}
+
+export const postMessageCookie = (site, key, val) => {
+	if (window.top === window.self) return;
+
+	window.parent.postMessage({
+		'func': 'setCookieFromMessage',
+		'key': key,
+		'value': val,
+	}, `https://${site}`);
+}
+
+export const getCookieAnsweredQuestion = (answeredQuestion = 'answeredQuestion') => {
+	if (getCookie(answeredQuestion)) {
+		const object = JSON.parse(getCookie(answeredQuestion));
+		Object.entries(object).forEach((data) => {
+			const key = data[0];
+			const value = data[1];
+			object[key] = decodeURI(value);
+		});
+		return object;
+	}
+	return null;
+}
+
+export const setCookieAnsweredQuestion = (object) => {
+	if (typeof object === 'object') {
+		Object.entries(object).forEach((data) => {
+			const key = data[0];
+			const value = decodeURI(data[1]);
+			object[key] = encodeURI(value);
+		});
+		setCookie('answeredQuestion', JSON.stringify(object));
+		postMessageCookie('answeredQuestion', JSON.stringify(object));
+	} else {
+		setCookie('answeredQuestion', '');
+	}
+}
+
+export const clearCookie = () => {
+	setCookie('currentQuestion', 1);
+	setCookie('surveyPosition', 'start');
+	setCookie('answeredQuestion', '');
+	postMessageCookie('currentQuestion', 1);
+	postMessageCookie('surveyPosition', 'start');
+	postMessageCookie('answeredQuestion', '');
+}
+
+export const postMessageToParentCookie = (site, key, val) => {
+	if (window.top === window.self) return;
+
+	window.parent.postMessage({
+		'func': 'setCookieFromMessage',
+		'key': key,
+		'value': val,
+	}, `https://${site}`);
+}

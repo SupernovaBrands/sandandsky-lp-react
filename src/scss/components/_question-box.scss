@@ -47,5 +47,7 @@
 
 
 .survey-result__bg {
-	background-color: $gray-100;
+    @include media-breakpoint-up(lg) {
+	    background-color: $gray-100;
+    }
 }
