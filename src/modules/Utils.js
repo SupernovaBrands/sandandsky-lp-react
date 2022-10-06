@@ -177,15 +177,6 @@ export const setCookieAnsweredQuestion = (object) => {
 	}
 }
 
-export const clearCookie = () => {
-	setCookie('currentQuestion', 1);
-	setCookie('surveyPosition', 'start');
-	setCookie('answeredQuestion', '');
-	postMessageCookie('currentQuestion', 1);
-	postMessageCookie('surveyPosition', 'start');
-	postMessageCookie('answeredQuestion', '');
-}
-
 export const postMessageToParentCookie = (site, key, val) => {
 	if (window.top === window.self) return;
 

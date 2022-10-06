@@ -16,7 +16,6 @@ import {
     postMessageCookie,
     getCookieAnsweredQuestion,
     setCookieAnsweredQuestion,
-    clearCookie,
     postMessageToParentCookie,
 } from "../../modules/Utils";
 
@@ -65,6 +64,15 @@ const SurveyMask = () => {
     const setFinished = () => {
         setCookie('surveyPosition', 'finished');
         setPosition('finished');
+    }
+
+    export const clearCookie = () => {
+        setCookie('currentQuestion', 1);
+        setCookie('surveyPosition', 'start');
+        setCookie('answeredQuestion', '');
+        postMessageCookie(site, 'currentQuestion', 1);
+        postMessageCookie(site, 'surveyPosition', 'start');
+        postMessageCookie(site, 'answeredQuestion', '');
     }
 
     const answerAction = (question, answers) => {
