@@ -79,7 +79,7 @@ const SurveyMask = () => {
         console.log('answerAction', question, answers)
         currentAnswer[question] = answers;
         setAnswer(decodeAnswers(currentAnswer));
-        setCookieAnsweredQuestion(decodeAnswers(currentAnswer));
+        setCookieAnsweredQuestion(site, decodeAnswers(currentAnswer));
         console.log('currentAnswer2', currentAnswer)
     };
 
