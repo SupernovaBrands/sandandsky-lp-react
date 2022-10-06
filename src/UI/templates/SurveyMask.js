@@ -66,7 +66,7 @@ const SurveyMask = () => {
         setPosition('finished');
     }
 
-    export const clearCookie = () => {
+    const clearCookie = () => {
         setCookie('currentQuestion', 1);
         setCookie('surveyPosition', 'start');
         setCookie('answeredQuestion', '');
