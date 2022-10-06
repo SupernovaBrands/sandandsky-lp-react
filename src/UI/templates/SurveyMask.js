@@ -16,7 +16,6 @@ import {
     postMessageCookie,
     getCookieAnsweredQuestion,
     setCookieAnsweredQuestion,
-    clearCookie,
     postMessageToParentCookie,
 } from "../../modules/Utils";
 
@@ -38,7 +37,7 @@ const SurveyMask = () => {
     // INITIAL DATA
     let initialState = getCookie('surveyPosition') || 'start';
     if (surveyState === 'started' && (getCookie('surveyPosition') === 'start' || getCookie('surveyPosition') === null || getCookie('surveyPosition') === '')) {
-        postMessageData('Survey', 'started');
+        postMessageData(site, 'SurveyMask', 'started');
         initialState = 'question-1';
         setCookie('answeredQuestion', '');
     }
@@ -58,7 +57,7 @@ const SurveyMask = () => {
     const classes = currentPosition !== 'result' ? 'px-g' : 'overflow-hidden';
 
     const startQuiz = () => {
-        postMessageData('Survey', 'started');
+        postMessageData(site, 'SurveyMask', 'started');
         setPosition('question-1');
     };
 
@@ -67,11 +66,20 @@ const SurveyMask = () => {
         setPosition('finished');
     }
 
+    const clearCookie = () => {
+        setCookie('currentQuestion', 1);
+        setCookie('surveyPosition', 'start');
+        setCookie('answeredQuestion', '');
+        postMessageCookie(site, 'currentQuestion', 1);
+        postMessageCookie(site, 'surveyPosition', 'start');
+        postMessageCookie(site, 'answeredQuestion', '');
+    }
+
     const answerAction = (question, answers) => {
         console.log('answerAction', question, answers)
         currentAnswer[question] = answers;
         setAnswer(decodeAnswers(currentAnswer));
-        setCookieAnsweredQuestion(decodeAnswers(currentAnswer));
+        setCookieAnsweredQuestion(site, decodeAnswers(currentAnswer));
         console.log('currentAnswer2', currentAnswer)
     };
 
@@ -96,7 +104,7 @@ const SurveyMask = () => {
         if (window.top !== window.self) {
             window.parent.postMessage({
                 'func': 'callGaEvent',
-                'category': 'Survey',
+                'category': 'SurveyMask',
                 'action': 'submitEmail',
                 'label': email,
             }, `https://${site}`);
@@ -165,7 +173,7 @@ const SurveyMask = () => {
         const gaAnswers = decodeAnswers(currentAnswer)
         const keys = Object.keys(gaAnswers);
 
-        postMessageData('Survey', 'completed');
+        postMessageData(site, 'SurveyMask', 'completed');
         postMessageCookie(site, 'surveySubmitNew', 'true');
 
         keys.forEach((key,index) => {
@@ -173,7 +181,7 @@ const SurveyMask = () => {
             const a = gaAnswers[key];
             const label = q.question;
             const action = typeof(a) === 'object' ? a.join(',') : a;
-            postMessageData('Survey', action, label);
+            postMessageData(site, 'SurveyMask', action, label);
         });
     }
 

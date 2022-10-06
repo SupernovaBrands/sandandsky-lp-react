@@ -163,7 +163,7 @@ export const getCookieAnsweredQuestion = (answeredQuestion = 'answeredQuestion')
 	return null;
 }
 
-export const setCookieAnsweredQuestion = (object) => {
+export const setCookieAnsweredQuestion = (site, object) => {
 	if (typeof object === 'object') {
 		Object.entries(object).forEach((data) => {
 			const key = data[0];
@@ -171,19 +171,10 @@ export const setCookieAnsweredQuestion = (object) => {
 			object[key] = encodeURI(value);
 		});
 		setCookie('answeredQuestion', JSON.stringify(object));
-		postMessageCookie('answeredQuestion', JSON.stringify(object));
+		postMessageCookie(site, 'answeredQuestion', JSON.stringify(object));
 	} else {
 		setCookie('answeredQuestion', '');
 	}
-}
-
-export const clearCookie = () => {
-	setCookie('currentQuestion', 1);
-	setCookie('surveyPosition', 'start');
-	setCookie('answeredQuestion', '');
-	postMessageCookie('currentQuestion', 1);
-	postMessageCookie('surveyPosition', 'start');
-	postMessageCookie('answeredQuestion', '');
 }
 
 export const postMessageToParentCookie = (site, key, val) => {
