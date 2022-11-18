@@ -67,6 +67,7 @@
 		
 		@include media-breakpoint-up(lg) {
 			background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/desktop_3.jpg?v=1664355959);
+			max-height: 578px;
 		}
 
 		.tooltip {

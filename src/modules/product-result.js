@@ -23,10 +23,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                     switch (skinTypeAnswer) {
                         case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                             if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                 activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                             } else {
-                                productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                 activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                             }
                             break;
@@ -50,7 +50,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                             break;
                         default: //Red and flaky with uneven texture
                             if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                productsRecommend = ['APC Cleanser', 'APC Exfoliator', 'OC Moisturiser'];
+                                productsRecommend = ['OC Cleanser', 'APC Exfoliator', 'OC Moisturiser'];
                                 activePriority = ['AHAs', 'Vitamin E', 'Niacinamide'];
                             } else {
                                 productsRecommend = ['APC Mask', 'TSW Serum', 'OC Moisturiser'];
@@ -63,10 +63,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
@@ -108,37 +108,37 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
                             case skinTypeQuestions[1]: //A combination of shiny and dry on different areas
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'APC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
                             default: //Red and flaky with uneven texture
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -148,10 +148,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
@@ -160,7 +160,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -178,7 +178,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -193,19 +193,19 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
                             case skinTypeQuestions[1]: //A combination of shiny and dry on different areas
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'APC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
@@ -220,10 +220,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             default: //Red and flaky with uneven texture
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -233,19 +233,19 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'OC Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'OC Moisturiser'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Niacinamide'];
                                 }
                                 break;
                             case skinTypeQuestions[1]: //A combination of shiny and dry on different areas
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Serum'];
+                                    productsRecommend = ['OC Cleanser', 'APC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -260,10 +260,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             default: //Red and flaky with uneven texture
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Serum'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -363,10 +363,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Cream'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Serum'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -403,10 +403,10 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'APC Mask', 'TSW Serum'];
+                                    productsRecommend = ['OC Cleanser', 'APC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'TSW Serum'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'TSW Serum'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Hyaluronic Acid'];
                                 }
                                 break;
@@ -533,7 +533,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'OC Mask', 'AEA Serum'];
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'AEA Serum'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['APC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
@@ -573,7 +573,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
+                                    productsRecommend = ['OC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
                                     activePriority = ['AHAs', 'Hyaluronic Acid', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['APC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
