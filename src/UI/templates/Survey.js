@@ -272,7 +272,7 @@ const Survey = () => {
             }
         }
         console.log('productsRecommend', sku);
-        const data = { _ga: gId, questions_answers: dataForSaving, email, sku };
+        const data = { store: site, _ga: gId, questions_answers: dataForSaving, email, sku };
         fetch('https://api.sandandsky.com/surveys', {
             method: 'POST',
             headers: {
