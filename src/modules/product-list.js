@@ -813,6 +813,32 @@ const productList = {
 			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
 		},
 	},
+	'Marsmallow Toner': {
+		handle: 'marshmallow-toner',
+		howto: 'Use it daily both morning and night, after cleansing your skin and before your serum and moisturiser',
+		usp: 'AHA, BHA and Niacinamide-infused toner that cleanses, exfoliates and purifies, to hydrate and brighten skin, minimize pores and refine skin texture.',
+		title: 'Marshmallow Toner',
+		sku: 'SS0002592020',
+		dev: {
+			id: 6738811813959,
+			price: '$49.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+	},
+	'Pro Youth Dark Spot Serum': {
+		handle: 'pro-youth-dark-spot-serum',
+		howto: 'Use 2-3 times a week, apply 4 drops after cleansing your skin in the evening',
+		usp: 'A retinol-alternative serum enriched with AHA-Bakuchiol duo that treats pigmentation and dark spots, while improving the look of fine lines and uneven skin tone',
+		title: 'Pro Youth Dark Spot Serum',
+		sku: 'SS0003132020',
+		dev: {
+			id: 6738815680583,
+			price: '$49.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+	}
 };
 
 export default productList;
