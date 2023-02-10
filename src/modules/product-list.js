@@ -813,7 +813,7 @@ const productList = {
 			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_TSW_PDP_Renewing_night_cream_1_Hero_236x404_crop_center.jpg?v=1662963228',
 		},
 	},
-	'Marsmallow Toner': {
+	'Marshmallow Toner': {
 		handle: 'marshmallow-toner',
 		howto: 'Use it daily both morning and night, after cleansing your skin and before your serum and moisturiser',
 		usp: 'AHA, BHA and Niacinamide-infused toner that cleanses, exfoliates and purifies, to hydrate and brighten skin, minimize pores and refine skin texture.',
@@ -821,7 +821,49 @@ const productList = {
 		sku: 'SS0002592020',
 		dev: {
 			id: 6738811813959,
-			price: '$49.90',
+			price: '$34.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		us: {
+			id: 6984017477737,
+			price: '$34.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		au: {
+			id: 7257346048176,
+			price: '$54.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		ca: {
+			id: 6883326689365,
+			price: '$47.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		eu: {
+			id: 6835592101965,
+			price: '€35.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		int: {
+			id: 6839364616278,
+			price: '$34.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		my: {
+			id: 7257346146480,
+			price: 'RM166.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
+		},
+		uk: {
+			id: 7122147377214,
+			price: '£30.90',
 			compare_at_price: '',
 			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_MarshmallowToner_1_Hero_1140x1440_crop_center.jpg?v=1673599056',
 		},
@@ -835,6 +877,48 @@ const productList = {
 		dev: {
 			id: 6738815680583,
 			price: '$49.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		us: {
+			id: 6984037630057,
+			price: '$34.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		au: {
+			id: 7257358237872,
+			price: '$54.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		ca: {
+			id: 7257358237872,
+			price: '$54.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		eu: {
+			id: 6835596591181,
+			price: '€35.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		int: {
+			id: 6839365763158,
+			price: '$34.90',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		my: {
+			id: 7257358368944,
+			price: 'RM166.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
+		},
+		uk: {
+			id: 7122154553406,
+			price: '£30.90',
 			compare_at_price: '',
 			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/products/SS_PDP_ProYouthSerum_1_Hero_1140x1440_crop_center.jpg?v=1675308711',
 		},
