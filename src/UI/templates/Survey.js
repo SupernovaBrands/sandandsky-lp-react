@@ -164,11 +164,13 @@ const Survey = () => {
         const envStressResult = getEnvironmentStress(currentAnswer);
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
+        console.log('productsRecommend', currentAnswer, productsRecommend);
 
         const productHandle = [];
         const productSkus = [];
         let sku = '';
         productsRecommend.forEach((item, index) => {
+            console.log('item', item, productList[item]);
             productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
             sku = `${sku}${index === 0 ? '' : ','}${productList[item].sku}`;
