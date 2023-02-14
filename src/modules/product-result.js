@@ -135,7 +135,7 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                 break;
                             default: //Red and flaky with uneven texture
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'TSW Cream'];
+                                    productsRecommend = ['OC Cleanser', 'TSW Mask', 'Marshmallow Toner'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Glycolic Acid'];
                                 } else {
                                     productsRecommend = ['OC Cleanser', 'TSW Mask', 'Marshmallow Toner'];
