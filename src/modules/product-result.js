@@ -467,16 +467,16 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
                                     productsRecommend = ['Marshmallow Toner', 'TSW Serum', 'TSW Night Cream'];
-                                    activePriority = ['Vegan Squalane', 'Glycolic Acid', 'Hyaluronic Acid'];
+                                    activePriority = ['Glycolic Acid', 'Hyaluronic Acid', 'Vegan Squalane'];
                                 } else {
                                     productsRecommend = ['Marshmallow Toner', 'TSW Serum', 'TSW Night Cream'];
-                                    activePriority = ['Vegan Squalane', 'Glycolic Acid', 'Hyaluronic Acid'];
+                                    activePriority = ['Glycolic Acid', 'Hyaluronic Acid', 'Vegan Squalane'];
                                 }
                                 break;
                             default: //Red and flaky with uneven texture
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'Marshmallow Toner'];
-                                    activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'Glycolic Acid'];
+                                    productsRecommend = ['TSW Mask', 'Marshmallow Toner', 'TSW Serum'];
+                                    activePriority = ['Vegan Squalane', 'Glycolic Acid', 'Hyaluronic Acid'];
                                 } else {
                                     productsRecommend = ['TSW Mask', 'TSW Serum', 'TSW Cream'];
                                     activePriority = ['Vegan Squalane', 'Hyaluronic Acid', 'AHAs'];
@@ -509,8 +509,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['TSW Mask', 'AEA Serum', 'TSW Night Cream'];
                                     activePriority = ['Vegan Squalane', 'Vitamin C', 'Hyaluronic Acid'];
                                 } else {
-                                    productsRecommend = ['TSW Mask', 'TSW Serum', 'Marshmallow Toner'];
-                                    activePriority = ['Vegan Squalane', 'Glycolic Acid', 'Hyaluronic Acid'];
+                                    productsRecommend = ['Marshmallow Toner', 'TSW Mask', 'TSW Serum'];
+                                    activePriority = ['Glycolic Acid', 'Vegan Squalane', 'Hyaluronic Acid'];
                                 }
                                 break;
                             default: //Red and flaky with uneven texture
