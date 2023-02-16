@@ -6,6 +6,7 @@ import { ReactComponent as VitaminC } from '../assets/vitamin-c.svg';
 import { ReactComponent as Niacinamide } from '../assets/niacinamide.svg';
 import { ReactComponent as VitaminE } from '../assets/vitamin-e.svg';
 import { ReactComponent as SalicylicAcid } from '../assets/salicylic-acid.svg';
+import { ReactComponent as GlycolicAcid } from '../assets/glycolic-acid.svg';
 
 const activeDescription = {
 	'Salicylic Acid': {
@@ -42,6 +43,11 @@ const activeDescription = {
 		icon: <VeganSqualane className="svg--active-priority" />,
 		title: 'Vegan Squalane',
 		desc: 'Squalane has anti-inflammatory properties that can reduce redness and swelling, as it helps moisturize and repair dry, rough skin to improve skin texture and appearance.'
+	},
+	'Glycolic Acid': {
+		icon: <GlycolicAcid className="svg--active-priority" />,
+		title: 'Glycolic Acid',
+		desc: 'One of the most powerful and effective AHAs given its ability to retexturize and brighten skin, while diminishing the look of fine lines, wrinkles, and discolouration.'
 	}
 };
 
