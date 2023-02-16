@@ -299,8 +299,8 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                                     productsRecommend = ['APC Cleanser', 'APC Exfoliator', 'Pro Youth Dark Spot Serum'];
                                     activePriority = ['AHAs', 'Vitamin E', 'Glycolic Acid'];
                                 } else {
-                                    productsRecommend = ['Pro Youth Dark Spot Serum', 'APC Exfoliator', 'AEA Moisturiser'];
-                                    activePriority = ['AHAs', 'Vitamin E', 'Glycolic Acid'];
+                                    productsRecommend = ['APC Exfoliator', 'AEA Moisturiser', 'Pro Youth Dark Spot Serum'];
+                                    activePriority = ['Vitamin E', 'Vitamin C', 'Glycolic Acid'];
                                 }
                                 break;
                             default: //Red and flaky with uneven texture
