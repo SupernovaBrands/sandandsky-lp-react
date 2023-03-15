@@ -213,6 +213,7 @@ const Survey = () => {
     }
 
     const setFinished = () => {
+        postMessageData('Survey', 'viewMyResult');
         setCookie('surveyPosition', 'finished');
         setPosition('finished');
     }
@@ -413,7 +414,7 @@ const Survey = () => {
 				</>)}
 
                 { (currentPosition === 'finished' && !submitted && additionalStep && !redirect) && (
-                    <EmailForm onSubmit={onSubmit} skipEmail={skipEmail}/>
+                    <EmailForm onSubmit={onSubmit} skipEmail={skipEmail} viewMyResult={viewMyResult}/>
                 )}
 
                 { currentPosition === 'finished' && submitted && additionalStep && !redirect && (
