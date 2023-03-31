@@ -34,7 +34,7 @@ const SurveyCard = (props) => {
 
 	return (
 		<div className="survey-result__product-list">
-			<div className="container p-g my-g survey-result__bg">
+			<div className="container p-g mb-g survey-result__bg">
 				<div className="row">
 					<div className="col-4">
 						<a href={`https://${selectedSite}.sandandsky.com/products/${productDetail.handle}`} aria-label={productDetail.title}>
@@ -47,20 +47,25 @@ const SurveyCard = (props) => {
 					<div className="col-8 ps-lg-0">
 						<p className="font-size-sm mb-0">{titleRange}</p>
 						<p className="mb-1 fw-bold">{productDetail.title.replace(titleRange, '').trim()}</p>
-						<p className="d-flex font-size-sm align-items-center mb-1">
-							{activePriority.icon}
-							{activePriority.title}
-						</p>
-						<div className="accordion border-top border-bottom">
-							<button className="accordion-button shadow-none bg-transparent text-body px-0 border-0 py-2 mb-0 d-flex justify-content-between font-size-sm" data-target={`collapse${productDetail[storeDomain].id}`} id={`btnCollapse${productDetail[storeDomain].id}`} data-btnindex={productDetail[storeDomain].id} onClick={accordionHandle} data-parent="#accordion__products">
-								How to Use
-								<Plus className='minus' />
-								<Minus className='plus' />
-							</button>
-							<div className="collapse" id={`collapse${productDetail[storeDomain].id}`} data-bs-parent="#accordion__products">
-								<p className="mb-0 pb-2">{productList.howto}</p>
+						{activePriority && (
+							<p className="d-flex font-size-sm align-items-center mb-1">
+								{activePriority.icon}
+								{activePriority.title}
+							</p>
+						)}
+						{productDetail.howto && (
+							<div className="accordion border-top border-bottom">
+								<button className="accordion-button shadow-none bg-transparent text-body px-0 border-0 py-2 mb-0 d-flex justify-content-between font-size-sm" data-target={`collapse${productDetail[storeDomain].id}`} id={`btnCollapse${productDetail[storeDomain].id}`} data-btnindex={productDetail[storeDomain].id} onClick={accordionHandle} data-parent="#accordion__products">
+									How to Use
+									<Plus className='minus' />
+									<Minus className='plus' />
+								</button>
+								<div className="collapse" id={`collapse${productDetail[storeDomain].id}`} data-bs-parent="#accordion__products">
+									<p className="mb-0 pb-2">{productList.howto}</p>
+								</div>
 							</div>
-						</div>
+						)}
+						
 						<div className="d-flex font-size-sm mt-g mb-3">
 							{productDetail[storeDomain].compare_at_price && <span className="text-decoration-line-through me-1 text-muted">{productDetail[storeDomain].compare_at_price}</span>}
 							{productDetail[storeDomain].price && <span className="text-secondary fw-bold">{productDetail[storeDomain].price}</span>}
