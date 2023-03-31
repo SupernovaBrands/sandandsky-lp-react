@@ -1,6 +1,6 @@
 import getEnvironmentStress from './environment-stress';
 
-const getProductRecommendation = (Questions, currentAnswer) => {
+const getProductRecommendation = (Questions, currentAnswer, store) => {
 	const envStressResult = getEnvironmentStress(currentAnswer);
 
     const skinConcernsQ = Questions[6].answers;
@@ -782,11 +782,14 @@ const getProductRecommendation = (Questions, currentAnswer) => {
                 }
                 break;
         }
+        if (['www.cocoandeve.com', 'us.cocoandeve.com', 'ca.cocoandeve.com'].indexOf(store) === -1) {
+            productsRecommend.push('Daily Hydrating Sunscreen');
+        }
 	return {productsRecommend, activePriority}
 };
 
-const getProductResult = (Questions, currentAnswer) => {
-	return getProductRecommendation(Questions, currentAnswer);
+const getProductResult = (Questions, currentAnswer, store) => {
+	return getProductRecommendation(Questions, currentAnswer, store);
 };
 
 export default getProductResult;

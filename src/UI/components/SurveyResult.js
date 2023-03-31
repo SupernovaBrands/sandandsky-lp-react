@@ -146,7 +146,7 @@ const SurveyResult = (props) => {
 			<div className="survey-result__bg survey-result__priority-actives">
 				<div className="container px-2 py-4 my-g">
 					<div className="row">
-						<div className="col-12 col-lg-5 col-xl-6">
+						<div className="col-12 col-lg-5 col-xl-6 mb-2">
 							<p className="h1 mb-2 d-none d-lg-block mb-2">Priority Actives</p>
 							<p className="d-none d-lg-block survey-result__subtitle">These active ingredients have been identified to<br />suit your skin’s needs and concerns:</p>
 						</div>
@@ -197,23 +197,33 @@ const SurveyResult = (props) => {
 			</div>
 
 			<div className="container px-g mt-4 mb-g">
-				<p className="survey-result__product fw-bold mb-2">Your Skincare Essentials</p>
-				<p>Below are the essential products for your skin based off your skin analysis:</p>
-			</div>
-
-			<div className="container px-0 px-lg-g">
-				<div className="row" id="accordion__products">
-					{resultProducts.length > 0 && resultProducts.map((item, index) => {
-						return(
-							<div key={index} className="col-12 col-lg-4">
-								<SurveyCard
-									accordionHandle={accordionHandle}
-									activePriority={activeDescription[activePriority[index]]}
-									productDetail={item}
-									productList={productList[productsRecommend[index]]} />
-							</div>
-						);
-					})}
+				<div className="row">
+					<div className="col-12 col-lg-4">
+						<p className="survey-result__product fw-bold mb-2">Your Skincare Essentials</p>
+						<p>Below are the essential products for your skin based off your skin analysis:</p>
+					</div>
+					<div className="col-12 col-lg-8">
+						<div className="row" id="accordion__products">
+							{resultProducts.length > 0 && resultProducts.map((item, index) => {
+								return(
+									<div key={index} className="col-12 col-lg-6">
+										{index < 3 ? (
+											<SurveyCard
+											accordionHandle={accordionHandle}
+											activePriority={activeDescription[activePriority[index]]}
+											productDetail={item}
+											productList={productList[productsRecommend[index]]} />
+										) : (
+											<SurveyCard
+											accordionHandle={accordionHandle}
+											productDetail={item}
+											productList={productList[productsRecommend[index]]} />
+										)}
+									</div>
+								);
+							})}
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

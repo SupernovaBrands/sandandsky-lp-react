@@ -163,7 +163,7 @@ const Survey = () => {
         console.log('skinType', skinType)
         const envStressResult = getEnvironmentStress(currentAnswer);
 
-        const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer);
+        const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer, selectedSite);
         console.log('productsRecommend', currentAnswer, productsRecommend);
 
         const productHandle = [];
