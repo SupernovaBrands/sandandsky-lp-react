@@ -925,8 +925,8 @@ const productList = {
 	},
 	'Daily Hydrating Sunscreen': {
 		handle: 'daily-hydrating-sunscreen-spf50',
-		howto: '',
-		usp: '',
+		howto: 'Use it everyday as the last step of your skincare routine, at least 30 minutes before being exposed to the sun',
+		usp: 'Our ultimate daily sunscreen with SPF50+ PA++++ broad spectrum sun protection blocks out UVA/UVB rays and is antioxidant-rich!',
 		title: 'Australian Sunshield Daily Hydrating Sunscreen SPF50+',
 		sku: 'SS0002852010',
 		dev: {
