@@ -46,7 +46,7 @@ const SurveyCard = (props) => {
 					</div>
 					<div className="col-8 ps-lg-0">
 						<p className="font-size-sm mb-0">{titleRange}</p>
-						<p className="mb-1 fw-bold">{productDetail.title.replace(titleRange, '').trim()}</p>
+						<p className="survey-result__product-list__title mb-1 fw-bold">{productDetail.title.replace(titleRange, '').trim()}</p>
 						{activePriority && (
 							<p className="d-flex font-size-sm align-items-center mb-1">
 								{activePriority.icon}

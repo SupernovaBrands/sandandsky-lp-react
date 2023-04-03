@@ -51,6 +51,12 @@
 	&__product-list {
 		background-color: $gray-100;
 
+		&__title {
+			@include media-breakpoint-up(lg) {
+				min-height: 42px;
+			}
+		}
+
 		@include media-breakpoint-up(lg) {
 			background-color: white;
 		}
