@@ -784,6 +784,7 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
         }
         if (['www.cocoandeve.com', 'us.cocoandeve.com', 'ca.cocoandeve.com'].indexOf(store) === -1) {
             productsRecommend.push('Daily Hydrating Sunscreen');
+            activePriority.push('Vitamin E');
         }
 	return {productsRecommend, activePriority}
 };

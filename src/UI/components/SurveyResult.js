@@ -146,11 +146,11 @@ const SurveyResult = (props) => {
 			<div className="survey-result__bg survey-result__priority-actives">
 				<div className="container px-2 py-4 my-g">
 					<div className="row">
-						<div className="col-12 col-lg-5 col-xl-6 mb-2">
+						<div className={`col-12 col-lg-5 ${activePriority.length === 3 ? 'col-xl-6' : 'col-xl-4' } mb-2`}>
 							<p className="h1 mb-2 d-none d-lg-block mb-2">Priority Actives</p>
 							<p className="d-none d-lg-block survey-result__subtitle">These active ingredients have been identified to<br />suit your skin’s needs and concerns:</p>
 						</div>
-						<div className="col-12 col-lg-7 col-xl-6">
+						<div className={`col-12 col-lg-7 ${activePriority.length === 3 ? 'col-xl-6' : 'col-xl-8'}`}>
 							<div className="accordion d-lg-none accordion__priority" id="surveyResult_2">
 								{activePriority && activePriority.map((item, index) => {
 									const itemIndex = index + 3;
@@ -181,7 +181,7 @@ const SurveyResult = (props) => {
 							<div className="row d-none d-lg-flex px-lg-hg">
 								{activePriority && activePriority.map((item, index) => {
 									return (
-										<div key={index} className="col-lg-4 px-lg-hg">
+										<div key={index} className={`${activePriority.length === 3 ? 'col-lg-4' : 'col-lg-3'} px-lg-hg`}>
 											<div className="pt-2 px-g bg-white text-center h-100">
 												{activeDescription[item].icon}
 												<p className="fw-bold border-bottom py-g">{activeDescription[item].title}</p>
@@ -207,18 +207,11 @@ const SurveyResult = (props) => {
 							{resultProducts.length > 0 && resultProducts.map((item, index) => {
 								return(
 									<div key={index} className="col-12 col-lg-6">
-										{index < 3 ? (
-											<SurveyCard
+										<SurveyCard
 											accordionHandle={accordionHandle}
 											activePriority={activeDescription[activePriority[index]]}
 											productDetail={item}
 											productList={productList[productsRecommend[index]]} />
-										) : (
-											<SurveyCard
-											accordionHandle={accordionHandle}
-											productDetail={item}
-											productList={productList[productsRecommend[index]]} />
-										)}
 									</div>
 								);
 							})}
