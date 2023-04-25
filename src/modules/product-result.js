@@ -782,7 +782,7 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                 }
                 break;
         }
-        if (['www.cocoandeve.com', 'us.cocoandeve.com', 'ca.cocoandeve.com'].indexOf(store) === -1) {
+        if (['www.sandandsky.com', 'us.sandandsky.com', 'ca.sandandsky.com'].indexOf(store) === -1) {
             productsRecommend.push('Daily Hydrating Sunscreen');
             activePriority.push('Vitamin E');
         }
