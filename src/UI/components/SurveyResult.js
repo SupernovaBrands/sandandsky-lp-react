@@ -198,15 +198,15 @@ const SurveyResult = (props) => {
 
 			<div className="container px-g mt-4 mb-g">
 				<div className="row">
-					<div className="col-12 col-lg-4">
+					<div className={`col-12 ${resultProducts.length === 3 ? 'col-lg-12' : 'col-lg-4' }`}>
 						<p className="survey-result__product fw-bold mb-2">Your Skincare Essentials</p>
 						<p>Below are the essential products for your skin based off your skin analysis:</p>
 					</div>
-					<div className="col-12 col-lg-8">
+					<div className={`col-12 ${resultProducts.length === 3 ? 'col-lg-12 mt-4' : 'col-lg-8'}`}>
 						<div className="row" id="accordion__products">
 							{resultProducts.length > 0 && resultProducts.map((item, index) => {
 								return(
-									<div key={index} className="col-12 col-lg-6">
+									<div key={index} className={`col-12 ${resultProducts.length === 3 ? 'col-lg-4' : 'col-lg-6' }`}>
 										<SurveyCard
 											accordionHandle={accordionHandle}
 											activePriority={activeDescription[activePriority[index]]}
