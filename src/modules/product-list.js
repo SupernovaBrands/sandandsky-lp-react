@@ -977,6 +977,61 @@ const productList = {
 			compare_at_price: '',
 			image: 'https://cdn.shopify.com/s/files/1/0043/2734/2115/products/SS_PDP_DailyHydratingSunscreen_1_Hero_186x322_crop_center.jpg?v=1679550994',
 		},
+	},
+	'Anti-Aging Eye Cream': {
+		handle: 'anti-aging-eye-cream',
+		howto: 'Apply before the use of serums and moisturisers.',
+		usp: 'Use daily, both morning and evening.',
+		title: 'Anti-aging Eye Cream',
+		sku: 'SS0002792020',
+		au: {
+			id: 7320365301936,
+			price: '$52.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0043/2734/2115/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708076'
+		},
+		ca: {
+			id: 6913433010261,
+			price: '$46.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0093/6096/5717/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708055'
+		},
+		eu: {
+			id: 8353173766468,
+			price: '€35.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0239/8928/9037/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708089'
+		},
+		int: {
+			id: 6858074783830,
+			price: '$49.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0248/5370/8886/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708125'
+		},
+		uk: {
+			id: 7148662489150,
+			price: '£31.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0110/9413/0750/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708165'
+		},
+		us: {
+			id: 7008480165993,
+			price: '$35.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0253/9847/6905/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708190'
+		},
+		my: {
+			id: 7320365334704,
+			price: 'RM129.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0612/2799/1216/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683708139'
+		},
+		dev: {
+			id: 6775910563911,
+			price: '$35.00',
+			compare_at_price: '',
+			image: 'https://cdn.shopify.com/s/files/1/0277/5262/8295/files/SS_PDP_Anti-AgingEyeCream_1_Hero_186x322_crop_center.jpg?v=1683685618'
+		}
 	}
 };
 
