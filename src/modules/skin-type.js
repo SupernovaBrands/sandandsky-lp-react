@@ -108,6 +108,22 @@ const getSkinType = (currentAnswers) => {
 					break;
 			};
 			break;
+		case skinConcernsAnswers[9]:
+			switch(skinType) {
+				case skinTypeAnswers[0]:
+					skinResult = skinResultList['Oily'];
+					break;
+				case skinTypeAnswers[1]:
+					skinResult = skinResultList['Combination'];
+					break;
+				case skinTypeAnswers[2]:
+					skinResult = skinResultList['Normal'];
+					break;
+				default:
+					skinResult = skinResultList['Sensitive'];
+					break;
+			};
+			break;
 		default:
 			skinResult = skinResultList['Sensitive'];
 			break;

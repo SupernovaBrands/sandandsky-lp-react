@@ -104,6 +104,7 @@ const Questions = [
             'Fine lines or wrinkles',
             'Dark spots or hyperpigmentation',
             'Dullness or uneven skin tone',
+            'Dark circles and/or eye bags',
         ],
         type: 'SingleChoice',
         inputType: 'Button',
