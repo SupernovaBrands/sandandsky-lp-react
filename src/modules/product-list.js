@@ -980,8 +980,8 @@ const productList = {
 	},
 	'Anti-Aging Eye Cream': {
 		handle: 'anti-aging-eye-cream',
-		howto: 'Apply before the use of serums and moisturisers.',
-		usp: 'Use daily, both morning and evening.',
+		howto: 'Apply a pea-sized amount to the contours of your eyes and eyelids, up to the brow bone, both morning and evening',
+		usp: 'Tackle dark circles, eye bags and wrinkles with our 8% Vitamin C-infused and Peptide-powered formula, while visibly firming, reviving and brightening skin.',
 		title: 'Anti-aging Eye Cream',
 		sku: 'SS0002792020',
 		au: {
