@@ -15,6 +15,8 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
     const skinTypeQuestions = Questions[0].answers;
     const skinTypeAnswer = currentAnswer[1];
 
+    console.log(skinConcernsA, 'testing');
+
     switch (skinConcernsA) {
         case skinConcernsQ[0]: //Clogged or enlarged pores
             switch (ageRangesA) {
@@ -816,7 +818,7 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                                 break;
                             default: //Red and flaky with uneven texture
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['AEA Mask', 'TSW Boost Cream', 'Anti-Aging Eye Cream'];
+                                    productsRecommend = ['AEA Mask', 'TSW Cream', 'Anti-Aging Eye Cream'];
                                     activePriority = ['Hyaluronic Acid', 'AHAs', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['OC Cleanser', 'TSW Serum', 'Anti-Aging Eye Cream'];
