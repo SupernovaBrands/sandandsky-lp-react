@@ -535,6 +535,46 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
+                                    productsRecommend = ['OC Cleanser', 'OC Mask', 'AEA Serum'];
+                                    activePriority = ['AHAs', 'Salicylic Acid', 'Vitamin C'];
+                                } else {
+                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
+                                    activePriority = ['AHAs', 'Vitamin C', 'Vegan Squalane'];
+                                }
+                                break;
+                            case skinTypeQuestions[1]: //A combination of shiny and dry on different areas
+                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
+                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
+                                    activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
+                                } else {
+                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
+                                    activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
+                                }
+                                break;
+                            case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
+                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
+                                    productsRecommend = ['AEA Mask', 'APC Cleanser', 'Pro Youth Dark Spot Serum'];
+                                    activePriority = ['Vitamin C', 'AHAs', 'Glycolic Acid'];
+                                } else {
+                                    productsRecommend = ['APC Mask', 'APC Cleanser', 'Pro Youth Dark Spot Serum'];
+                                    activePriority = ['Vitamin C', 'AHAs', 'Glycolic Acid'];
+                                }
+                                break;
+                            default: //Red and flaky with uneven texture
+                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
+                                    productsRecommend = ['AEA Mask', 'Pro Youth Dark Spot Serum', 'TSW Cream'];
+                                    activePriority = ['Vitamin C', 'Glycolic Acid', 'Hyaluronic Acid'];
+                                } else {
+                                    productsRecommend = ['AEA Mask', 'Pro Youth Dark Spot Serum', 'TSW Cream'];
+                                    activePriority = ['Vitamin C', 'Glycolic Acid', 'Hyaluronic Acid'];
+                                }
+                                break;
+                        }
+                        break;
+                    default://26-35, 36-45, >45
+                        switch (skinTypeAnswer) {
+                            case skinTypeQuestions[0]: //Tends to get shiny throughout the day
+                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
                                     productsRecommend = ['OC Cleanser', 'AEA Mask', 'Anti-Aging Eye Cream'];
                                     activePriority = ['AHAs', 'Hyaluronic Acid', 'Vitamin C'];
                                 } else {
@@ -553,10 +593,10 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                                 break;
                             case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'Pro Youth Dark Spot Serum', 'Anti-Aging Eye Cream'];
+                                    productsRecommend = ['AEA Enzyme Polish', 'Pro Youth Dark Spot Serum', 'Anti-Aging Eye Cream'];
                                     activePriority = ['AHAs', 'Glycolic Acid', 'Vitamin C'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'Pro Youth Dark Spot Serum', 'Anti-Aging Eye Cream'];
+                                    productsRecommend = ['AEA Enzyme Polish', 'Pro Youth Dark Spot Serum', 'Anti-Aging Eye Cream'];
                                     activePriority = ['AHAs', 'Glycolic Acid', 'Vitamin C'];
                                 }
                                 break;
@@ -567,46 +607,6 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                                 } else {
                                     productsRecommend = ['AEA Enzyme Polish', 'Pro Youth Dark Spot Serum', 'Anti-Aging Eye Cream'];
                                     activePriority = ['Vitamin C', 'Glycolic Acid', 'Vitamin C'];
-                                }
-                                break;
-                        }
-                        break;
-                    default://26-35, 36-45, >45
-                        switch (skinTypeAnswer) {
-                            case skinTypeQuestions[0]: //Tends to get shiny throughout the day
-                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['OC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
-                                    activePriority = ['AHAs', 'Hyaluronic Acid', 'Vitamin C'];
-                                } else {
-                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
-                                    activePriority = ['AHAs', 'Vitamin C', 'Vegan Squalane'];
-                                }
-                                break;
-                            case skinTypeQuestions[1]: //A combination of shiny and dry on different areas
-                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'AEA Serum', 'TSW Cream'];
-                                    activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
-                                } else {
-                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
-                                    activePriority = ['AHAs', 'Vitamin C', 'Hyaluronic Acid'];
-                                }
-                                break;
-                            case skinTypeQuestions[2]: //Comfortable in summer, but dry in cooler climates
-                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['AEA Enzyme Polish', 'Pro Youth Dark Spot Serum', 'AEA Moisturiser'];
-                                    activePriority = ['AHAs', 'Glycolic Acid', 'Vitamin C'];
-                                } else {
-                                    productsRecommend = ['AEA Enzyme Polish', 'AEA Mask', 'Pro Youth Dark Spot Serum'];
-                                    activePriority = ['AHAs', 'Vitamin C', 'Glycolic Acid'];
-                                }
-                                break;
-                            default: //Red and flaky with uneven texture
-                                if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['AEA Enzyme Polish', 'AEA Serum', 'AEA Moisturiser'];
-                                    activePriority = ['AHAs', 'Vitamin C', 'Vegan Squalane'];
-                                } else {
-                                    productsRecommend = ['AEA Mask', 'AEA Mask', 'Pro Youth Dark Spot Serum'];
-                                    activePriority = ['Vitamin C', 'AHAs', 'Glycolic Acid'];
                                 }
                                 break;
                         }
@@ -791,7 +791,7 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                         switch (skinTypeAnswer) {
                             case skinTypeQuestions[0]: //Tends to get shiny throughout the day
                                 if (envStressResult.title === 'LOW' || envStressResult.title === 'AVERAGE') {
-                                    productsRecommend = ['APC Cleanser', 'AEA Moisturiser', 'Anti-Aging Eye Cream'];
+                                    productsRecommend = ['OC Cleanser', 'AEA Moisturiser', 'Anti-Aging Eye Cream'];
                                     activePriority = ['AHAs', 'Vegan Squalane', 'Vitamin C'];
                                 } else {
                                     productsRecommend = ['OC Cleanser', 'Pro Youth Dark Spot Serum', 'Anti-Aging Eye Cream'];
