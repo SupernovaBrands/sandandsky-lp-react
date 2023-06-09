@@ -538,7 +538,7 @@ const getProductRecommendation = (Questions, currentAnswer, store) => {
                                     productsRecommend = ['OC Cleanser', 'OC Mask', 'AEA Serum'];
                                     activePriority = ['AHAs', 'Salicylic Acid', 'Vitamin C'];
                                 } else {
-                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'TSW Cream'];
+                                    productsRecommend = ['APC Cleanser', 'AEA Mask', 'AEA Moisturiser'];
                                     activePriority = ['AHAs', 'Vitamin C', 'Vegan Squalane'];
                                 }
                                 break;
