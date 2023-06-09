@@ -94,3 +94,35 @@
 		}
 	}
 }
+
+.survey-skin {
+	&.cover {
+		background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/skin_quiz_mob_cover.jpg?v=1686281953);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: bottom;
+		max-width: 100%;
+		
+		@include media-breakpoint-up(lg) {
+			background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/skin_quiz_desk_cover.jpg?v=1686281954);
+			max-height: 100%;
+		}
+
+		.heading-wrapper {
+			margin-top: -300px;
+			@include media-breakpoint-up(lg) {
+				margin-top: -300px;
+			}
+		}
+
+		h1 {
+			color: white;
+			max-width: 430px;
+		}
+
+		p {
+			color: white;
+		}
+	}
+}
