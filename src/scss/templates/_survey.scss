@@ -110,19 +110,28 @@
 		}
 
 		.heading-wrapper {
-			margin-top: -300px;
+			margin-top: 180px;
 			@include media-breakpoint-up(lg) {
-				margin-top: -240px;
+				margin-top: 150px;
 			}
 		}
 
 		h1 {
 			color: white;
-			max-width: 430px;
+			max-width: 260px;
+
+			@include media-breakpoint-up(lg) {
+				max-width: 430px;
+			}
 		}
 
 		p {
 			color: white;
+			max-width: 320px;
+
+			@include media-breakpoint-up(lg) {
+				max-width: 430px;
+			}
 		}
 	}
 }
