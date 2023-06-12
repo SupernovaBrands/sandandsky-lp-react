@@ -101,18 +101,18 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: bottom;
+		background-position: top;
 		max-width: 100%;
 		
 		@include media-breakpoint-up(lg) {
-			background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/skin_quiz_desk_cover.jpg?v=1686281954);
+			background-image: url(https://cdn.shopify.com/s/files/1/0277/5262/8295/files/Quiz_Cover_03_1.jpg?v=1686536009);
 			max-height: 100%;
 		}
 
 		.heading-wrapper {
 			margin-top: -300px;
 			@include media-breakpoint-up(lg) {
-				margin-top: -480px;
+				margin-top: -240px;
 			}
 		}
 
