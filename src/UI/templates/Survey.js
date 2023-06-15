@@ -161,7 +161,7 @@ const Survey = () => {
             event: 'quiz',
             event_params: {
                 category: 'Survey',
-                userAction: action
+                target: action
             },
         };
         window.dataLayer.push(dataToPush);
