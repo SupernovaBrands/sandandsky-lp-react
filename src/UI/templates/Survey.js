@@ -165,7 +165,9 @@ const Survey = () => {
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer, selectedSite);
         console.log('productsRecommend', currentAnswer, productsRecommend);
-
+        window.dataLayer.push({
+            event: 'quiz_completed',
+        });
         const productHandle = [];
         const productSkus = [];
         let sku = '';
