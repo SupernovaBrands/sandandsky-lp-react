@@ -156,21 +156,29 @@ const Survey = () => {
         postMessageCookie('answeredQuestion', '');
     }
 
+    const sendTodataLayer = (action) => {
+        const dataToPush = {
+            event: 'quiz',
+            event_params: {
+                category: 'Survey',
+                target: action
+            },
+        };
+        window.dataLayer.push(dataToPush);
+    }
+
 	const gettingResult = (close = false) => {
         const selectedSite = site ? site : 'dev.sandandsky.com';
-
+        sendTodataLayer('completed');
         const skinType = getSkinType(currentAnswer);
-        console.log('skinType', skinType)
         const envStressResult = getEnvironmentStress(currentAnswer);
 
         const { productsRecommend, activePriority } = getProductResult(Questions, currentAnswer, selectedSite);
-        console.log('productsRecommend', currentAnswer, productsRecommend);
 
         const productHandle = [];
         const productSkus = [];
         let sku = '';
         productsRecommend.forEach((item, index) => {
-            console.log('item', item, productList[item]);
             productHandle.push(productList[item].handle);
             productSkus.push(productList[item].sku);
             sku = `${sku}${index === 0 ? '' : ','}${productList[item].sku}`;
