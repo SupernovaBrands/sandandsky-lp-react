@@ -335,20 +335,14 @@ const Survey = () => {
     }
 
 	return (
-		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
-			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? 'align-items-center survey-content__start pt-4' : 'align-content-start'} `}>
+		<div ref={targetRef} className={`${currentPosition === 'start' ? 'cover survey-skin m-0 w-100' : classes} ${currentPosition !== 'result' ? 'container' : ''}`}>
+			<div className={`row justify-content-center survey-content ${currentPosition === 'start' ? ' survey-content__start align-items-start' : 'align-content-start'} `}>
 				{ currentPosition === 'start' && (
 				<>
-					<div className="px-g d-flex align-items-center flex-column justify-content-center text-center">
-                        <div className="w-100 text-end mb-5 pb-5 me-ng me-lg-0">
-                            <SplashTop />
-                        </div>
+					<div className={`px-g d-flex align-items-center flex-column justify-content-center text-center ${currentPosition === 'start' ? 'heading-wrapper' : ''}`}>
 						<h1 className="mb-g">Discover your routine to flawless skin</h1>
 						<p className="font-size-sm mb-4">Find the perfect solution to your skin’s needs in just a few steps!</p>
 						<button className="btn btn-primary text-white" onClick={() => startQuiz()}>Take the quiz</button>
-                        <div className="w-100 text-start mt-5 pt-5 ms-ng ms-lg-0">
-                            <SplashBottom />
-                        </div>
 					</div>
 				</>)}
 
