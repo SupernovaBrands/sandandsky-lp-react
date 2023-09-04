@@ -1,11 +1,13 @@
 
-const RangeBanner = () => {
+const RangeBanner = (props) => {
 	return (
 		<section className='range__banner jumbotron'>
-			<div className='d-lg-none text-center'>
-				<h1 className='mb-2'>Australian Pink Clay</h1>
-				<p className='mb-g'>Detoxify • Refine • Soothe</p>
-			</div>
+			{!props.amazonLp && (
+				<div className='d-lg-none text-center'>
+					<h1 className='mb-2'>Australian Pink Clay</h1>
+					<p className='mb-g'>Detoxify • Refine • Soothe</p>
+				</div>
+			)}
 
 			<picture className="d-block w-100">
 				<source srcSet="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/3122223b-21a2-4bed-93cf-f442f0fe5000/2280x" media="(min-width: 768px)" type="image/webp" />
