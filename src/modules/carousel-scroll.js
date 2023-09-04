@@ -138,7 +138,7 @@ const carouselScroll = (carouselId) => {
         window.addEventListener('resize', function () {
             checkButton();
         });
-    }, 500);
+    }, 0);
 };
 
 export default carouselScroll;

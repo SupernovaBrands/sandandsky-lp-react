@@ -1,0 +1,100 @@
+@import '_core';
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/carousel";
+
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+@import 'core/fonts';
+@import 'core/type';
+@import 'core/grid';
+@import 'core/utilities';
+
+@import 'components/svgs';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/product-card';
+@import 'components/announcement-bar';
+
+@import 'sections/header';
+@import 'sections/footer';
+
+@import 'sections/a-beauty-review';
+
+.tab .nav-link {
+	border-bottom: 2px solid transparent!important;
+	&.active {
+		border-bottom-color: $primary !important;
+		font-weight: 700;
+	}
+}
+
+main {
+	overflow-x: hidden;
+}
+
+.rounded-lg {
+	border-radius: .3rem;
+}
+
+.range__amazon-images figure {
+	margin-bottom: 7.5px;
+}
+
+.carousel--loop .col-9 {
+	max-width: 75%;
+}
+@include media-breakpoint-up(lg) {
+	.carousel--loop .col-lg-4 {
+		max-width: 25%;
+	}
+}
+
+.carousel--loop__amazon {
+	figcaption {
+		min-height: calc-em(351);
+		@include media-breakpoint-up(lg) {
+			min-height: calc-em(321);
+		}
+	}
+
+	.carousel-control {
+		width: calc-em(40);
+		height: calc-em(40);
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include media-breakpoint-up(lg) {
+			top: 180px;
+			transform: none;
+		}
+	}
+}
+
+
+.range__amazon-images {
+	.pe-hg-2 {
+		padding-right: calc(7.5px / 2);
+	}
+	.ps-hg-2 {
+		padding-left: calc(7.5px / 2);
+	}
+}

@@ -27,6 +27,22 @@
 			font-size: $font-size-sm;
 		}
 	}
+
+	img {
+		border-top-left-radius: calc-em(8);
+		border-top-right-radius: calc-em(8);
+	}
+
+	&.col-9 {
+		max-width: 75%;
+	}
+
+	&__content {
+		min-height: calc-em(185);
+		@include media-breakpoint-up(lg) {
+			min-height: 187px;
+		}
+	}
 }
 
 
