@@ -1,30 +1,55 @@
 import carouselLoop from "../../modules/carousel-loop";
 
 const REVIEWS = [{
+	type: 'Apc',
 	id: 1,
 	title: 'Holy grail',
 	text: 'This product is a holy grail, look-no-further kind of mask! It is a clay mask that doesn’t strip moisture away, and in fact boosts my moisture level. Pores are detoxed and become tighter, even after the first use. You won’t regret your purchase!',
-	username: 'Shayna VanLehn'
+	username: 'Shayna VanLehn',
+	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f0d2cf30-610f-4496-94c6-9901b7f57300/public',
+	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c2944690-4b76-4f96-39a6-0026e46aaf00/public',
+	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/5cb72da7-afd9-416a-7e1c-e18b49546700/public',
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e09f9c4c-3936-401c-717b-49ff5dd4e100/public'
 },{
+	type: 'Apc2',
 	id: 2,
 	title: 'Removed makeup effectively and skin feels softer',
 	text: 'I found the cleanser to be very gentle on my skin yet effective. It removed my make up easily and exfoliated my skin without stripping it. My skin felt smoother, more plump and I saw a noticeable difference in the visibility of my pores.',
-	username: 'Julia'
+	username: 'Julia',
+	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/52e2bead-9a28-4845-a4b9-f31384119400/public',
+	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/52e2bead-9a28-4845-a4b9-f31384119400/public',
+	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8c88abd5-e9a2-452e-5874-bd9111959300/public',
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4dabcbc9-ee3d-491a-be42-ad8fcbd30200/public'
 },{
+	type: 'BounceMask',
 	id: 3,
 	title: 'Achieved the result I wanted',
 	text: 'Achieved the result I wanted after around 2-3 weeks of use. I used this in tandem with the pink clay mask and the result is clearly obvious with the before and after photo. Clear skin and lesser visible pores.',
-	username: 'Corrine C.'
+	username: 'Corrine C.',
+	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/83467212-899e-4706-258f-547013423b00/public',
+	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6ae869e7-8506-401d-47fe-b206e22dbe00/public',
+	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/54682d30-5cf2-4950-acdd-c0da4fecdf00/public',
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/82b453ce-69be-4c16-5a3a-d3a684876700/public'
 },{
+	type: 'Toner',
 	id: 4,
 	title: 'Where has this product been all my life!! I absolutely love this toner!',
 	text: 'I used this after my S&S oil control cleanser every day. Following the toner, I applied a couple splash drops, and then finished my regular routine with the S&S prebiotic moisturizer. I loved how my skin felt and looked after the toner.',
-	username: 'JoAnn Smith'
+	username: 'JoAnn Smith',
+	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/a9e840a9-6196-4696-4f9a-d38776c9b300/public',
+	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/0ea13653-c7e7-4392-f702-391b31e40a00/public',
+	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/64c78341-6637-4898-4757-18db40c30e00/public',
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1519a77a-c421-45ca-8beb-eff6bc495500/public'
 },{
+	type: 'Exfo',
 	id: 5,
 	title: 'ABSOLUTELY IN LOVE',
 	text: 'Love love love! My skin feels and looks much smoother since using this product, it helps to clear and heal breakouts, and had improved texture. It was so easy to incorporate into my skincare routine. I started to see benefits within the first week! Overall beautiful product, very satisfied and will definitely continue to use!',
-	username: 'Olivia Dunstan'
+	username: 'Olivia Dunstan',
+	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b5240f25-d570-4aba-b8a7-f0a04ccc9700/public',
+	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/96d279d3-73ed-4d08-ae13-057d618b4700/public',
+	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c819a0e0-18ab-48b0-f158-988744ff3800/public',
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f105acd8-0aa0-412d-3776-bf6a17147300/public'
 }];
 const REVIEW_DUPLICATED = [...REVIEWS, ...REVIEWS];
 
@@ -39,8 +64,10 @@ const AmazonReviewCarousel = () => {
 							{REVIEW_DUPLICATED.map((review, id) => (
 								<figure key={review.id + id} className={`carousel-item col-9 col-lg-4 ${id === 2 ? 'active' : ''}`}>
 									<picture>
-										<source type="image/jpeg" srcSet="https://via.placeholder.com/300x214" />
-										<img className="w-100" src="https://via.placeholder.com/296x211" alt="Sunny Honey Bronzing Foam" loading="lazy" />
+										<source type="image/webp" srcSet={`${review.imgWebp}`}/>
+										<source type="image/webp" srcSet={`${review.srcWebp}`} media="(min-width: 992px)"/>
+										<source type="image/jpeg" srcSet={review.srcSet} media="(min-width: 992px)" />
+										<img className="w-100" src={review.img} alt="Sunny Honey Bronzing Foam" loading="lazy" />
 									</picture>
 									<figcaption className="p-3 bg-white">
 										<div className="d-flex text-secondary mt-2 mb-3 mt-lg-0">
