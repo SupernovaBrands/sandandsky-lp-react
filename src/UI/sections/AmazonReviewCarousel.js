@@ -9,7 +9,8 @@ const REVIEWS = [{
 	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f0d2cf30-610f-4496-94c6-9901b7f57300/public',
 	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c2944690-4b76-4f96-39a6-0026e46aaf00/public',
 	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/5cb72da7-afd9-416a-7e1c-e18b49546700/public',
-	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e09f9c4c-3936-401c-717b-49ff5dd4e100/public'
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e09f9c4c-3936-401c-717b-49ff5dd4e100/public',
+	url: 'https://www.amazon.com/stores/page/13D71666-B985-4E76-AA80-CB5F48B40C97?maas=maas_adg_43B56D7812A06D86BC67A48D09CBC29B_afap_abs&ref_=aa_maas&tag=maas&ingress=3&visitId=ed42bedc-3f53-420c-8f91-6fe4cae64c34',
 },{
 	type: 'Apc2',
 	id: 2,
@@ -19,7 +20,8 @@ const REVIEWS = [{
 	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/52e2bead-9a28-4845-a4b9-f31384119400/public',
 	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/52e2bead-9a28-4845-a4b9-f31384119400/public',
 	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8c88abd5-e9a2-452e-5874-bd9111959300/public',
-	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4dabcbc9-ee3d-491a-be42-ad8fcbd30200/public'
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4dabcbc9-ee3d-491a-be42-ad8fcbd30200/public',
+	url: 'https://www.amazon.com/Sand-Sky-Australian-Congestion-Exfoliates/dp/B08Y5PHJLD?ref_=ast_sto_dp',
 },{
 	type: 'BounceMask',
 	id: 3,
@@ -29,7 +31,8 @@ const REVIEWS = [{
 	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/83467212-899e-4706-258f-547013423b00/public',
 	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/6ae869e7-8506-401d-47fe-b206e22dbe00/public',
 	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/54682d30-5cf2-4950-acdd-c0da4fecdf00/public',
-	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/82b453ce-69be-4c16-5a3a-d3a684876700/public'
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/82b453ce-69be-4c16-5a3a-d3a684876700/public',
+	url: 'https://www.amazon.com/Sand-Sky-Australian-Hydrating-Moisturizing/dp/B07ZPYQC9Q?ref_=ast_sto_dp',
 },{
 	type: 'Toner',
 	id: 4,
@@ -39,7 +42,8 @@ const REVIEWS = [{
 	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/a9e840a9-6196-4696-4f9a-d38776c9b300/public',
 	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/0ea13653-c7e7-4392-f702-391b31e40a00/public',
 	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/64c78341-6637-4898-4757-18db40c30e00/public',
-	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1519a77a-c421-45ca-8beb-eff6bc495500/public'
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/1519a77a-c421-45ca-8beb-eff6bc495500/public',
+	url: 'https://www.amazon.com/stores/page/E1C9C5D9-A08B-432E-A3B6-62D83AC1C9A9?maas=maas_adg_CDC57C77974FB085785D710BE0192BD5_afap_abs&ref_=aa_maas&tag=maas&ingress=3&visitId=ed42bedc-3f53-420c-8f91-6fe4cae64c34',
 },{
 	type: 'Exfo',
 	id: 5,
@@ -49,7 +53,8 @@ const REVIEWS = [{
 	img: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/b5240f25-d570-4aba-b8a7-f0a04ccc9700/public',
 	srcSet: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/96d279d3-73ed-4d08-ae13-057d618b4700/public',
 	imgWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c819a0e0-18ab-48b0-f158-988744ff3800/public',
-	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f105acd8-0aa0-412d-3776-bf6a17147300/public'
+	srcWebp: 'https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f105acd8-0aa0-412d-3776-bf6a17147300/public',
+	url: 'https://www.amazon.com/Sand-Sky-Perfection-Exfoliating-Australian/dp/B07N78L532?ref_=ast_sto_dp',
 }];
 const REVIEW_DUPLICATED = [...REVIEWS, ...REVIEWS];
 
@@ -63,12 +68,14 @@ const AmazonReviewCarousel = () => {
 						<div className="carousel-inner d-flex flex-nowrap row">
 							{REVIEW_DUPLICATED.map((review, id) => (
 								<figure key={review.id + id} className={`carousel-item col-9 col-lg-4 ${id === 2 ? 'active' : ''}`}>
-									<picture>
-										<source type="image/webp" srcSet={`${review.imgWebp}`}/>
-										<source type="image/webp" srcSet={`${review.srcWebp}`} media="(min-width: 992px)"/>
-										<source type="image/jpeg" srcSet={review.srcSet} media="(min-width: 992px)" />
-										<img className="w-100" src={review.img} alt="Sunny Honey Bronzing Foam" loading="lazy" />
-									</picture>
+									<a href={review.url}>
+										<picture>
+											<source type="image/webp" srcSet={`${review.imgWebp}`}/>
+											<source type="image/webp" srcSet={`${review.srcWebp}`} media="(min-width: 992px)"/>
+											<source type="image/jpeg" srcSet={review.srcSet} media="(min-width: 992px)" />
+											<img className="w-100" src={review.img} alt="Sunny Honey Bronzing Foam" />
+										</picture>
+									</a>
 									<figcaption className="p-3 bg-white">
 										<div className="d-flex text-secondary mt-2 mb-3 mt-lg-0">
 											<div className="d-flex">
