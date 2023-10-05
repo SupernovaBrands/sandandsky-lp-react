@@ -1,9 +1,8 @@
 const rangeProducts = [
 	{
 		title: "Australian Pink Clay Porefining Face Mask",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_PFM_Crop_23_222x279_crop_center.jpg?v=1637829738",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/WEBSITE_CAROUSEL_APC_MASK_03_1140x_64ae5058-83da-4e4d-80ba-dd1f97d7449a_222x279_crop_center.jpg?v=1637829738",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8ded33e5-dda6-4a3c-3ff7-ba31a6c0a200/public",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/aba78ca5-4cbd-4f0c-a43e-0aa6f5d89e00/public",
 		ratingScore: 4.7,
 		totalReviews: 2541,
 		mobileTab: ['bestseller', 'pore-refining', 'hydrating'],
@@ -39,9 +38,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Pore Tight Kit",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_PoreTight_Crop_222x279_crop_center.jpg?v=1637326414",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Content_Kit_APC-PoreTight_Bathroom_SB_130721_V2_1140x1440_cdd12d91-b2d5-4adf-a85a-818e24c62946_222x279_crop_center.jpg?v=1637326414",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/8b0504a3-1567-4d7d-6975-f9c6256f3300/public",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/94f73bce-c687-4797-8384-5354d7d83300/public",
 		ratingScore: 4.9,
 		totalReviews: 428,
 		handle: "pore-tight-kit",
@@ -77,9 +75,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Perfect Skin Kit",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_PerfectSkinKit_23_1_222x279_crop_center.jpg?v=1637751097",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_ECOMM_APC_TDK_Carousel_PerfectSkinKit1_VG_12072021-2_1140x_3b00da72-4365-4f63-937e-d9db86a3ff1c_222x279_crop_center.jpg?v=1637751097",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d05d5731-1821-4378-871e-992e8aa88800/public",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/031eefee-00b4-4772-2153-d6655ac48700/public",
 		ratingScore: 4.8,
 		totalReviews: 931,
 		handle: "perfect-skin-bundle",
@@ -115,9 +112,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Smoothing Body Sand",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_SmoothingBodySand_23_222x279_crop_center.jpg?v=1637750359",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/CAROUSEL_APC_BODYSAND_02_1140x_cb04321f-47ce-4901-8e6b-98ac872c781a_222x279_crop_center.jpg?v=1637750359",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/e5067209-b00a-4e9c-44bd-38ef036f8600/public",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ebbf157a-6636-4a79-b5c1-241694d49700/public",
 		ratingScore: 4.7,
 		totalReviews: 401,
 		mobileTab: ['bestseller', 'hydrating'],
@@ -153,9 +149,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Flash Perfection Exfoliator",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_ExfoNew_222x279_crop_center.jpg?v=1638426810",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/WEBSITE_CAROUSEL_APC_EXFO_02_1140x_75c8cb15-a583-4c13-8852-e0a321b04585_222x279_crop_center.jpg?v=1638426810",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/7cf10ed0-fb24-4bf9-fc37-5b5d5ed54f00/public",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/4257a7ef-99c8-47e2-1104-f165e327e200/public",
 		ratingScore: 4.8,
 		totalReviews: 738,
 		mobileTab: ['pore-refining', 'exfoliation'],
@@ -191,9 +186,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Deep Pore Cleanser",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_Cleanser_1_222x279_crop_center.jpg?v=1638426897",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/CAROUSEL_APC_CLEANSER_02_1140x_1140x_ab188cfb-629e-45ba-bc83-8ef7d17ef91e_222x279_crop_center.jpg?v=1638426897",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/c69b938a-d8f5-449a-bd26-288f77494c00/public",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/a2cf9493-b1b7-4104-f8aa-88974dc5c900/public",
 		ratingScore: 4.9,
 		totalReviews: 428,
 		mobileTab: ['hydrating'],
@@ -229,9 +223,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Total Detox Kit",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_Sand_Mask_Crop_23_1_222x279_crop_center.jpg?v=1637751245",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/WEBSITE_CAROUSEL_TOTALDETOX-KIT_Hero_1140x_f577cd63-e623-43be-bd65-504ba346a29d_222x279_crop_center.jpg?v=1637751245",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/f070512a-0af2-4f76-4cc5-9f701cedca00/520x",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/d343b164-8ee9-4372-ab76-6ac3cb31ad00/520x",
 		ratingScore: 4.8,
 		totalReviews: 341,
 		mobileTab: ['exfoliation'],
@@ -267,9 +260,8 @@ const rangeProducts = [
 	},
 	{
 		title: "Australian Pink Clay Pink Clay Icon Kit",
-		img: "//cdn.shopify.com/s/files/1/0253/9847/6905/products/SS_Ecomm_Hero_SB_APC_Icons_Crop_222x279_crop_center.jpg?v=1637751245",
-		imgHover:
-			"//cdn.shopify.com/s/files/1/0253/9847/6905/products/WEBSITE_CAROUSEL_APC-Fam_SB_150721_570x_5285f9c4-82ff-478f-a2bc-342b74f9395d_222x279_crop_center.jpg?v=1637325500",
+		img: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/28ab1c4a-536f-41c8-952c-700a33bec300/520x",
+		imgHover: "https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/bf60ae0e-6cee-4f33-6dfe-80c718397f00/520x",
 		ratingScore: 4.8,
 		totalReviews: 334,
 		mobileTab: ['exfoliation'],

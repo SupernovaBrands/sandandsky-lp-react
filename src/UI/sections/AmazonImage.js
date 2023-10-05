@@ -66,22 +66,22 @@ const AmazonImage = () => {
 
 
 				<figure className="col-6 col-lg-3 px-hg px-lg-hg">
-					<a href="">
+					<a href="https://www.amazon.com/stores/page/13D71666-B985-4E76-AA80-CB5F48B40C97?ingress=0&visitId=fcbc7446-dd8a-4e86-97e3-e9ae3ae8f237&ref_=aa_maas">
 						<img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/ddf3402a-c7d9-499e-dc6a-7111b8ae8c00/public" alt="1" className="w-100" />
 					</a>
 				</figure>
 				<figure className="col-6 col-lg-3 px-hg px-lg-hg">
-					<a href="">
+					<a href="https://www.amazon.com/stores/page/764B7352-DDA3-4BA2-AD76-A5A1C69488D4?ingress=0&visitId=fcbc7446-dd8a-4e86-97e3-e9ae3ae8f237&ref_=aa_maas">
 						<img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/316c1901-4d9c-4b59-e40f-69915ae9ea00/public" alt="1" className="w-100" />
 					</a>
 				</figure>
 				<figure className="col-6 col-lg-3 px-hg px-lg-hg">
-					<a href="">
+					<a href="https://www.amazon.com/stores/page/251C802B-41B5-4432-BC4B-E6D63560FCCF?ingress=0&visitId=fcbc7446-dd8a-4e86-97e3-e9ae3ae8f237&ref_=aa_maas">
 						<img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/52ac2df5-b568-4433-33bf-22fa2975dd00/public" alt="1" className="w-100" />
 					</a>
 				</figure>
 				<figure className="col-6 col-lg-3 px-hg px-lg-hg">
-					<a href="">
+					<a href="https://www.amazon.com/stores/page/1E6DD10F-5408-4542-8C1F-69BDA89E6A84?ingress=0&visitId=fcbc7446-dd8a-4e86-97e3-e9ae3ae8f237&ref_=aa_maas">
 						<img src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/232250f0-1714-4f07-8fd8-fc44a4275a00/public" alt="1" className="w-100" />
 					</a>
 				</figure>
