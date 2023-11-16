@@ -105,7 +105,7 @@ const Survey = () => {
     const [submitted, setSubmitted] = useState(initialSubmitted);
     const [redirect, setRedirect] = useState(false);
     const [email, setEmail] = useState('');
-    const additionalStep = true;
+    const additionalStep = false; // set false for bfcm period, after bfcm is true
 
     const postMessageCookie = (key, val) => {
         if (window.top === window.self) return;
