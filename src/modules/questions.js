@@ -82,7 +82,7 @@ const Questions = [
             {label: 'Eye Care'},
             {label: 'None'},
         ],
-        caption: '*Choose up to 6',
+        caption: '*Choose up to 7',
         captionClass: 'w-100 font-size-sm mb-4',
         type: 'MultipleChoice',
         lastFull: false,
