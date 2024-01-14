@@ -341,7 +341,7 @@ const Survey = () => {
 				<>
 					<div className={`px-g d-flex align-items-center flex-column justify-content-center text-center ${currentPosition === 'start' ? 'heading-wrapper' : ''}`}>
 						<h1 className="mb-g">Discover your routine to flawless skin</h1>
-						<p className="font-size-sm mb-4">Find the perfect solution to your skin’s needs in just a few steps!</p>
+						<p className="font-size-sm mb-4">Find the perfect solution to your skin’s needs in just a few steps! <br /> Get 15% off!</p>
 						<button className="btn btn-primary text-white" onClick={() => startQuiz()}>Take the quiz</button>
 					</div>
 				</>)}
