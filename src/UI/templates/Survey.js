@@ -317,7 +317,8 @@ const Survey = () => {
     }
 
     const skipEmail = () => {
-        gettingResult(true);
+        // gettingResult(true);
+        setSubmitted(true);
     }
 
     const onSubmit = (email) => {
