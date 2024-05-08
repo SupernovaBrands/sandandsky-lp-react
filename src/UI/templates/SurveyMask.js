@@ -8,7 +8,7 @@ import MultipleChoice from '../components/MultipleChoice';
 import EmailForm from '../components/EmailForm2';
 import ResultContent from '../components/ResultContent2';
 
-import { 
+import {
     setCookie,
     getCookie,
     decodeAnswers,
@@ -84,7 +84,8 @@ const SurveyMask = () => {
     };
 
     const skipEmail = () => {
-        gettingResult(true, true);
+        // gettingResult(true, true);
+        setSubmitted(true);
     }
 
     const viewMyResult = () => {
@@ -99,7 +100,7 @@ const SurveyMask = () => {
         setEmail(emailtoSave);
         setSubmitted(true);
         postMessageToParentCookie(site, 'quizEmail', email, site);
-        setTimeout(() => { saveData(); }) 
+        setTimeout(() => { saveData(); })
         console.log('email3', email);
         if (window.top !== window.self) {
             window.parent.postMessage({
