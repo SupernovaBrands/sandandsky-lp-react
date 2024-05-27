@@ -8,8 +8,8 @@ const ResultContent = (props) => {
         <div className="col-12 col-lg-6 mt-4 pt-0 pt-lg-4 text-center">
             <p className="h1">Thanks!<br/>Here is your promo code:</p>
             <div className="col-12 col-lg-8 ms-auto me-auto mt-2">
-                <span className='h1 px-4 py-1 text-primary rounded p-2 bg-light-gray d-inline-block bg-primary-light'>MASK15</span>
-                <p className='mt-2'>No minimum spend, 15% off single full-sized masks only!</p>
+                <span className='h1 px-4 py-1 text-primary rounded p-2 bg-light-gray d-inline-block bg-primary-light'>MASK20</span>
+                <p className='mt-2'>No minimum spend, 20% off single full-sized masks only!</p>
                 <button className="mt-2 btn btn-lg btn-primary w-100" onClick={viewMyResult}>View my results</button>
             </div>
         </div>
