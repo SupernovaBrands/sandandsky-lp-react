@@ -242,7 +242,7 @@ const SurveyMask = () => {
                         <div className='survey-mask__start-screen text-center mt-7 mt-lg-3'>
                             <img className='tooltip' src="https://imagedelivery.net/ghVX8djKS3R8-n0oGeWHEA/5d327fa8-3567-48a0-177f-0f28bcaa3300/828x" />
                             <h1>Mask Quiz</h1>
-                            <button className="btn btn-primary text-white" onClick={() => startQuiz()}>Take the quiz</button>
+                            <button className="btn btn-primary text-white" onClick={() => startQuiz()}>Get Started</button>
                         </div>
                     </>
                 )}
