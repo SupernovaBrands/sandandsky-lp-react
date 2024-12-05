@@ -1,5 +1,5 @@
 {
-  "name": "cocoandeve-react",
+  "name": "sandandsky-react",
   "version": "0.1.0",
   "private": true,
   "homepage": "../",
@@ -179,5 +179,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "engines": {
+    "node": "v14.18.2",
+    "npm": "v6.14.15"
   }
 }
